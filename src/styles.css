@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+}
+
+body, footer {
+    background-color: #191f29;
+}
+
+
+.navbar {
+    background-color: #292f3a; /* Color de fondo para la barra de navegación */
+}
+
+footer {
+    background-color: #191f29; /* Color de fondo del footer */
+    color: white; /* Color del texto en el footer */
+}
+
+footer a {
+    color: white; /* Cambia el color del texto de los enlaces del footer a blanco */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d3d3d3; /* Cambia el color del texto de los enlaces del footer al pasar el ratón */
+}
