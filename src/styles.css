@@ -11,6 +11,21 @@ body, footer {
     background-color: #292f3a; /* Color de fondo para la barra de navegación */
 }
 
+.navbar .nav-link {
+    color: white; /* Cambia el color de los enlaces de la barra de navegación a blanco */
+}
+
+
+.logonav {
+    width: 100px;
+}
+
+
+
+
+
+
+
 footer {
     background-color: #191f29; /* Color de fondo del footer */
     color: white; /* Color del texto en el footer */
@@ -24,3 +39,4 @@ footer a {
 footer a:hover {
     color: #d3d3d3; /* Cambia el color del texto de los enlaces del footer al pasar el ratón */
 }
+
