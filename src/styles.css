@@ -19,13 +19,17 @@ body{
 }
 
 
+.carousel-inner {
+    max-height: 300px;
+}
+
 .main-cards{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRityx2ItvawRwJPUA-AHJPJUpxfzmr9fgQP4EHiffr8EfPPwFQ2yaXd_YVEOMnkDPYdAA&usqp=CAU");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwxVCR8efhCeBEyUXdeYJkF-Ycsm0xiIa_WQ&s");
     background-position: center;
     background-size: contain;
-    width: 200px;
-    height: 100px;
     border-color: #292a33 !important;
+    width: 200px;
+    height: 120px;
 }
 
 footer {
@@ -41,3 +45,21 @@ footer a:hover {
     color: #d3d3d3; /* Cambia el color del texto de los enlaces del footer al pasar el ratón */
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px; 
+    height: 50px; 
+    background-size: 100% 100%; /
+}
+
+.second-slider-card {
+    background-image: url("https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d008324e9b917dffe8d17c_grey.jpg");
+    background-position: center;
+    background-size: contain;
+    border-color: #292a33 !important;
+    width: 200px;
+    height: 120px;
+    min-width: 150px;
+    min-height: 80px;
+    
+}
