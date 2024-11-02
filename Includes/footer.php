@@ -22,7 +22,7 @@
   </div>
 
   <!-- Parte inferior del footer -->
-  <div class="footer-links d-flex justify-content-start">
+  <div class="footer-links d-flex">
     <div class="link-column">
       <p class="links-title">NUESTROS LINKS</p>
       <ul class="nav flex-column" style="list-style-type: none; padding: 0;">
@@ -58,18 +58,24 @@
         </li>
       </ul>
     </div>
-  </div>
 
-
-
-  <div class="d-flex justify-content-between align-items-center">
-    <p class="text-center mb-0" style="color: white;">© 2024 TP PHP allario bernardez ruiz</p>
-    <div class="social-icons">
-      <a href="#" class="me-2 text-white"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="me-2 text-white"><i class="bi bi-twitter"></i></a>
-      <a href="#" class="me-2 text-white"><i class="bi bi-instagram"></i></a>
+    <div class="link-column">
+      <p class="links-title">Redes Sociales</p>
+      <ul class="nav flex-row" style="list-style-type: none; padding: 0;">
+        <li class="nav-item">
+        <a href="#" class="me-2 text-white"><i class="bi bi-facebook"></i></a>
+        </li>
+        <li class="nav-item">
+        <a href="#" class="me-2 text-white"><i class="bi bi-twitter"></i></a>
+        </li>
+        <li class="nav-item">
+        <a href="#" class="me-2 text-white"><i class="bi bi-instagram"></i></a>
+        </li>
+      </ul>
     </div>
+
   </div>
+
 </footer>
 
 
