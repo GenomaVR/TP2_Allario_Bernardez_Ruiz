@@ -24,9 +24,6 @@ body {
 }
 
 /* Carousel Styles */
-.carousel-inner {
-    max-height: 300px;
-}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -47,19 +44,25 @@ body {
     transition: transform 0.5s ease;
 }
 
-.carousel-item2 {
+.card-content {
     box-sizing: border-box;
     padding: 10px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5); /* Shadow effect */
+    box-shadow: 0 4px 12px 1px #030618; /* Shadow effect */
     border-radius: 15px;
     overflow: visible;
     width: 190px;
     height: 260px;
+    background-color: #292f3a;
 }
 
-.carousel-item2 img {
 
+
+.carousel-item2 img {
+    position: relative;
+    width: 110%;
+    top: -20px;
+    left: -1px;
 }
 
 .carousel-control-prev,
@@ -79,20 +82,32 @@ body {
     background-position: center;
     background-size: contain;
     border-color: #292a33 !important;
-    width: 200px;
-    height: 120px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow to cards */
+    transition: transform 0.5s ease; /* Add smooth transition on hover */
 }
+
+.main-cards:hover {
+    transform: translate3d(0px, 0px, 0px) scale3d(1.08, 1.08, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+.img-box {
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 .second-slider-card {
     background-image: url("https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d008324e9b917dffe8d17c_grey.jpg");
     background-position: center;
     background-size: contain;
     border-color: #292a33 !important;
-    width: 200px;
-    height: 120px;
-    min-width: 150px;
-    min-height: 80px;
 }
 
 /* Footer Styles */
@@ -119,18 +134,11 @@ footer a:hover {
     border: none;
 }
 
-.multiple-card-slider .carousel-control-prev,
-.multiple-card-slider .carousel-control-next {
-    background-color: #ffffff;
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
+
+/* Slider de Mirá más*/
 
 
-
+/* Slider de Mirá más*/
 @media (max-width: 956px) {
     .slider-medium-2col .container-columns {
         display: flex;
@@ -139,7 +147,7 @@ footer a:hover {
     }
 }
 
-/* Slider Medium 2 Column Styles */
+/* Slider de Mirá más*/
 .slider-medium-2col {
     background-image: url("./img/stpunk2.jpeg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     background-size: cover;
@@ -148,15 +156,3 @@ footer a:hover {
 }
 
 
-/* Media Queries */
-@media (min-width: 768px) {
-    .multiple-card-slider .carousel-item2 {
-        margin-right: 0;
-        flex: 0 0 calc(100% / 3);
-        display: block;
-        backface-visibility: visible;
-    }
-    .multiple-card-slider .carousel-inner {
-        display: flex;
-    }
-}
