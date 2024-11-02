@@ -1,55 +1,87 @@
+/* General Styles */
 * {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background-image: radial-gradient(circle farthest-corner at 50% 50%, #1b232c, #141620);
     font-family: 'open sans', sans-serif;
 }
 
-
+/* Navbar Styles */
 .navbar {
-    background-color: #161a24; /* Color de fondo para la barra de navegación */
-    color: #ffffff !important;
+    background-color: #292f3a; /* Color de fondo para la barra de navegación */
 }
 
-.navbar .navbar-brand,
 .navbar .nav-link {
-    color: #ffffff !important; /* Set text color to white */
+    color: white; /* Cambia el color de los enlaces de la barra de navegación a blanco */
 }
 
+.logonav {
+    width: 100px;
+}
 
+/* Carousel Styles */
 .carousel-inner {
     max-height: 300px;
 }
 
-.main-cards{
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    background-size: 100% 100%; /* Ensure the icon scales properly */
+    font-size: 200px;
+}
+
+.carousel2 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner2 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item2 {
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5); /* Shadow effect */
+    border-radius: 15px;
+    overflow: visible;
+    width: 190px;
+    height: 260px;
+}
+
+.carousel-item2 img {
+
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Card Styles */
+.main-cards {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwxVCR8efhCeBEyUXdeYJkF-Ycsm0xiIa_WQ&s");
     background-position: center;
     background-size: contain;
     border-color: #292a33 !important;
     width: 200px;
     height: 120px;
-}
-
-footer {
-        color: white; /* Color del texto en el footer */
-}
-
-footer a {
-   /* color: white !important;  Cambia el color del texto de los enlaces del footer a blanco */
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #d3d3d3; /* Cambia el color del texto de los enlaces del footer al pasar el ratón */
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 50px; 
-    height: 50px; 
-    background-size: 100% 100%; /
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow to cards */
 }
 
 .second-slider-card {
@@ -61,5 +93,70 @@ footer a:hover {
     height: 120px;
     min-width: 150px;
     min-height: 80px;
-    
+}
+
+/* Footer Styles */
+footer {
+    color: white; /* Color del texto en el footer */
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d3d3d3; /* Cambia el color del texto de los enlaces del footer al pasar el ratón */
+}
+
+/* Multiple Card Slider Styles */
+.multiple-card-slider .carousel-inner {
+    padding: 1em;
+}
+
+.multiple-card-slider .card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+}
+
+.multiple-card-slider .carousel-control-prev,
+.multiple-card-slider .carousel-control-next {
+    background-color: #ffffff;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+@media (max-width: 956px) {
+    .slider-medium-2col .container-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Slider Medium 2 Column Styles */
+.slider-medium-2col {
+    background-image: url("./img/stpunk2.jpeg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .multiple-card-slider .carousel-item2 {
+        margin-right: 0;
+        flex: 0 0 calc(100% / 3);
+        display: block;
+        backface-visibility: visible;
+    }
+    .multiple-card-slider .carousel-inner {
+        display: flex;
+    }
 }
