@@ -2,16 +2,16 @@
 include './Includes/header.php';
 ?>
 
-<div id="carouselExample" class="carousel slide d-flex justify-content-center position-relative m-3">
-    <div class="container">
+<div id="carouselExample" class="carousel slide d-flex justify-content-center position-relative m-3 main-carousel">
+    <div class="container p-3">
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item carousel-banner">
                 <img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/7769eb95-3738-4630-bf37-967d43a1584a/compose?format=webp&label=hero_carousel_none_300&width=2880" class="d-block w-100 img-fluid" alt="...">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item carousel-banner active">
                 <img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/e5374834-7e7b-4dad-bcfe-f2bf642d55f1/compose?format=webp&label=hero_carousel_none_300&width=2880" class="d-block w-100 img-fluid" alt="...">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item carousel-banner">
                 <img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/c7584e7d-40fd-4398-8c9b-d0a1be68cc30/compose?format=webp&label=hero_carousel_none_300&width=2880" class="d-block w-100 img-fluid" alt="...">
             </div>
         </div>
