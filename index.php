@@ -316,5 +316,5 @@ include './Includes/footer.php';
     });
 
     updateCarousel();
-});
-</script>
+});//end
+</script> 
