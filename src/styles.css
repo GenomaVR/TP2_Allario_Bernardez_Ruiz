@@ -299,9 +299,15 @@ footer .nav-link:hover {
 
 
 /* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE */
-
-/* Estilo para las cards */
-.card {
+/* Estilo para el contenedor de las cards */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cards se acomoden en varias filas */
+    justify-content: space-evenly; /* Espacia las cards uniformemente */
+  }
+  
+  /* Estilo para las cards */
+  .card {
     max-width: 250px; /* Tamaño máximo de la card */
     min-width: 200px; /* Tamaño mínimo de la card */
     margin: 10px; /* Espaciado entre las cards */
@@ -313,8 +319,8 @@ footer .nav-link:hover {
   
   /* Estilo para la imagen dentro de la card */
   .card-img-top {
-    height: 150px; /* Altura fija para las imágenes */
-    object-fit: contain; /* Asegura que la imagen cubra el área sin distorsionarse */
+    height: 120px; /* Altura fija para las imágenes */
+    object-fit: contain; /* Ajusta la imagen para que no se recorte ni se haga zoom */
     width: 100%; /* La imagen ocupa todo el ancho de la card */
     border-radius: 8px 8px 0 0; /* Redondea las esquinas superiores de la imagen */
   }
@@ -323,28 +329,140 @@ footer .nav-link:hover {
   .card-body {
     padding: 10px;
     text-align: center;
-    flex-grow: 1; /* Hace que el contenido de la card crezca si es necesario */
+    flex-grow: 1;
   }
   
   .card-title {
-    font-size: 1.2rem; /* Tamaño de la fuente para el título */
+    font-size: 1.2rem;
   }
   
   .card-text {
-    font-size: 1rem; /* Tamaño de la fuente para el precio */
+    font-size: 1rem;
   }
   
   .btn-primary {
-    font-size: 0.9rem; /* Tamaño de la fuente del botón */
-    padding: 6px 12px; /* Ajustar el tamaño del botón */
+    font-size: 0.9rem;
+    padding: 6px 12px;
   }
   
-  /* Asegurarse de que las cards se acomoden bien en pantallas pequeñas */
+  /* Asegurarse de que las cards se acomoden en 2 por fila en pantallas pequeñas */
   @media (max-width: 767px) {
     .card {
-      max-width: 100%; /* Las cards tomarán todo el ancho en pantallas pequeñas */
-      min-width: 100%;
+      max-width: 45%; /* Las cards serán un poco más pequeñas en pantallas pequeñas */
+      min-width: 45%; /* Las cards serán un poco más pequeñas en pantallas pequeñas */
+    }
+  
+    .card-body {
+      padding: 8px;
+    }
+
+    .col {
+        display: flex;
+        justify-content: center;
+
+    }
+  
+    .row {
+      justify-content: space-between; /* Distribuye las cards de manera equitativa en una fila */
+    }
+  }
+
+
+
+
+  /* CONTACTO */  /* CONTACTO */  /* CONTACTO */  /* CONTACTO */  /* CONTACTO */  /* CONTACTO */  /* CONTACTO */  /* CONTACTO */  /* CONTACTO */
+
+
+/* Definimos la animación para mover el fondo hacia abajo sin rebote */
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0; /* Empieza en la parte superior */
+    }
+    100% {
+        background-position: 0 100%; /* Desplaza la imagen completamente hacia abajo */
+    }
+}
+
+.contact-page {
+    background-image: url('../logo/fondoContacto.jpg');
+    background-color: rgba(100, 100, 100, 0.9); /* Fondo oscuro con opacidad */
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-repeat: repeat-y; /* Hace que el fondo se repita verticalmente */
+    background-position: 0 0; /* Comienza desde la parte superior */
+    min-height: 100vh;
+    position: relative;
+    animation: moveBackground 20s linear infinite; /* Animación continua */
+    background-attachment: fixed; /* Mantiene el fondo fijo durante el desplazamiento */
+}
+
+/* Si necesitas un ajuste más fino, podrías intentar con 'background-attachment: fixed' */
+.contact-page {
+    background-attachment: fixed;
+}
+
+
+
+/* Contenedor que mantiene el formulario centrado */
+.contact-form-container {
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    height: 80vh;             /* Ocupa el 80% de la altura de la ventana */
+    margin-top: 50px;         /* Separación con el encabezado */
+  }
+  
+  /* Estilo del contenedor del formulario */
+  .contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+  .contact-form {
+    background-color: #1f3b4d; /* Fondo oscuro */
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px; /* Ancho máximo del formulario */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    color: white;  /* Color del texto blanco */
+    position: relative; /* Necesario para el borde de neón animado */
+    overflow: hidden;   /* Asegura que la animación no se salga del borde */
+    animation: neonGlow 1.5s ease-in-out infinite alternate; /* Animación de neón */
+  }
+  
+  /* Efecto de luz de neón alrededor del borde */
+  @keyframes neonGlow {
+    0% {
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1);
     }
   }
   
+  /* Estilo de los campos del formulario */
+  .contact-form .form-control {
+    border-radius: 10px;
+    background-color: #2e4a5a;
+    color: white;
+    border: 1px solid #3c5c73;
+  }
   
+  .contact-form .form-control::placeholder {
+    color: #a1c4d7;
+  }
+  
+  /* Estilo del botón de enviar */
+  .contact-form .btn {
+    background-color: #3a6b8f;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
+  .contact-form .btn:hover {
+    background-color: #345f7d;
+  }
