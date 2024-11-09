@@ -283,6 +283,8 @@ include './Includes/header.php';
 include './Includes/footer.php';
 ?>
 
+<!-- Custom JS -->
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('#customCarousel .carousel-inner2');
