@@ -233,7 +233,8 @@ footer .nav-link {
     color: white;
     display: inline-block;
     text-decoration: none; 
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
     font-family: "Roboto", sans-serif;
     position: relative; /* Asegúrate de que el elemento padre tenga posicionamiento relativo */
     padding: 0;
@@ -261,18 +262,89 @@ footer .nav-link:hover {
 }
 
 
-.social-icons a {
-    color: white;
-    font-size:20px;
+.social-icon {
+
+    font-size: 40px;
+    transition: opacity 0.3s ease;
 }
 
-.social-icons a:hover {
-    color: #7394cc;
-}
+.social-icon:hover {
+    opacity: 1; 
+  }
+  
+  .social-icon:not(:hover) {
+    opacity: 0.5; 
+  }
+
+
 
 .logos {
     max-width: 100px; 
     height: 100px;
-    margin: 10px 0; 
-    object-fit: contain; 
+    margin: 10px 0;
+    object-fit: contain;
+    transition: opacity 0.3s ease, filter 0.3s ease;
 }
+
+.nav:hover .logos {
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+.nav-item:hover .logos {
+    opacity: 1;
+    filter: none;
+}
+
+
+
+/* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE */
+
+/* Estilo para las cards */
+.card {
+    max-width: 250px; /* Tamaño máximo de la card */
+    min-width: 200px; /* Tamaño mínimo de la card */
+    margin: 10px; /* Espaciado entre las cards */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las cards */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilo para la imagen dentro de la card */
+  .card-img-top {
+    height: 150px; /* Altura fija para las imágenes */
+    object-fit: contain; /* Asegura que la imagen cubra el área sin distorsionarse */
+    width: 100%; /* La imagen ocupa todo el ancho de la card */
+    border-radius: 8px 8px 0 0; /* Redondea las esquinas superiores de la imagen */
+  }
+  
+  /* Estilo para el cuerpo de la card */
+  .card-body {
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1; /* Hace que el contenido de la card crezca si es necesario */
+  }
+  
+  .card-title {
+    font-size: 1.2rem; /* Tamaño de la fuente para el título */
+  }
+  
+  .card-text {
+    font-size: 1rem; /* Tamaño de la fuente para el precio */
+  }
+  
+  .btn-primary {
+    font-size: 0.9rem; /* Tamaño de la fuente del botón */
+    padding: 6px 12px; /* Ajustar el tamaño del botón */
+  }
+  
+  /* Asegurarse de que las cards se acomoden bien en pantallas pequeñas */
+  @media (max-width: 767px) {
+    .card {
+      max-width: 100%; /* Las cards tomarán todo el ancho en pantallas pequeñas */
+      min-width: 100%;
+    }
+  }
+  
+  

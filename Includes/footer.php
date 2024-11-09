@@ -45,16 +45,24 @@
       <p class="links-title">SPONSORS</p>
       <ul class="nav flex-row" style="list-style-type: none; padding: 0;">
         <li class="nav-item">
-          <img class="logos" src="./logo/inca.png" alt="INCA">
+          <a href="https://www.inca.com" target="_blank">
+            <img class="logos" src="./logo/inca.png" alt="INCA">
+          </a>
         </li>
         <li class="nav-item">
-          <img class="logos" src="./logo/telefe.png" alt="Telefe">
+          <a href="https://www.telefe.com" target="_blank">
+            <img class="logos" src="./logo/telefe.png" alt="Telefe">
+          </a>
         </li>
         <li class="nav-item">
-          <img class="logos" src="./logo/vorterix.png" alt="INCA">
+          <a href="https://www.vorterix.com" target="_blank">
+            <img class="logos" src="./logo/vorterix.png" alt="Vorterix">
+          </a>
         </li>
         <li class="nav-item">
-          <img class="logos" src="./logo/cinemark.png" alt="INCA">
+          <a href="https://www.cinemark.com" target="_blank">
+            <img class="logos" src="./logo/cinemark.png" alt="Cinemark">
+          </a>
         </li>
       </ul>
     </div>
@@ -63,13 +71,13 @@
       <p class="links-title">Redes Sociales</p>
       <ul class="nav flex-row" style="list-style-type: none; padding: 0;">
         <li class="nav-item">
-        <a href="#" class="me-2 text-white"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white "><i class="bi bi-facebook social-icon"></i></a>
         </li>
         <li class="nav-item">
-        <a href="#" class="me-2 text-white"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white "><i class="bi bi-twitter social-icon"></i></a>
         </li>
         <li class="nav-item">
-        <a href="#" class="me-2 text-white"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white "><i class="bi bi-instagram social-icon"></i></a>
         </li>
       </ul>
     </div>
