@@ -51,9 +51,17 @@ include './Includes/header.php';
 
 
 
-<article class="fluid-container text-white mx-5 px-5 d-flex flex-column justify-content-center">
-    <div class="titulo container text-white text-center mt-5">
+<article class="somos-container container text-white px-5 d-flex flex-column justify-content-center mx-auto p-5 rounded" >
+    
+    <div class="titulo container text-white text-center m-2">
         <h1>SOMOS EL CINEFILO</h1>
+    </div>
+    <div class="titulo container text-white text-center">
+        <h2 class="px-5 text-center mb-3">
+        Las historias nos conmueven.
+Nos hacen sentir más emociones, nos muestran otros puntos de vista
+y nos acercan a los demás.
+        </h2>
     </div>
    <div class="row">
         <div class="col-sm">
@@ -69,34 +77,35 @@ include './Includes/header.php';
             </p>
         </div>
         <div class="side-img col-sm">
-            <img src="./src/img/soldado_argentino.jpg" alt="" class="w-100">
+            <img src="./src/img/soldado_argentino.jpg" alt="" class="w-100 rounded">
         </div>
    </div>
 </article>
 
+<br>
 
-<article class="fluid-container text-white mx-5 px-5 d-flex flex-column justify-content-center">
-    <div class="titulo  container text-white text-center mt-5">
+<article class="historia-container container text-white px-5 d-flex flex-column justify-content-center mx-auto p-5 rounded">
+    <div class="titulo  container text-white text-center">
         <h2>NUESTRA HISTORIA</h2>
     </div>
     <div class="row">
         <div class="side-img col-sm">
-            <img src="./src/img/2440052.jfif" alt="" class="w-100">
+            <img src="./src/img/2440052.jfif" alt="" class="w-100 rounded">
         </div>
         <div class="col-sm">
             <p class="par">
-                El Cinéfilo Argentino nació de una pasión compartida por el cine y de una visión ambiciosa: crear un espacio donde cada espectador pudiera disfrutar del mejor cine del mundo desde la comodidad de su hogar. No fue un camino fácil, pero nuestra determinación y amor por el cine nos llevaron a superar cada obstáculo en el desarrollo de esta plataforma de streaming que hoy puedes disfrutar.
+                El Cinéfilo Argentino nació de una pasión por el cine y una ambiciosa visión: ofrecer el mejor cine del mundo desde la comodidad del hogar. Aunque el camino no fue fácil, el amor por el cine nos impulsó a superar cada obstáculo para crear esta plataforma de streaming.
             </p>
             <p class="par">
-                Desde nuestros primeros días, sabíamos que queríamos construir algo especial, un lugar que no solo ofreciera películas, sino que también brindara una experiencia envolvente y personalizada para cada cinéfilo. Nos sumergimos en interminables jornadas de trabajo, construyendo y probando cada funcionalidad, seleccionando cuidadosamente cada título, y colaborando con productores y distribuidores para garantizar una colección que fuera diversa y accesible.
+            Desde el principio, buscamos algo especial: no solo películas, sino una experiencia personalizada. Trabajamos arduamente seleccionando títulos y colaborando con productores para ofrecer una colección diversa y accesible.
 
             </p>
             <p class="par">
-                Hoy, El Cinéfilo Argentino es una realidad gracias a la dedicación de un equipo apasionado que, día a día, sigue trabajando para mejorar cada detalle. Desde el diseño intuitivo hasta el sistema de recomendaciones, cada aspecto de nuestra plataforma fue creado pensando en la comodidad y en el disfrute de nuestros usuarios.
+            Hoy, gracias a un equipo dedicado, El Cinéfilo Argentino es una realidad. Cada detalle, desde el diseño hasta las recomendaciones, está pensado para tu disfrute.
 
             </p>
             <p class="par">
-                Nos enorgullece el camino recorrido y estamos emocionados por lo que viene. Gracias por ser parte de esta historia y por acompañarnos en esta aventura cinematográfica que sigue creciendo.
+            Gracias por ser parte de esta aventura cinematográfica que no deja de crecer.
             </p>
         </div>
 
@@ -116,10 +125,11 @@ include './Includes/header.php';
 </section>
 
 
-<div class="my-4">
+<div class="my-4 w-100 container p-0">
     <div class="text-white m-auto justify-content-center bento-container">
       <div class="bento-col1">
-        <div class="item bento-item2 rounded">              <h2>NUESTRO SERVICIO</h2>
+        <div class="item bento-item2 rounded">
+            <h2>NUESTRO SERVICIO</h2>
             <p>En El Cinéfilo Argentino, nos esforzamos por ofrecer un servicio de streaming de calidad que se adapte a las necesidades y gustos de cada cinéfilo. </p>
             <p>
             Nuestra plataforma está diseñada para ser intuitiva, fácil de usar y accesible desde cualquier dispositivo, para que puedas disfrutar del mejor cine en cualquier momento y lugar.
