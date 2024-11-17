@@ -5,6 +5,11 @@ include './Includes/header.php'
 ?>
 
 
+<?php 
+
+include './Includes/body.php'
+
+?>
 
 
 
