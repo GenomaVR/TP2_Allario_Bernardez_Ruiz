@@ -92,12 +92,9 @@ body {
 
 /* Card Styles */
 .main-cards {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwxVCR8efhCeBEyUXdeYJkF-Ycsm0xiIa_WQ&s");
-  background-position: center;
-  background-size: contain;
   border-color: #292a33 !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow to cards */
-  transition: transform 0.3s ease; /* Add smooth transition on hover */
+  transition: transform 0.5s ease; /* Add smooth transition on hover */
 }
 
 .main-cards:hover {
@@ -106,14 +103,48 @@ body {
 }
 
 .img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
 .img-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
+}
+
+#publisher1 {
+  background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1840284294248416067/34ADF44749112D29537821ACA0C042E101E49FCB/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
+}
+
+#publisher2 {
+  background-image: url("https://i.ytimg.com/vi/C8_KTypKJRU/maxresdefault.jpg");
+}
+
+#publisher3 {
+  background-image: url("https://sm.ign.com/ign_es/gallery/s/silent-hil/silent-hill-2-remake-trailer-screenshots_hbep.jpg");
+}
+
+#publisher4 {
+  background-image: url("https://images3.alphacoders.com/553/553911.jpg");
+}
+
+#publisher1,
+#publisher2,
+#publisher3,
+#publisher4 {
+  background-position: center;
+  background-size: cover;
+}
+
+#publisher1:hover,
+#publisher2:hover,
+#publisher3:hover,
+#publisher4:hover {
 }
 
 .second-slider-card {

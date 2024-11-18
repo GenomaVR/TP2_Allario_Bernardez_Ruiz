@@ -42,22 +42,22 @@ require './Includes/dbcon.php';
         </div>
         <div class="container d-flex justify-content-center">
             <div class="d-flex justify-content-center gap-3 card-rows row">
-                <div class="card p-2 border-4 bg-light main-cards col-2">
+                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher1">
                     <div class="img-box">
-                        <img src="./logo/publisher/blizzard-logo.svg" alt="">
+                        <img src="./logo/publisher/blizzard-logo.avif" alt="">
                     </div>
                 </div>
-                <div class="card p-2 border-4 bg-light main-cards col-2">
+                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher2">
                     <div class="img-box">
                         <img src="./logo/publisher/valve_logo.svg" alt="">
                     </div>
                 </div>
-                <div class="card p-2 border-4 bg-light main-cards col-2">
+                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher3">
                     <div class="img-box">
                         <img src="./logo/publisher/konami-logo.png" alt="">
                     </div>
                 </div>
-                <div class="card p-2 border-4 bg-light main-cards col-2">
+                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher4">
                     <div class="img-box">
                         <img src="./logo/publisher/ubi-logo.png" alt="">
                     </div>
