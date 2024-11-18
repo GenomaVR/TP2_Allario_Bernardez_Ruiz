@@ -1,0 +1,45 @@
+#index-banner1,
+#index-banner2,
+#index-banner3 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+
+#index-banner1 {
+  background-image: url("../src/slider/5.jpg");
+}
+
+#index-banner2 {
+  background-image: url("../src/slider/COD6.webp");
+}
+
+#index-banner3 {
+  background-image: url("../src/slider/SCP2.jpeg");
+}
+
+#index-banner1::before,
+#index-banner2::before,
+#index-banner3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Adjust the opacity to make it lighter */
+  z-index: 1;
+}
+
+#index-banner1 a,
+#index-banner2 a,
+#index-banner3 a {
+  position: relative;
+  z-index: 2;
+}

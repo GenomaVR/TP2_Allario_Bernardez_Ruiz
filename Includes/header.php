@@ -26,6 +26,9 @@ $total_items = count($carrito);
   <link rel="stylesheet" href="../../TP2_Allario_Bernardez_Ruiz/src/styles.css">
   
 
+
+
+  <link rel="stylesheet" href="./src/styles2.css">
 </head>
 
 <body>

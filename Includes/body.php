@@ -1,67 +1,39 @@
 <?php
-// Conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "films"; // Nombre de la base de datos correcta
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-
-// Consulta de películas
-$sql = "SELECT nombre, imagen FROM cine_db";
-$result = $conn->query($sql);
-
-if (!$result) {
-    // Mostrar mensaje de error si la consulta falla
-    die("Error en la consulta: " . $conn->error);
-}
-
-if ($result->num_rows > 0) {
-    // Salida de datos de cada fila
-    while($row = $result->fetch_assoc()) {
-        echo "<div class='pelicula'>";
-        echo "<h2>" . $row["nombre"] . "</h2>";
-        echo "<img src='" . $row["imagen"] . "' alt='" . $row["nombre"] . "'>";
-        echo "</div>";
-    }
-} else {
-    echo "0 resultados";
-}
-
-$conn->close();
+// Incluir la conexión a la base de datos
+require './Includes/dbcon.php';
 ?>
-
-
-
-
-
-
 
 <body>
 
-
-
-    <div id="carouselExample" class="carousel slide d-flex justify-content-center position-relative m-3 main-carousel" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="container p-3">
-            <div class="carousel-inner">
-                <div class="carousel-item carousel-banner">
-                    <img src="../../TP2_Allario_Bernardez_Ruiz/src/Slider/1.png" class="d-block w-100 img-fluid" alt="...">
-                </div>
-                <div class="carousel-item carousel-banner active">
-                    <img src="../../TP2_Allario_Bernardez_Ruiz/src/Slider/2.png" class="d-block w-100 img-fluid" alt="...">
-                </div>
-                <div class="carousel-item carousel-banner">
-                    <img src="../../TP2_Allario_Bernardez_Ruiz/src/Slider/3.png" class="d-block w-100 img-fluid" alt="...">
-                </div>
-            </div>
-        </div>
-
+<div id="carouselExampleIndicators" class="carousel slide d-flex justify-content-center position-relative main-carousel" data-bs-interval="3000">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner container-fluid p-0">
+    <div class="carousel-item active carousel-banner"  id="index-banner1">
+        <a href="">a</a>
     </div>
+    <div class="carousel-item carousel-banner"  id="index-banner2">
+        <a href="">a</a>
+    </div>
+    <div class="carousel-item carousel-banner"  id="index-banner3">
+        <a href="">a</a>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
 
 
     <main class="my-5">
@@ -70,29 +42,24 @@ $conn->close();
         </div>
         <div class="container d-flex justify-content-center">
             <div class="d-flex justify-content-center gap-3 card-rows row">
-                <div class="card p-2 border-4 bg-light main-cards col-2">
+                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher1">
                     <div class="img-box">
-                        <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
+                        <img src="./logo/publisher/blizzard-logo.avif" alt="">
                     </div>
                 </div>
-                <div class="card p-2 border-4 bg-light main-cards col-2">
+                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher2">
                     <div class="img-box">
-                        <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
+                        <img src="./logo/publisher/valve_logo.svg" alt="">
                     </div>
                 </div>
-                <div class="card p-2 border-4 bg-light main-cards col-2">
+                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher3">
                     <div class="img-box">
-                        <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
+                        <img src="./logo/publisher/konami-logo.png" alt="">
                     </div>
                 </div>
-                <div class="card p-2 border-4 bg-light main-cards col-2">
+                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher4">
                     <div class="img-box">
-                        <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                    </div>
-                </div>
-                <div class="card p-2 border-4 bg-light main-cards col-2">
-                    <div class="img-box">
-                        <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
+                        <img src="./logo/publisher/ubi-logo.png" alt="">
                     </div>
                 </div>
             </div>
@@ -106,64 +73,31 @@ $conn->close();
         <div id="carouselExample2" class="container carousel slide d-flex justify-content-center position-relative" data-bs-ride="carousel">
             <div class="d-flex justify-content-center">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="d-flex justify-content-center gap-3 card-rows row">
-                            <div class="card p-2 border-4 bg-light main-cards col-2">
-                                <div class="img-box">
-                                    <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                                </div>
-                            </div>
-                            <div class="card p-2 border-4 bg-light main-cards col-2">
-                                <div class="img-box">
-                                    <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                                </div>
-                            </div>
-                            <div class="card p-2 border-4 bg-light main-cards col-2">
-                                <div class="img-box">
-                                    <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                                </div>
-                            </div>
-                            <div class="card p-2 border-4 bg-light main-cards col-2">
-                                <div class="img-box">
-                                    <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                                </div>
-                            </div>
-                            <div class="card p-2 border-4 bg-light main-cards col-2">
-                                <div class="img-box">
-                                    <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-flex justify-content-center gap-3 card-rows row">
-                            <div class="card p-2 border-4 bg-light main-cards col-2">
-                                <div class="img-box">
-                                    <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                                </div>
-                            </div>
-                            <div class="card p-2 border-4 bg-light main-cards col-2">
-                                <div class="img-box">
-                                    <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                                </div>
-                            </div>
-                            <div class="card p-2 border-4 bg-light main-cards col-2">
-                                <div class="img-box">
-                                    <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                                </div>
-                            </div>
-                            <div class="card p-2 border-4 bg-light main-cards col-2">
-                                <div class="img-box">
-                                    <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                                </div>
-                            </div>
-                            <div class="card p-2 border-4 bg-light main-cards col-2">
-                                <div class="img-box">
-                                    <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                    if ($result->num_rows > 0) {
+                        $active = true;
+                        $counter = 0;
+                        while($row = $result->fetch_assoc()) {
+                            if ($counter % 4 == 0) {
+                                if ($counter > 0) {
+                                    echo '</div></div>'; // Close previous carousel-item and row
+                                }
+                                echo '<div class="carousel-item ' . ($active ? 'active' : '') . '">';
+                                echo '<div class="d-flex justify-content-center gap-3 card-rows row">';
+                                $active = false;
+                            }
+                            echo '<div class="card border-4 bg-light main-cards col-2 p-0">';
+                            echo '<div class="img-box p-0">';
+                            echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
+                            echo '</div>';
+                            echo '</div>';
+                            $counter++;
+                        }
+                        echo '</div></div>'; // Close the last carousel-item and row
+                    } else {
+                        echo "0 resultados";
+                    }
+                    ?>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
@@ -190,37 +124,37 @@ $conn->close();
                     <div class="carousel-inner2 p-4 gap-5">
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d28d2f683aff27688f2f7e_freeguy-p-500.jpg" alt="">
+                                <img src="./slider-img/cod6-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d025ce78d11b309d63b7cf_dollface-p-500.jpg" alt="">
+                                <img src="./slider-img/helldivers2-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d025b5a482d939fd8813c5_prisonbreak-p-500.jpg" alt="">
+                                <img src="./slider-img/metro_awakening-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d025a88fcf241e91b16829_captive-p-500.jpg" alt="">
+                                <img src="./slider-img/silent-hill2-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d28d2f683aff27688f2f7e_freeguy-p-500.jpg" alt="">
+                                <img src="./slider-img/space-marine2-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d28cd5683aff357f8f2b13_pistol-p-500.jpg" alt="">
+                                <img src="./slider-img/farming-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d28d2f683aff27688f2f7e_freeguy-p-500.jpg" alt="">
+                                <img src="./slider-img/tlou1.webp" alt="">
                             </div>
                         </div>
                     </div>
