@@ -190,37 +190,37 @@ $conn->close();
                     <div class="carousel-inner2 p-4 gap-5">
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d28d2f683aff27688f2f7e_freeguy-p-500.jpg" alt="">
+                                <img src="./slider-img/cod6-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d025ce78d11b309d63b7cf_dollface-p-500.jpg" alt="">
+                                <img src="./slider-img/helldivers2-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d025b5a482d939fd8813c5_prisonbreak-p-500.jpg" alt="">
+                                <img src="./slider-img/metro_awakening-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d025a88fcf241e91b16829_captive-p-500.jpg" alt="">
+                                <img src="./slider-img/silent-hill2-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d28d2f683aff27688f2f7e_freeguy-p-500.jpg" alt="">
+                                <img src="./slider-img/space-marine2-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d28cd5683aff357f8f2b13_pistol-p-500.jpg" alt="">
+                                <img src="./slider-img/farming-slider.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d28d2f683aff27688f2f7e_freeguy-p-500.jpg" alt="">
+                                <img src="./slider-img/tlou1.webp" alt="">
                             </div>
                         </div>
                     </div>
