@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "films"; // Nombre de la base de datos correcta
+$dbname = "juegos"; // Nombre de la base de datos correcta
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Consulta de películas
-$sql = "SELECT nombre, imagen FROM cine_db";
+$sql = "SELECT titulo, imagen FROM titulos";
 $result = $conn->query($sql);
 
 if (!$result) {
@@ -25,8 +25,8 @@ if ($result->num_rows > 0) {
     // Salida de datos de cada fila
     while($row = $result->fetch_assoc()) {
         echo "<div class='pelicula'>";
-        echo "<h2>" . $row["nombre"] . "</h2>";
-        echo "<img src='" . $row["imagen"] . "' alt='" . $row["nombre"] . "'>";
+        echo "<h2>" . $row["titulo"] . "</h2>";
+        echo "<img src='." . $row["imagen"] . "' alt='" . $row["titulo"] . "'>";
         echo "</div>";
     }
 } else {
