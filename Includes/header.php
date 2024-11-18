@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="./src/styles.css">
 
 
+
+  <link rel="stylesheet" href="./src/styles2.css">
 </head>
 
 <body>
