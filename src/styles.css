@@ -5,7 +5,41 @@
 
 body {
     background-color: #191f29;
+    height: 100%;
 }
+
+/* carrito */
+
+.navbar-cart {
+  background-color: transparent; /* Fondo transparente */
+  color: #8a2be2; /* Color de texto violeta */
+  border: 2px solid #8a2be2; /* Borde violeta */
+  padding: 8px 16px; /* Tamaño del botón */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: all 0.3s ease; /* Transición suave */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-cart:hover {
+  background-color: #8a2be2; /* Fondo violeta en hover */
+  color: white; /* Texto blanco en hover */
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.8); /* Efecto de neón en hover */
+}
+
+.cart-empty {
+  color: white; /* Establece el color del texto a blanco */
+}
+
+.cart-empty-text {
+  color: white; /* Establece el color del texto a blanco */
+}
+
+.cart-container {
+  color: white; /* Establece el color del texto en el contenedor del carrito como blanco */
+}
+
 
 
 
@@ -477,7 +511,7 @@ body {
 
 .subscribe-text-container {
     flex: 0 0 30%; 
-    background-color: #2b4674; 
+    background-color: #8a2be2; 
     color: white;
     text-align: center;
     display: flex;
@@ -507,7 +541,7 @@ body {
 
 .subscribe-mail {
     flex: 0 0 70%; 
-    background-color: #7394cc; 
+    background-color: #a445b2; 
     color: white;
     display: flex; 
     align-items: center;
@@ -671,73 +705,150 @@ footer .nav-link:hover {
 
 
 /* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE */
-/* Estilo para el contenedor de las cards */
+
+/* General para .row (dejamos que Bootstrap lo gestione) */
 .row {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las cards se acomoden en varias filas */
-    justify-content: space-evenly; /* Espacia las cards uniformemente */
-  }
-  
-  /* Estilo para las cards */
-  .card {
+    margin: 0;
+}
+
+/* Estilo para las cards */
+.card {
     max-width: 250px; /* Tamaño máximo de la card */
-    min-width: 200px; /* Tamaño mínimo de la card */
-    margin: 10px; /* Espaciado entre las cards */
+    margin: 10px auto; /* Centrado y espaciado */
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las cards */
     display: flex;
     flex-direction: column;
-  }
-  
-  /* Estilo para la imagen dentro de la card */
-  .card-img-top {
+}
+
+/* Estilo para la imagen dentro de la card */
+.card-img-top {
     height: 120px; /* Altura fija para las imágenes */
     object-fit: contain; /* Ajusta la imagen para que no se recorte ni se haga zoom */
     width: 100%; /* La imagen ocupa todo el ancho de la card */
     border-radius: 8px 8px 0 0; /* Redondea las esquinas superiores de la imagen */
-  }
-  
-  /* Estilo para el cuerpo de la card */
-  .card-body {
+}
+
+/* Estilo para el cuerpo de la card */
+.card-body {
     padding: 10px;
     text-align: center;
     flex-grow: 1;
-  }
-  
-  .card-title {
+}
+
+.card-title {
     font-size: 1.2rem;
-  }
-  
-  .card-text {
+}
+
+.card-text {
     font-size: 1rem;
-  }
-  
-  .btn-primary {
+}
+
+.btn-primary {
     font-size: 0.9rem;
     padding: 6px 12px;
-  }
-  
-  /* Asegurarse de que las cards se acomoden en 2 por fila en pantallas pequeñas */
-  @media (max-width: 767px) {
+}
+
+/* Asegurarse de que las cards sean responsivas */
+@media (max-width: 767px) {
     .card {
-      max-width: 45%; /* Las cards serán un poco más pequeñas en pantallas pequeñas */
-      min-width: 45%; /* Las cards serán un poco más pequeñas en pantallas pequeñas */
+        max-width: 100%; /* Ocupan toda la fila en pantallas pequeñas */
     }
-  
-    .card-body {
-      padding: 8px;
-    }
+}
 
-    .col {
-        display: flex;
-        justify-content: center;
 
-    }
-  
-    .row {
-      justify-content: space-between; /* Distribuye las cards de manera equitativa en una fila */
-    }
+/* Estilo para la tarjeta */
+.neon-card {
+    background-color: #1e1e2f; /* Mismo color del fondo */
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #a445b2, #d41872, #ff0066) 1; /* Bordes neón violeta */
+    border-radius: 12px; /* Bordes redondeados */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
+}
+
+.neon-card:hover {
+    transform: translateY(-5px); /* Efecto al pasar el mouse */
+    box-shadow: 0 0 15px rgba(164, 69, 178, 0.8), 0 0 30px rgba(212, 24, 114, 0.6); /* Brillo neón */
+}
+
+/* Padding para la imagen */
+.card-img-top {
+    padding: 10px;
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    background: #282a36; /* Fondo oscuro detrás de la imagen */
+}
+
+/* Estilo para el botón */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn-success i {
+    font-size: 1.2rem; /* Tamaño del ícono */
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Texto "Fuera de stock" */
+.text-danger {
+    font-weight: bold;
+    color: #ff5252; /* Color rojo para resaltar */
+}
+
+
+/* Estilo para el texto de las tarjetas */
+.card-title, 
+.card-text, 
+.card-body {
+    color: #ffffff; /* Color blanco */
+}
+
+/* Texto de "Fuera de stock" mantiene el color rojo */
+.text-danger {
+    color: #ff5252; /* Ya definido previamente */
+}
+
+/* Ajusta el color del botón para que sea consistente */
+.btn-success {
+    color: #ffffff; /* Asegura que el texto del botón sea blanco */
+}
+
+.btn-secondary {
+    background-color: transparent; /* Fondo transparente */
+    color: #8a2be2; /* Color de texto violeta */
+    border: 2px solid #8a2be2; /* Borde violeta */
+    padding: 8px 16px; /* Tamaño del botón */
+    font-size: 1rem; /* Tamaño del texto */
+    margin: 0 5px; /* Espaciado entre botones */
+    transition: all 0.3s ease; /* Transición suave */
   }
+  
+  .btn-secondary:hover {
+    background-color: #8a2be2; /* Fondo violeta en hover */
+    color: white; /* Texto blanco en hover */
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.8); /* Efecto de neón en hover */
+  }
+  
+  .btn-secondary.active {
+    background-color: #8a2be2; /* Fondo violeta cuando está activo */
+    color: white; /* Texto blanco cuando está activo */
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.8); /* Efecto de neón */
+  }
+
+ 
+
+  
+    
+  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */
+
+
+
 
 
 

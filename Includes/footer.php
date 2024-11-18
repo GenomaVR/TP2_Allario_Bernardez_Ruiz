@@ -45,13 +45,13 @@
       <p class="links-title">SPONSORS</p>
       <ul class="nav flex-row" style="list-style-type: none; padding: 0;">
         <li class="nav-item">
-          <a href="https://www.inca.com" target="_blank">
-            <img class="logos" src="./logo/inca.png" alt="INCA">
+          <a href="https://store.steampowered.com/" target="_blank">
+            <img class="logos" src="../logo/steam.png" alt="STEAM">
           </a>
         </li>
         <li class="nav-item">
-          <a href="https://www.telefe.com" target="_blank">
-            <img class="logos" src="./logo/telefe.png" alt="Telefe">
+          <a href="https://store.epicgames.com/en-US/" target="_blank">
+            <img class="logos" src="../logo/epic.png" alt="EpicGames">
           </a>
         </li>
         <li class="nav-item">
@@ -60,8 +60,8 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="https://www.cinemark.com" target="_blank">
-            <img class="logos" src="./logo/cinemark.png" alt="Cinemark">
+          <a href="https://www.youtube.com/@Parenlamano" target="_blank">
+            <img class="logos" src="../logo/PLM.png" alt="PLM">
           </a>
         </li>
       </ul>
