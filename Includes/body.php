@@ -5,7 +5,7 @@ require './Includes/dbcon.php';
 
 <body>
 
-<div id="carouselExampleIndicators" class="carousel slide d-flex justify-content-center position-relative main-carousel" data-bs-interval="3000">
+<div id="carouselExampleIndicators" class="carousel slide d-flex justify-content-center position-relative main-carousel" data-bs-interval="2000">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -38,7 +38,7 @@ require './Includes/dbcon.php';
 
     <main class="my-5">
         <div class="container  mt-5 text-white">
-            <h3>Nuevo en TBD</h3>
+            <h3>Developers</h3>
         </div>
         <div class="container d-flex justify-content-center">
             <div class="d-flex justify-content-center gap-3 card-rows row">
@@ -68,7 +68,7 @@ require './Includes/dbcon.php';
 
     <div>
         <div class="container mt-5 text-white">
-            <h3>Para ver ahora mismo</h3>
+            <h3>Para comprar ahora!</h3>
         </div>
         <div id="carouselExample2" class="container carousel slide d-flex justify-content-center position-relative" data-bs-ride="carousel">
             <div class="d-flex justify-content-center">
@@ -88,7 +88,7 @@ require './Includes/dbcon.php';
                             }
                             echo '<div class="card border-4 bg-light main-cards col-2 p-0">';
                             echo '<div class="img-box p-0">';
-                            echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
+                            echo '<img src="' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
                             echo '</div>';
                             echo '</div>';
                             $counter++;
@@ -171,82 +171,6 @@ require './Includes/dbcon.php';
 
 
 
-    <!-- <div class="container mt-5 text-white">
-        <h3>Para ver ahora mismo</h3>
-    </div>
-    <div id="carouselExample4" class="container carousel slide d-flex justify-content-center position-relative" data-bs-ride="carousel">
-        <div class="d-flex justify-content-center">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center gap-3 card-rows row">
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center gap-3 card-rows row">
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample4" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample4" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    </div> -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -286,3 +210,4 @@ require './Includes/dbcon.php';
 
 
 </body>
+

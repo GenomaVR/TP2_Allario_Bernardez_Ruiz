@@ -16,6 +16,6 @@ include './Includes/body.php'
 
 <?php
 
-include './Includes/footer.php'
+include '../TP2_Allario_Bernardez_Ruiz/Includes/footer.php'
 
 ?>
