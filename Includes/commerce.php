@@ -78,14 +78,15 @@ if ($conn->connect_error) {
         // Verifica si el producto es gratuito o tiene precio
         if ($row["genero"] == "Free to Play" || $row["precio"] == 0) {
           echo '<button class="btn btn-success d-flex align-items-center justify-content-center" 
-          onclick="mostrarDetalleProducto(\'' . $row["titulo"] . '\', \'' . $row["descripcion"] . '\', \'' . $imagen . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . $row["lanzamiento"] . '\', \'' . $row["publisher"] . '\', \'' . $row["genero"] . '\')">
+          onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($imagen) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">
           <i class="bi bi-cart-plus me-2"></i> Descargar gratis
-      </button>';
+          </button>';
         } else {
           echo '<button class="btn btn-primary d-flex align-items-center justify-content-center" 
           onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($imagen) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">
           <i class="bi bi-eye me-2"></i> Ver más
-      </button>';
+          </button>';
+          
       
       
    
