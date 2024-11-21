@@ -57,7 +57,7 @@ if ($conn->connect_error) {
 
         echo '<div class="col-md-3">
         <div class="card h-100 neon-card">
-            <img src="' . $imagen . '" class="card-img-top p-3" alt="' . $row["titulo"] . '">
+            <img src="..' . $imagen . '" class="card-img-top p-3" alt="' . $row["titulo"] . '">
             <div class="card-body d-flex flex-column align-items-center text-center">
                 <h5 class="card-title text-white">' . $row["titulo"] . '</h5>
                 <p class="card-text text-white">';
@@ -77,19 +77,19 @@ if ($conn->connect_error) {
 
         // Verifica si el producto es gratuito o tiene precio
         if ($row["genero"] == "Free to Play" || $row["precio"] == 0) {
-          echo '<button class="btn btn-success d-flex align-items-center justify-content-center" 
+          echo '<button class="btn btn-success d-flex align-items-center justify-content-center"
           onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($imagen) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">
           <i class="bi bi-cart-plus me-2"></i> Descargar gratis
           </button>';
         } else {
-          echo '<button class="btn btn-primary d-flex align-items-center justify-content-center" 
+          echo '<button class="btn btn-primary d-flex align-items-center justify-content-center"
           onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($imagen) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">
           <i class="bi bi-eye me-2"></i> Ver más
           </button>';
-          
-      
-      
-   
+
+
+
+
         }
 
 

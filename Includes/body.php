@@ -83,10 +83,10 @@ require './Includes/dbcon.php';
                                     echo '</div></div>'; // Close previous carousel-item and row
                                 }
                                 echo '<div class="carousel-item ' . ($active ? 'active' : '') . '">';
-                                echo '<div class="d-flex justify-content-center gap-3 card-rows row">';
+                                echo '<div class="d-flex gap-3 card-rows row">';
                                 $active = false;
                             }
-                            echo '<div class="card border-4 bg-light main-cards col-2 p-0">';
+                            echo '<div class="card border-4 bg-light main-cards cards-juegos col-2 p-0 d-none d-md-block">'; // Hide on small screens
                             echo '<div class="img-box p-0">';
                             echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
                             echo '</div>';
@@ -100,15 +100,15 @@ require './Includes/dbcon.php';
                     ?>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
 

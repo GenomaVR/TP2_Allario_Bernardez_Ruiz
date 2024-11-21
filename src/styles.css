@@ -4,8 +4,8 @@
 }
 
 body {
-    background-color: #191f29;
-    height: 100%;
+  background-color: #191f29;
+  height: 100%;
 }
 
 /* carrito */
@@ -39,8 +39,6 @@ body {
 .cart-container {
   color: white; /* Establece el color del texto en el contenedor del carrito como blanco */
 }
-
-
 
 /* Carousel Styles */
 
@@ -133,8 +131,12 @@ body {
 }
 
 .main-cards:hover {
-  transform: translate3d(0px, 0px, 0px) scale3d(1.08, 1.08, 1) rotateX(0deg)
+  transform: translate3d(0px, 0px, 0px) scale3d(1.2, 1.2, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+.cards-juegos {
+  width: 200px;
 }
 
 .img-box {
@@ -167,7 +169,6 @@ body {
 #publisher4 {
   background-image: url("https://images3.alphacoders.com/553/553911.jpg");
 }
-
 
 .second-slider-card {
   background-image: url("https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d008324e9b917dffe8d17c_grey.jpg");
@@ -505,14 +506,14 @@ body {
 }
 
 .subscribe-text-container {
-    flex: 0 0 30%; 
-    background-color: #8a2be2; 
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    padding: 15px; 
+  flex: 0 0 30%;
+  background-color: #8a2be2;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
 }
 
 .subscribe-text {
@@ -535,12 +536,12 @@ body {
 }
 
 .subscribe-mail {
-    flex: 0 0 70%; 
-    background-color: #a445b2; 
-    color: white;
-    display: flex; 
-    align-items: center;
-    padding: 35px;
+  flex: 0 0 70%;
+  background-color: #a445b2;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 35px;
 }
 
 .subscribe-bar {
@@ -688,163 +689,151 @@ footer .nav-link:hover {
   filter: none;
 }
 
-
-
-/* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE *//* ECOMMERCE */
+/* ECOMMERCE */ /* ECOMMERCE */ /* ECOMMERCE */ /* ECOMMERCE */ /* ECOMMERCE */ /* ECOMMERCE */ /* ECOMMERCE */ /* ECOMMERCE */ /* ECOMMERCE */ /* ECOMMERCE */
 
 /* General para .row (dejamos que Bootstrap lo gestione) */
 .row {
-    margin: 0;
+  margin: 0;
 }
 
 /* Estilo para las cards */
 .card {
-    max-width: 250px; /* Tamaño máximo de la card */
-    margin: 10px auto; /* Centrado y espaciado */
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las cards */
-    display: flex;
-    flex-direction: column;
+  max-width: 250px; /* Tamaño máximo de la card */
+  margin: 10px auto; /* Centrado y espaciado */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las cards */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Estilo para la imagen dentro de la card */
 .card-img-top {
-    height: 120px; /* Altura fija para las imágenes */
-    object-fit: contain; /* Ajusta la imagen para que no se recorte ni se haga zoom */
-    width: 100%; /* La imagen ocupa todo el ancho de la card */
-    border-radius: 8px 8px 0 0; /* Redondea las esquinas superiores de la imagen */
+  height: 120px; /* Altura fija para las imágenes */
+  object-fit: contain; /* Ajusta la imagen para que no se recorte ni se haga zoom */
+  width: 100%; /* La imagen ocupa todo el ancho de la card */
+  border-radius: 8px 8px 0 0; /* Redondea las esquinas superiores de la imagen */
 }
 
 /* Estilo para el cuerpo de la card */
 .card-body {
-    padding: 10px;
-    text-align: center;
-    flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+  flex-grow: 1;
 }
 
 .card-title {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .card-text {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .btn-primary {
-    font-size: 0.9rem;
-    padding: 6px 12px;
+  font-size: 0.9rem;
+  padding: 6px 12px;
 }
 
 /* Asegurarse de que las cards sean responsivas */
 @media (max-width: 767px) {
-    .card {
-        max-width: 100%; /* Ocupan toda la fila en pantallas pequeñas */
-    }
+  .card {
+    max-width: 100%; /* Ocupan toda la fila en pantallas pequeñas */
+  }
 }
-
 
 /* Estilo para la tarjeta */
 .neon-card {
-    background-color: #1e1e2f; /* Mismo color del fondo */
-    border: 2px solid transparent;
-    border-image: linear-gradient(45deg, #a445b2, #d41872, #ff0066) 1; /* Bordes neón violeta */
-    border-radius: 12px; /* Bordes redondeados */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
+  background-color: #1e1e2f; /* Mismo color del fondo */
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #a445b2, #d41872, #ff0066) 1; /* Bordes neón violeta */
+  border-radius: 12px; /* Bordes redondeados */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
 }
 
 .neon-card:hover {
-    transform: translateY(-5px); /* Efecto al pasar el mouse */
-    box-shadow: 0 0 15px rgba(164, 69, 178, 0.8), 0 0 30px rgba(212, 24, 114, 0.6); /* Brillo neón */
+  transform: translateY(-5px); /* Efecto al pasar el mouse */
+  box-shadow: 0 0 15px rgba(164, 69, 178, 0.8), 0 0 30px rgba(212, 24, 114, 0.6); /* Brillo neón */
 }
 
 /* Padding para la imagen */
 .card-img-top {
-    padding: 10px;
-    border-radius: 8px; /* Opcional: bordes redondeados */
-    background: #282a36; /* Fondo oscuro detrás de la imagen */
+  padding: 10px;
+  border-radius: 8px; /* Opcional: bordes redondeados */
+  background: #282a36; /* Fondo oscuro detrás de la imagen */
 }
 
 /* Estilo para el botón */
 .btn-success {
-    background-color: #28a745;
-    border-color: #28a745;
-    font-weight: bold;
-    font-size: 1rem;
+  background-color: #28a745;
+  border-color: #28a745;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .btn-success i {
-    font-size: 1.2rem; /* Tamaño del ícono */
+  font-size: 1.2rem; /* Tamaño del ícono */
 }
 
 .btn-success:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
+  background-color: #218838;
+  border-color: #1e7e34;
 }
 
 /* Texto "Fuera de stock" */
 .text-danger {
-    font-weight: bold;
-    color: #ff5252; /* Color rojo para resaltar */
+  font-weight: bold;
+  color: #ff5252; /* Color rojo para resaltar */
 }
 
-
 /* Estilo para el texto de las tarjetas */
-.card-title, 
-.card-text, 
+.card-title,
+.card-text,
 .card-body {
-    color: #ffffff; /* Color blanco */
+  color: #ffffff; /* Color blanco */
 }
 
 /* Texto de "Fuera de stock" mantiene el color rojo */
 .text-danger {
-    color: #ff5252; /* Ya definido previamente */
+  color: #ff5252; /* Ya definido previamente */
 }
 
 /* Ajusta el color del botón para que sea consistente */
 .btn-success {
-    color: #ffffff; /* Asegura que el texto del botón sea blanco */
+  color: #ffffff; /* Asegura que el texto del botón sea blanco */
 }
 
 .btn-secondary {
-    background-color: transparent; /* Fondo transparente */
-    color: #8a2be2; /* Color de texto violeta */
-    border: 2px solid #8a2be2; /* Borde violeta */
-    padding: 8px 16px; /* Tamaño del botón */
-    font-size: 1rem; /* Tamaño del texto */
-    margin: 0 5px; /* Espaciado entre botones */
-    transition: all 0.3s ease; /* Transición suave */
-  }
-  
-  .btn-secondary:hover {
-    background-color: #8a2be2; /* Fondo violeta en hover */
-    color: white; /* Texto blanco en hover */
-    box-shadow: 0 0 10px rgba(138, 43, 226, 0.8); /* Efecto de neón en hover */
-  }
-  
-  .btn-secondary.active {
-    background-color: #8a2be2; /* Fondo violeta cuando está activo */
-    color: white; /* Texto blanco cuando está activo */
-    box-shadow: 0 0 10px rgba(138, 43, 226, 0.8); /* Efecto de neón */
-  }
+  background-color: transparent; /* Fondo transparente */
+  color: #8a2be2; /* Color de texto violeta */
+  border: 2px solid #8a2be2; /* Borde violeta */
+  padding: 8px 16px; /* Tamaño del botón */
+  font-size: 1rem; /* Tamaño del texto */
+  margin: 0 5px; /* Espaciado entre botones */
+  transition: all 0.3s ease; /* Transición suave */
+}
 
- 
+.btn-secondary:hover {
+  background-color: #8a2be2; /* Fondo violeta en hover */
+  color: white; /* Texto blanco en hover */
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.8); /* Efecto de neón en hover */
+}
 
-  
-    
-  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */  /* COMMERCE */
+.btn-secondary.active {
+  background-color: #8a2be2; /* Fondo violeta cuando está activo */
+  color: white; /* Texto blanco cuando está activo */
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.8); /* Efecto de neón */
+}
 
+/* COMMERCE */ /* COMMERCE */ /* COMMERCE */ /* COMMERCE */ /* COMMERCE */ /* COMMERCE */ /* COMMERCE */ /* COMMERCE */ /* COMMERCE */ /* COMMERCE */ /* COMMERCE */ /* COMMERCE */
 
+.col {
+  display: flex;
+  justify-content: center;
+}
 
-
-  .col {
-    display: flex;
-    justify-content: center;
-  }
-
-  .row {
-    justify-content: space-between; /* Distribuye las cards de manera equitativa en una fila */
-  }
-
+.row {
+  justify-content: space-between; /* Distribuye las cards de manera equitativa en una fila */
+}
 
 /* CONTACTO */ /* CONTACTO */ /* CONTACTO */ /* CONTACTO */ /* CONTACTO */ /* CONTACTO */ /* CONTACTO */ /* CONTACTO */ /* CONTACTO */
 
@@ -940,4 +929,180 @@ footer .nav-link:hover {
 
 .contact-form .btn:hover {
   background-color: #345f7d;
+}
+
+#index-banner1,
+#index-banner2,
+#index-banner3 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+
+#index-banner1 {
+  background-image: url("../src/slider/5.jpg");
+}
+
+#index-banner2 {
+  background-image: url("../src/slider/COD6.webp");
+}
+
+#index-banner3 {
+  background-image: url("../src/slider/SCP2.jpeg");
+}
+
+#index-banner1::before,
+#index-banner2::before,
+#index-banner3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+#index-banner1 a,
+#index-banner2 a,
+#index-banner3 a {
+  position: relative;
+  z-index: 2;
+}
+
+/* ABOUT */
+
+.img-about {
+  position: relative;
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.img-about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../src/about-img/nomansky.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.img-about:hover::before {
+  transform: scale(1.05);
+}
+
+.img-about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Adjust the opacity to make it lighter */
+  z-index: 1;
+}
+
+.img-about h1,
+.img-about p,
+.img-about a {
+  position: relative;
+  z-index: 2;
+}
+
+.about-info {
+  color: white;
+}
+
+.about-info img {
+  width: 100%;
+  height: auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-shadow {
+  box-shadow: 0 0 20px 5px rgba(138, 43, 226, 0.7); /* Purple shadow */
+}
+
+.about-info h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.about-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-info ul li {
+  margin-bottom: 0.5rem;
+}
+
+.about-info ul li::before {
+  content: "•";
+  color: #ffc107; /* Adjust the color as needed */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button Styles */
+.btn.godown-btn {
+  background-color: #8a2be2; /* Adjust the color as needed */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn.godown-btn:hover {
+  background-color: transparent; /* Adjust the hover color as needed */
+  border: 1px solid #8a2be2;
+  color: #fff;
 }
