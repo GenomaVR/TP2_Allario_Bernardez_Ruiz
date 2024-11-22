@@ -72,7 +72,7 @@ require './Includes/dbcon.php';
         </div>
         <div id="carouselExample2" class="container carousel slide d-flex justify-content-center position-relative" data-bs-ride="carousel">
             <div class="d-flex justify-content-center">
-                <div class="carousel-inner">
+                <div class="carousel-inner overflow-visible">
                     <?php
                     if ($result->num_rows > 0) {
                         $active = true;
@@ -83,10 +83,10 @@ require './Includes/dbcon.php';
                                     echo '</div></div>'; // Close previous carousel-item and row
                                 }
                                 echo '<div class="carousel-item ' . ($active ? 'active' : '') . '">';
-                                echo '<div class="d-flex gap-3 card-rows row">';
+                                echo '<div class="d-flex justify-content-center gap-3 card-rows row">';
                                 $active = false;
                             }
-                            echo '<div class="card border-4 bg-light main-cards cards-juegos col-2 p-0 d-none d-md-block">'; // Hide on small screens
+                            echo '<div class="card cards-juegos border-4 bg-light main-cards col-2 p-0">';
                             echo '<div class="img-box p-0">';
                             echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
                             echo '</div>';
@@ -100,20 +100,49 @@ require './Includes/dbcon.php';
                     ?>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 
 
 
-    <div class="container-fluid slider-medium-2col my-5 py-5 ">
+
+    <section class="container mt-5">
+    <div class="row justify-content-center gap-3">
+        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4">
+            <div class="text-white text-center">
+                <h2>RECORRE NUESTRO STORE</h2>
+            </div>
+            <div class="card-body about-info rounded">
+                <img src="./src/img/store.jpg" alt="" class="rounded mb-4 img-fluid">
+                <p>Encuentra los mejores juegos a los mejores precios tan buenos que podríamos quebrar mañana.</p>
+                <a href="./commerce.php" class="btn godown-btn mt-4">Ir a la tienda</a>
+            </div>
+        </div>
+        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4">
+            <div class="text-white text-center">
+                <h2>UNITE A NUESTRO DISCORD</h2>
+            </div>
+            <div class="card-body about-info rounded">
+                <img src="./src/img/discord.jpg" alt="" class="rounded mb-4 img-fluid">
+                <p>Tenemos servidores personalizados para divertirte al máximo con tu Team.</p>
+                <a href="./commerce.php" class="btn godown-btn mt-4">Ir al Server</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<div class="container-fluid slider-medium-2col my-5 py-5 ">
         <div class="row container-columns d-flex md-flex-wrap">
             <div class="call-to-action d-flex flex-column justify-content-center align-items-center text-center col-xl-3">
                 <h3 class="text-white">PROXIMAMENTE</h3>
@@ -169,84 +198,20 @@ require './Includes/dbcon.php';
         </div>
     </div>
 
-
-
-    <!-- <div class="container mt-5 text-white">
-        <h3>Para ver ahora mismo</h3>
-    </div>
-    <div id="carouselExample4" class="container carousel slide d-flex justify-content-center position-relative" data-bs-ride="carousel">
-        <div class="d-flex justify-content-center">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center gap-3 card-rows row">
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center gap-3 card-rows row">
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card p-2 border-4 bg-light main-cards col-2">
-                            <div class="img-box">
-                                <img src="https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62cd64e5e1c3b915971ba8f8_marvel_logo.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<section class="container-fluid mt-5 tga2024">
+    <div class="row justify-content-start gap-3 tga2024 align-items-center">
+        <div class="container col-12 col-md-12 col-lg-6 p-4 align-items-center">
+            <div class="text-white text-center">
+                <h2>YA VOTASTE PARA EL GOTY?</h2>
+            </div>
+            <div class="text-white fw-bold text-center">
+                <p>Vota a tus juegos favoritos en THE GAMES AWARDS 2024 y, por supuesto, a VAPOR en la cateogría mejor Store</p>
+                <a href="./commerce.php" class="btn godown-btn mt-4">Votar ahora</a>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample4" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample4" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-    </div> -->
+</section>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

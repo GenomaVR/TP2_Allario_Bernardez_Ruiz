@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 
 
 <body>
-  <div class="container my-5">
+  <div class="container my-5 principal">
     <!-- Contenedor principal de las filas -->
     <?php
     // Definir cuántos juegos mostrar por página
