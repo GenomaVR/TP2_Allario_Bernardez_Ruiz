@@ -36,82 +36,118 @@ require './Includes/dbcon.php';
 
 
 
-    <main class="my-5">
-        <div class="container  mt-5 text-white">
-            <h3>Nuevo en TBD</h3>
-        </div>
-        <div class="container d-flex justify-content-center">
-            <div class="d-flex justify-content-center gap-3 card-rows row">
-                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher1">
-                    <div class="img-box">
-                        <img src="./logo/publisher/blizzard-logo.avif" alt="">
-                    </div>
-                </div>
-                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher2">
-                    <div class="img-box">
-                        <img src="./logo/publisher/valve_logo.svg" alt="">
-                    </div>
-                </div>
-                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher3">
-                    <div class="img-box">
-                        <img src="./logo/publisher/konami-logo.png" alt="">
-                    </div>
-                </div>
-                <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher4">
-                    <div class="img-box">
-                        <img src="./logo/publisher/ubi-logo.png" alt="">
-                    </div>
+<main class="my-5">
+    <div class="container mt-5 text-white">
+        <h3>Nuevo en TBD</h3>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <div class="d-flex justify-content-center gap-3 card-rows row">
+            <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher1">
+                <div class="img-box">
+                    <img src="./logo/publisher/blizzard-logo.avif" alt="">
                 </div>
             </div>
-        </div>
-    </main>
-
-    <div>
-        <div class="container mt-5 text-white">
-            <h3>Para ver ahora mismo</h3>
-        </div>
-        <div id="carouselExample2" class="container carousel slide d-flex justify-content-center position-relative" data-bs-ride="carousel">
-            <div class="d-flex justify-content-center">
-                <div class="carousel-inner overflow-visible">
-                    <?php
-                    if ($result->num_rows > 0) {
-                        $active = true;
-                        $counter = 0;
-                        while($row = $result->fetch_assoc()) {
-                            if ($counter % 4 == 0) {
-                                if ($counter > 0) {
-                                    echo '</div></div>'; // Close previous carousel-item and row
-                                }
-                                echo '<div class="carousel-item ' . ($active ? 'active' : '') . '">';
-                                echo '<div class="d-flex justify-content-center gap-3 card-rows row">';
-                                $active = false;
-                            }
-                            echo '<div class="card cards-juegos border-4 bg-light main-cards col-2 p-0">';
-                            echo '<div class="img-box p-0">';
-                            echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
-                            echo '</div>';
-                            echo '</div>';
-                            $counter++;
-                        }
-                        echo '</div></div>'; // Close the last carousel-item and row
-                    } else {
-                        echo "0 resultados";
-                    }
-                    ?>
+            <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher2">
+                <div class="img-box">
+                    <img src="./logo/publisher/valve_logo.svg" alt="">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher3">
+                <div class="img-box">
+                    <img src="./logo/publisher/konami-logo.png" alt="">
+                </div>
+            </div>
+            <div class="card p-2 border-4 bg-light main-cards col-2" id="publisher4">
+                <div class="img-box">
+                    <img src="./logo/publisher/ubi-logo.png" alt="">
+                </div>
+            </div>
         </div>
     </div>
+</main>
 
+<div>
+    <div class="container mt-5 text-white">
+        <h3>Para ver ahora mismo</h3>
+    </div>
+    <!-- Carousel for larger screens -->
+    <div id="carouselExample2" class="container carousel slide d-flex justify-content-center position-relative d-none d-lg-flex" data-bs-ride="carousel">
+        <div class="d-flex justify-content-center">
+            <div class="carousel-inner overflow-visible">
+                <?php
+                if ($result->num_rows > 0) {
+                    $active = true;
+                    $counter = 0;
+                    while($row = $result->fetch_assoc()) {
+                        if ($counter % 4 == 0) {
+                            if ($counter > 0) {
+                                echo '</div></div>'; // Close previous carousel-item and row
+                            }
+                            echo '<div class="carousel-item ' . ($active ? 'active' : '') . '">';
+                            echo '<div class="d-flex justify-content-center gap-3 card-rows row">';
+                            $active = false;
+                        }
+                        echo '<div class="card cards-juegos border-4 bg-light main-cards col-2 p-0">';
+                        echo '<div class="img-box p-0">';
+                        echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
+                        echo '</div>';
+                        echo '</div>';
+                        $counter++;
+                    }
+                    echo '</div></div>'; // Close the last carousel-item and row
+                } else {
+                    echo "0 resultados";
+                }
+                ?>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
+    <!-- Carousel for smaller screens -->
+    <div id="carouselExample3" class="container carousel slide d-flex justify-content-center position-relative d-lg-none" data-bs-ride="carousel">
+        <div class="d-flex justify-content-center">
+            <div class="carousel-inner overflow-visible">
+                <?php
+                // Reset the result pointer and fetch data again for the smaller carousel
+                $result->data_seek(0);
+                if ($result->num_rows > 0) {
+                    $active = true;
+                    while($row = $result->fetch_assoc()) {
+                        echo '<div class="carousel-item ' . ($active ? 'active' : '') . '">';
+                        echo '<div class="d-flex justify-content-center gap-3 card-rows row">';
+                        echo '<div class="card cards-juegos border-4 bg-light main-cards col-12 p-0">';
+                        echo '<div class="img-box p-0">';
+                        echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                        $active = false;
+                    }
+                } else {
+                    echo "0 resultados";
+                }
+                ?>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
 
 
     <section class="container mt-5">
