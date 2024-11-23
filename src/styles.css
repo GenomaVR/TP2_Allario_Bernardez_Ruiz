@@ -841,7 +841,7 @@ footer .nav-link:hover {
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 600px;
+  height: 800px;
 }
 
 #index-banner1 {
@@ -1029,4 +1029,370 @@ footer .nav-link:hover {
   background-color: #280e41;
   transition: all 1s ease;
   background-size: no-repeat;
+}
+
+/* ==== LOGGIN Y REGISTRO ==== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} /*reseteo de margenes y rellenos*/
+
+.login-body-conntainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /*cubre toda la ventana*/
+  flex-direction: column;
+  background: #23242a;
+} /*cubre todo centradito, el color del fondo...*/
+
+.login-logo {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.login-logo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: -1;
+}
+
+.login-logo:hover::before {
+  opacity: 1;
+}
+
+.logonav {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ANIMACIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN*/
+/* KEYFRAME PARA PODER HACER LA ANIMACIÓN!!*/
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* GIRA POR LA CAJA 360GRADOS*/
+
+.contenedor-caja-login {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.contenedor-caja-login::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  animation: animate 6s linear infinite;
+}
+.contenedor-caja-login::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+/*FIN DE ANIMACIÓN*/
+
+.form-login {
+  position: absolute;
+  inset: 2px;
+  background: #28292d;
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/*TITULO*/
+.titulo-login {
+  color: #45f3ff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.campo-entrada-login {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+.campo-entrada-login input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+.campo-entrada-login span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.campo-entrada-login input:valid ~ span,
+.campo-entrada-login input:focus ~ span {
+  color: #45f3ff;
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+.campo-entrada-login i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+.campo-entrada-login input:valid ~ i,
+.campo-entrada-login input:focus ~ i {
+  height: 44px;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+.links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  text-decoration: beige;
+}
+.links a:hover,
+.links a:nth-child(2) {
+  color: #45f3ff;
+}
+input[type="submit"] {
+  border: none;
+  outline: none;
+  padding: 11px 25px;
+  background: #45f3ff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 100px;
+  margin-top: 10px;
+}
+input[type="submit"]:active {
+  opacity: 0.8;
+}
+
+/*REGISTRO*/
+
+/* Estilo para el cuerpo de la página */
+.contenedor-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #23242a;
+}
+
+/* Animación de giro */
+@keyframes rotar-animacion {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Caja contenedora */
+.contenedor-caja {
+  position: relative;
+  width: 380px;
+  height: 550px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.contenedor-caja::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 500px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  animation: rotar-animacion 6s linear infinite;
+}
+.contenedor-caja::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 500px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  animation: rotar-animacion 6s linear infinite;
+  animation-delay: -3s;
+}
+
+/* Estilos para el formulario */
+.formulario-registro {
+  position: absolute;
+  inset: 2px;
+  background: #28292d;
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para el título */
+.titulo-formulario {
+  color: #45f3ff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+/* Estilos para las entradas de texto */
+.campo-entrada {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+.campo-entrada input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+.campo-entrada span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.campo-entrada input:valid ~ span,
+.campo-entrada input:focus ~ span {
+  color: #45f3ff;
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+.campo-entrada i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+.campo-entrada input:valid ~ i,
+.campo-entrada input:focus ~ i {
+  height: 44px;
+}
+
+/* Enlaces */
+.enlaces-formulario {
+  display: flex;
+  justify-content: space-between;
+}
+.enlaces-formulario a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  text-decoration: none;
+}
+.enlaces-formulario a:hover,
+.enlaces-formulario a:nth-child(2) {
+  color: #45f3ff;
+}
+
+/* Botón de envío */
+.btn-enviar {
+  border: none;
+  outline: none;
+  padding: 12px 0; /* Centrado vertical */
+  background: #45f3ff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  width: calc(100% - 40px); /* Asegura que el botón no sobresalga */
+  margin: 20px auto; /* Centra el botón horizontalmente */
+  text-align: center;
+  color: #23242a;
+  font-size: 1em;
+  display: block;
+}
+
+.btn-enviar:active {
+  opacity: 0.8;
 }

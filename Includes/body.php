@@ -226,34 +226,6 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
 
 
 
-    <section class="container mt-5">
-    <div class="row justify-content-center gap-3">
-        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4">
-            <div class="text-white text-center">
-                <h2>RECORRE NUESTRO STORE</h2>
-            </div>
-            <div class="card-body about-info rounded">
-                <img src="./src/img/store.jpg" alt="" class="rounded mb-4 img-fluid">
-                <p>Encuentra los mejores juegos a los mejores precios tan buenos que podríamos quebrar mañana.</p>
-            </div>
-            <a href="./commerce.php" class="btn godown-btn mt-4">Ir a la tienda</a>
-        </div>
-        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4">
-            <div class="text-white text-center">
-                <h2>UNITE A NUESTRO DISCORD</h2>
-            </div>
-            <div class="card-body about-info rounded">
-                <img src="./src/img/discord.jpg" alt="" class="rounded mb-4 img-fluid">
-                <p>Tenemos servidores personalizados para divertirte al máximo con tu Team.</p>
-            </div>
-            <a href="./commerce.php" class="btn godown-btn mt-4">Ir al Server</a>
-        </div>
-    </div>
-</section>
-
-
-
-
 <div class="container-fluid slider-medium-2col my-5 py-5 ">
         <div class="row container-columns d-flex md-flex-wrap">
             <div class="call-to-action d-flex flex-column justify-content-center align-items-center text-center col-xl-3">
@@ -309,6 +281,36 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
             </div>
         </div>
     </div>
+
+
+
+    <section class="container mt-5">
+    <div class="row justify-content-center gap-3">
+        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4">
+            <div class="text-white text-center">
+                <h2>RECORRE NUESTRO STORE</h2>
+            </div>
+            <div class="card-body about-info rounded">
+                <img src="./src/img/store.jpg" alt="" class="rounded mb-4 img-fluid">
+                <p>Encuentra los mejores juegos a los mejores precios tan buenos que podríamos quebrar mañana.</p>
+            </div>
+            <a href="./commerce.php" class="btn godown-btn mt-4">Ir a la tienda</a>
+        </div>
+        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4">
+            <div class="text-white text-center">
+                <h2>UNITE A NUESTRO DISCORD</h2>
+            </div>
+            <div class="card-body about-info rounded">
+                <img src="./src/img/discord.jpg" alt="" class="rounded mb-4 img-fluid">
+                <p>Tenemos servidores personalizados para divertirte al máximo con tu Team.</p>
+            </div>
+            <a href="./commerce.php" class="btn godown-btn mt-4">Ir al Server</a>
+        </div>
+    </div>
+</section>
+
+
+
 
 
     <main class="mx-5">
