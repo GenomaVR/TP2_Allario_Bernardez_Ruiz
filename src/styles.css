@@ -45,6 +45,40 @@ body {
   box-shadow: 0 4px 12px 1px #030618; /* Add shadow effect */
 }
 
+.banner-content {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the pseudo-elements */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  max-width: 80%; /* Ensure the content does not overflow */
+  margin: 150px auto; /* Center the content */
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.banner-content .btn {
+  background-color: #8a2be2; /* Adjust the color as needed */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.banner-content .btn:hover {
+  background-color: #6a1bbd; /* Adjust the hover color as needed */
+  color: #fff;
+}
+
 .main-carousel {
   overflow: visible;
 }
@@ -163,6 +197,21 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+  .main-cards:hover {
+    transform: translate3d(0px, -10px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    box-shadow: 0 0 15px rgba(164, 69, 178, 0.8),
+      0 0 30px rgba(212, 24, 114, 0.6); /* Brillo neón */
+  }
+
+  #publisher1,
+  #publisher2,
+  #publisher3,
+  #publisher4 {
+    height: 120px;
+    width: 100px;
+    margin: auto;
   }
 }
 
@@ -796,7 +845,7 @@ footer .nav-link:hover {
 }
 
 #index-banner1 {
-  background-image: url("../src/slider/5.jpg");
+  background-image: url("../src/slider/helldivers2.jpg");
 }
 
 #index-banner2 {
@@ -966,11 +1015,11 @@ footer .nav-link:hover {
 
 .tga2024 {
   width: 100%;
-  height: 500px;
+  min-height: 300px;
+  max-height: 500px;
   background-image: url("../src/img/tga2024-2.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-position: top;
-  border-radius: 10px;
   background-color: #040404c9;
   background-blend-mode: overlay;
   transition: all 1s ease;
@@ -979,4 +1028,5 @@ footer .nav-link:hover {
 .tga2024:hover {
   background-color: #280e41;
   transition: all 1s ease;
+  background-size: no-repeat;
 }
