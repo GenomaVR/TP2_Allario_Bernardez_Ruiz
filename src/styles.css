@@ -876,6 +876,10 @@ footer .nav-link:hover {
   z-index: 2;
 }
 
+.five-slider {
+  min-height: 200px;
+}
+
 /* ABOUT */
 
 .img-about {
@@ -935,8 +939,6 @@ footer .nav-link:hover {
 }
 
 .about-info img {
-  width: 100%;
-  height: auto;
   transition: box-shadow 0.3s ease;
 }
 
@@ -957,18 +959,17 @@ footer .nav-link:hover {
 .about-info ul {
   list-style-type: none;
   padding: 0;
+  text-decoration: none;
 }
 
 .about-info ul li {
   margin-bottom: 0.5rem;
+  text-decoration: none;
 }
 
-.about-info ul li::before {
-  content: "•";
-  color: #ffc107; /* Adjust the color as needed */
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+.about-text {
+  background: linear-gradient(to bottom, #585869, #343a40);
+  background-color: #343a40; /* Dark background color */
 }
 
 .fade-in {
@@ -1040,13 +1041,13 @@ footer .nav-link:hover {
   font-family: "Poppins", sans-serif;
 } /*reseteo de margenes y rellenos*/
 
-.login-body-conntainer {
+.login-body-conntainer,
+.register-body-conntainer {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh; /*cubre toda la ventana*/
   flex-direction: column;
-  background: #23242a;
 } /*cubre todo centradito, el color del fondo...*/
 
 .login-logo {
@@ -1395,4 +1396,42 @@ input[type="submit"]:active {
 
 .btn-enviar:active {
   opacity: 0.8;
+}
+
+.register-container {
+  position: relative; /* Ensure the pseudo-element is positioned relative to the container */
+  width: 100%;
+  min-height: 70vh; /* Ensure it covers the full viewport height */
+  background-image: url("../src/img/register.webp") !important; /* Update the path to your background image */
+  background-size: contain; /* Ensure the background image covers the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.register-content {
+  position: relative; /* Ensure the content is above the overlay */
+  z-index: 2; /* Ensure the content is above the overlay */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Optional: Add a semi-transparent background to the content */
+  padding: 20px;
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }

@@ -62,9 +62,9 @@ if (!$result) {
         <h3>Pensados para vos</h3>
     </div>
     <!-- Carousel for larger screens -->
-    <div id="carouselExample2" class="container-fluid    px-5 carousel slide d-flex position-relative d-none d-lg-flex" data-bs-ride="carousel">
+    <div id="carouselExample2" class="container-fluid px-5 carousel slide d-flex position-relative d-none d-lg-flex align-items-center" data-bs-ride="carousel">
         <div class="d-flex justify-content-center">
-            <div class="carousel-inner overflow-visible">
+            <div class="carousel-inner overflow-hidden">
                 <?php
                 if ($result->num_rows > 0) {
                     $active = true;
@@ -75,7 +75,7 @@ if (!$result) {
                                 echo '</div></div>'; // Close previous carousel-item and row
                             }
                             echo '<div class="carousel-item ' . ($active ? 'active' : '') . '">';
-                            echo '<div class="d-flex justify-content-between gap-5 card-rows">';
+                            echo '<div class="d-flex .five-slider justify-content-between gap-5 card-rows">';
                             $active = false;
                         }
                         echo '<div class="card cards-juegos border-4 bg-light main-cards col p-0" onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($row["imagen"]) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">';
@@ -313,7 +313,7 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
 
 
 
-    <main class="mx-5">
+<main class="mx-5">
     <div class="container-fluid mt-5 px-5 text-white ">
         <h3>Principales Publishers</h3>
     </div>

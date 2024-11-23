@@ -32,11 +32,10 @@ if( isset($_POST['email']) && isset($_POST['password']) ){
 
 <body class="login-body-conntainer">
 <div class="container-fluid login-logo">
-    <a class="navbar-brand" href="../../TP2_Allario_Bernardez_Ruiz/index.php">
+    <a class="navbar-brand" href="#">
       <img class="logonav" src="../../TP2_Allario_Bernardez_Ruiz/logo/logo.png" alt="">
     </a>
 </div>
-
 
 
 	<div class="contenedor-caja-login">
