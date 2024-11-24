@@ -1,7 +1,9 @@
 <?php
+include './includes/404-section.php';
+
 $servername = "localhost";
-$username = "root";  // Cambia esto si tu usuario de MySQL es diferente
-$password = "";      // Cambia esto si tu contraseña de MySQL es diferente
+$username = "root";  // Cambiá esto si tu usuario de MySQL es diferente
+$password = "";      // Cambiá esto si tu contraseña de MySQL es diferente
 $dbname = "juegos"; // Nombre de la base de datos correcta
 
 // Crear conexión
@@ -17,6 +19,7 @@ $sql = "SELECT id, titulo, descripcion, lanzamiento, genero, precio, publisher, 
 $result = $conn->query($sql);
 
 if (!$result) {
+  mostrar_error(true);
   die("Error en la consulta: " . $conn->error);
 }
 ?>
@@ -61,7 +64,7 @@ if (!$result) {
     <div class="container-fluid mt-5 px-5 text-white">
         <h3>Pensados para vos</h3>
     </div>
-    <!-- Carousel for larger screens -->
+    <!-- SLIDER CON IMAGENES DESDE LA BASE DE DATOS - VIEWPORTS GRANDES -->
     <div id="carouselExample2" class="container-fluid px-5 carousel slide d-flex position-relative d-none d-lg-flex align-items-center" data-bs-ride="carousel">
         <div class="d-flex justify-content-center">
             <div class="carousel-inner overflow-hidden">
@@ -72,7 +75,7 @@ if (!$result) {
                     while($row = $result->fetch_assoc()) {
                         if ($counter % 5 == 0) {
                             if ($counter > 0) {
-                                echo '</div></div>'; // Close previous carousel-item and row
+                                echo '</div></div>'; // CIERRA EL ULTIMO CAROUSEL ITEM
                             }
                             echo '<div class="carousel-item ' . ($active ? 'active' : '') . '">';
                             echo '<div class="d-flex .five-slider justify-content-between gap-5 card-rows">';
@@ -85,7 +88,7 @@ if (!$result) {
                         echo '</div>';
                         $counter++;
                     }
-                    echo '</div></div>'; // Close the last carousel-item and row
+                    echo '</div></div>'; // CIERRA EL ULTIMO CAROUSEL ITEM
                 } else {
                     echo "0 resultados";
                 }
@@ -102,12 +105,12 @@ if (!$result) {
         </button>
     </div>
 
-    <!-- Carousel for smaller screens -->
+    <!-- SLIDER CON IMAGENES DESDE LA BASE DE DATOS - VIEWPORTS CHICO  -->
     <div id="carouselExample3" class="container carousel slide d-flex justify-content-center position-relative d-lg-none" data-bs-ride="carousel">
         <div class="d-flex justify-content-center">
             <div class="carousel-inner overflow-visible">
                 <?php
-                // Reset the result pointer and fetch data again for the smaller carousel
+                // Resetea y hace fetch para volver a recorrer los resultados en pantallas más chicas
                 $result->data_seek(0);
                 if ($result->num_rows > 0) {
                     $active = true;
@@ -229,47 +232,62 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
 <div class="container-fluid slider-medium-2col my-5 py-5 ">
         <div class="row container-columns d-flex md-flex-wrap">
             <div class="call-to-action d-flex flex-column justify-content-center align-items-center text-center col-xl-3">
-                <h3 class="text-white">Los más vendidos</h3>
-                <a href="index.php" class="btn btn-dark w-50">Ir a la tienda</a>
+                <h3 class="text-white">Selección de los editores</h3>
+                <a href="index.php" class="btn btn-dark w-50">Ver tienda completa</a>
             </div>
             <div class="slider-verticalcards container-fluid col-xl-9">
                 <div class="carousel2" id="customCarousel">
                     <div class="carousel-inner2 p-4 gap-5">
-                        <div class="carousel-item2">
-                            <div class="card-content">
-                                <img src="./slider-img/cod6-slider.webp" alt="">
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                            <div class="carousel-item2">
+                                <div class="card-content">
+                                    <img src="./slider-img/cod6-slider.webp" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item2">
-                            <div class="card-content">
-                                <img src="./slider-img/helldivers2-slider.webp" alt="">
+                        </button>
+
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                            <div class="carousel-item2">
+                                <div class="card-content">
+                                    <img src="./slider-img/helldivers2-slider.webp" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item2">
-                            <div class="card-content">
-                                <img src="./slider-img/metro_awakening-slider.webp" alt="">
+                        </button>
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                            <div class="carousel-item2">
+                                <div class="card-content">
+                                    <img src="./slider-img/metro_awakening-slider.webp" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item2">
-                            <div class="card-content">
-                                <img src="./slider-img/silent-hill2-slider.webp" alt="">
+                        </button>
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                            <div class="carousel-item2">
+                                <div class="card-content">
+                                    <img src="./slider-img/silent-hill2-slider.webp" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item2">
-                            <div class="card-content">
-                                <img src="./slider-img/space-marine2-slider.webp" alt="">
+                        </button>
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                            <div class="carousel-item2">
+                                <div class="card-content">
+                                    <img src="./slider-img/space-marine2-slider.webp" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item2">
-                            <div class="card-content">
-                                <img src="./slider-img/farming-slider.webp" alt="">
+                        </button>
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                            <div class="carousel-item2">
+                                <div class="card-content">
+                                    <img src="./slider-img/farming-slider.webp" alt="">
+                                </div>
                             </div>
-                        </div>
+                        </button>
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                         <div class="carousel-item2">
                             <div class="card-content">
                                 <img src="./slider-img/tlou1.webp" alt="">
                             </div>
                         </div>
+                        </button>
                     </div>
                     <button class="carousel-control-prev" id="prevBtn">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -283,65 +301,146 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
     </div>
 
 
+    <script>
+function dataId(id) {
+    console.log("ID:", id);
+    fetch(`./Includes/get_product_details.php?id=${id}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                console.error('Error fetching product details:', data.error);
+            } else {
+                mostrarDetalleProducto(data.id, data.titulo, data.descripcion, data.imagen, data.precio, data.lanzamiento, data.publisher, data.genero);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching product details:', error);
+        });
+}
 
-    <section class="container mt-5">
+function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzamiento, publisher, genero) {
+    if (!imagen || imagen === 'null' || imagen === 'undefined') {
+        imagen = 'ruta/a/imagen/predeterminada.jpg'; // Imagen predeterminada si no hay imagen
+    }
+
+    const modalContent = `
+        <img src=".${imagen}" class="img-fluid mb-3" alt="${titulo}">
+        <h4>${titulo}</h4>
+        <p>${descripcion}</p>
+        <p><strong>Precio:</strong> ${precio == 0 || precio === '' ? 'Gratis' : '$' + precio}</p>
+        <p><strong>Lanzamiento:</strong> ${lanzamiento}</p>
+        <p><strong>Publisher:</strong> ${publisher}</p>
+    `;
+
+    document.getElementById('modalContent').innerHTML = modalContent;
+
+    const actionButton = document.getElementById('modalActionButton');
+
+    // Acciones para productos gratis o de pago
+    if (precio == 0 || genero === 'Free to Play') {
+        actionButton.innerText = 'Descargar gratis';
+        actionButton.onclick = function() {
+            alert(`Iniciando descarga de ${titulo}...`);
+        };
+    } else {
+        actionButton.innerText = 'Agregar al carrito';
+        actionButton.onclick = function() {
+            fetch('./Includes/agregar_carrito.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: id // Usar el ID correctamente para agregar al carrito
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const cartBadge = document.querySelector('.badge.bg-success');
+                    if (cartBadge) {
+                        cartBadge.textContent = data.totalItems;
+                    }
+                    alert('Producto agregado al carrito');
+                } else {
+                    alert('Error al agregar al carrito');
+                }
+            })
+            .catch(error => {
+                console.error('Error al agregar al carrito:', error);
+                alert('Error al agregar al carrito');
+            });
+        };
+    }
+
+    // Mostrar el modal
+    const productoModal = new bootstrap.Modal(document.getElementById('productoModal'));
+    productoModal.show();
+}
+</script>
+<section class="container mt-5">
     <div class="row justify-content-center gap-3">
         <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4">
-            <div class="text-white text-center">
+            <div class="text-white text-center mb-3">
                 <h2>RECORRE NUESTRO STORE</h2>
             </div>
-            <div class="card-body about-info rounded">
+            <div class="card-body about-info rounded d-flex flex-column">
                 <img src="./src/img/store.jpg" alt="" class="rounded mb-4 img-fluid">
-                <p>Encuentra los mejores juegos a los mejores precios tan buenos que podríamos quebrar mañana.</p>
+                <p class="flex-grow-1 mb-3">Encuentra los mejores juegos a los mejores precios tan buenos que podríamos quebrar mañana.</p>
+                <a href="./commerce.php" class="btn godown-btn mt-auto align-self-center">Ir a la tienda</a>
             </div>
-            <a href="./commerce.php" class="btn godown-btn mt-4">Ir a la tienda</a>
         </div>
         <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4">
-            <div class="text-white text-center">
+            <div class="text-white text-center mb-3">
                 <h2>UNITE A NUESTRO DISCORD</h2>
             </div>
-            <div class="card-body about-info rounded">
+            <div class="card-body about-info rounded d-flex flex-column">
                 <img src="./src/img/discord.jpg" alt="" class="rounded mb-4 img-fluid">
-                <p>Tenemos servidores personalizados para divertirte al máximo con tu Team.</p>
+                <p class="flex-grow-1 mb-3">Tenemos servidores personalizados para divertirte al máximo con tu Team.</p>
+                <a href="./404.php" class="btn godown-btn mt-auto align-self-center">Ir al Server</a>
             </div>
-            <a href="./commerce.php" class="btn godown-btn mt-4">Ir al Server</a>
         </div>
     </div>
 </section>
 
 
 
-
-
-<main class="mx-5">
+<section class="mx-5">
     <div class="container-fluid mt-5 px-5 text-white ">
         <h3>Principales Publishers</h3>
     </div>
     <div class="container-fluid px-5 d-flex justify-content-center">
         <div class="d-flex justify-content-between gap-3 card-rows w-100">
-            <div class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher1">
+        <a href="./includes/commerce.php" class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher1">
                 <div class="img-box">
                     <img src="./logo/publisher/blizzard-logo.avif" alt="">
                 </div>
-            </div>
-            <div class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher2">
-                <div class="img-box">
-                    <img src="./logo/publisher/valve_logo.svg" alt="">
-                </div>
-            </div>
-            <div class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher3">
+            </a>
+            <a href="./includes/commerce.php" class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher3">
                 <div class="img-box">
                     <img src="./logo/publisher/konami-logo.png" alt="">
                 </div>
-            </div>
-            <div class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher4">
+            </a>
+            <a href="./includes/commerce.php"  class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher2">
+
+                <div class="img-box">
+                    <img src="./logo/publisher/valve_logo.svg" alt="">
+                </div>
+
+            </a>
+            <a href="./includes/commerce.php"class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher4" >
+
                 <div class="img-box">
                     <img src="./logo/publisher/ubi-logo.png" alt="">
                 </div>
-            </div>
+
+            </a>
+
         </div>
     </div>
-</main>
+</section>
+
+
 
 
 
@@ -360,7 +459,11 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
 </section>
 
 
-    <script>
+    <script> //SCRIPT para Carrousel con imágenes verticales
+        /*test*/
+
+        /*test*/
+
         document.addEventListener('DOMContentLoaded', function() {
             const carousel = document.querySelector('#customCarousel .carousel-inner2');
             const prevBtn = document.getElementById('prevBtn');
