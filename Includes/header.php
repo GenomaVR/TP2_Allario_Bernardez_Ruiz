@@ -23,28 +23,26 @@ $total_items = count($carrito);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="../../TP2_Allario_Bernardez_Ruiz/src/styles.css">
-  
+  <link rel="stylesheet" href="src/styles.css">
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="../src/styles.css">
 
-
-
-  <link rel="stylesheet" href="./src/styles2.css">
 </head>
 
 <body>
 
 <nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <a class="navbar-brand logonav-container" href="#">
       <img class="logonav" src="../../TP2_Allario_Bernardez_Ruiz/logo/logo.png" alt="">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item d-flex align-items-center">
+      <ul class="navbar-nav d-flex align-items-start">
+        <li class="nav-item">
           <a class="nav-link" aria-current="page" href="../../TP2_Allario_Bernardez_Ruiz/index.php">
             <i class="bi bi-house me-2"></i> Home
           </a>
@@ -59,22 +57,24 @@ $total_items = count($carrito);
           <a class="nav-link" href="../../TP2_Allario_Bernardez_Ruiz/Includes/contacto.php">Contacto</a>
         </li>
       </ul>
-      <form class="d-flex search-bar me-3" role="search">
-        <input class="form-control search-input me-2" type="search" placeholder="Search" aria-label="Search" />
+      <form class="d-flex search-bar justify-content-center" role="search">
+        <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search" />
         <button class="btn search-btn" type="submit">
           <i class="bi bi-search"></i>
         </button>
       </form>
       <!-- Carrito -->
-      <a href="carrito.php" class="navbar-cart">
-        <i class="bi bi-cart4 me-2"></i> 
-        <span>Carrito</span> 
-        <span class="badge bg-success">
-  <?php echo isset($_SESSION['carrito']) ? count($_SESSION['carrito']) : 0; ?>
-</span>
-
+      <a href="carrito.php" class="navbar-cart m-2">
+        <i class="bi bi-cart4 mx-1"></i>
+        <span>Carrito</span>
+        <span class="badge bg-success mx-1">
+          <?php echo isset($_SESSION['carrito']) ? count($_SESSION['carrito']) : 0; ?>
+        </span>
+      </a>
+      <a href="../login/login.php" class="navbar-cart">
+        <span>Login</span>
+        <i class="bi bi-person  mx-1"></i>
       </a>
     </div>
   </div>
 </nav>
-

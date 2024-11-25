@@ -1,13 +1,13 @@
-<?php 
+<?php
 
 include './Includes/header.php'
 
 ?>
 
 
-<?php 
+<?php
 
-include './Includes/body.php'
+include './includes/body.php'
 
 ?>
 

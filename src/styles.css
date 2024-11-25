@@ -48,9 +48,13 @@ body {
 .banner-content {
   position: relative;
   z-index: 2; /* Ensure the content is above the pseudo-elements */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.438);
   max-width: 80%; /* Ensure the content does not overflow */
-  margin: 150px auto; /* Center the content */
+  margin: auto auto; /* Center the content */
+  top: 40%;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .banner-content h1 {
@@ -63,7 +67,8 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.banner-content .btn {
+.banner-content .btn,
+.call-to-action .btn {
   background-color: #8a2be2; /* Adjust the color as needed */
   color: #fff;
   padding: 10px 20px;
@@ -79,27 +84,29 @@ body {
   color: #fff;
 }
 
-.main-carousel {
-  overflow: visible;
+.banner-content:read-only {
+  color: white;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width: 40px;
-  height: 40px !important;
+  width: 60px;
+  height: 100px !important;
   background-size: 100% 100%; /* Ensure the icon scales properly */
-  font-size: 200px;
+  font-size: 100px;
+  transition: 0.4s;
+}
+
+.carousel-control-next-icon:hover,
+.carousel-control-prev-icon:hover {
+  background-color: #892be280 !important; /* overlay */
+  transition: 0.4s;
 }
 
 .carousel2 {
   position: relative;
   width: 100%;
   overflow: hidden;
-}
-
-.carousel-inner {
-  /* Limita la altura del carrusel */
-  overflow: hidden; /* Evita que el contenido se desborde */
 }
 
 .carousel-banner img {
@@ -112,6 +119,10 @@ body {
 .carousel-inner2 {
   display: flex;
   transition: transform 0.3s ease;
+}
+
+#carouselExample2 {
+  max-height: auto;
 }
 
 .card-content {
@@ -154,13 +165,14 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: rgb(255, 255, 255);
   border: none;
   padding: 10px;
   cursor: pointer;
+  width: 100px;
 }
 
 /* Card Styles */
+
 .main-cards {
   border-color: #292a33 !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow to cards */
@@ -168,25 +180,17 @@ body {
 }
 .main-cards {
   width: 100%;
-  max-width: 200px; /* Ajusta el tamaño máximo según tus necesidades */
-  height: 200px; /* Ajusta la altura según tus necesidades */
+  max-width: 250px; /* Ajusta el tamaño máximo según tus necesidades */
+  height: auto; /* Ajusta la altura según tus necesidades */
   margin: 10px;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .main-cards:hover {
-  transform: translate3d(0px, -10px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  box-shadow: 0 0 15px rgba(164, 69, 178, 0.8), 0 0 30px rgba(212, 24, 114, 0.6); /* Brillo neón */
-}
-
-.cards-juegos {
-  width: auto;
-}
-
-.card-rows {
-  overflow: visible;
+  transform: translate3d(0px, -10px, 0px) rotateX(0deg) rotateY(0deg)
+    rotateZ(0deg) skew(0deg, 0deg);
+  box-shadow: 0 0 10px rgba(164, 69, 178, 0.8), 0 0 30px rgba(212, 24, 114, 0.6); /* Brillo neón */
 }
 
 .img-box {
@@ -196,27 +200,32 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  object-fit: contain;
+}
+
+@media (max-width: 992px) {
+  .carousel-inner-container {
+    max-width: 460px;
+  }
 }
 
 .img-box img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Mantiene la proporción de la imagen y la recorta si es necesario */
-  object-position: center; /* Centra la imagen dentro del contenedor */
+  object-fit: contain;
+  object-position: center;
+  max-width: 460px;
+}
+
+.card-juego {
+  max-width: 460px;
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .main-cards img {
     width: 100%;
-    height: 100%;
     object-fit: contain;
-  }
-  .main-cards:hover {
-    transform: translate3d(0px, -10px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    box-shadow: 0 0 15px rgba(164, 69, 178, 0.8),
-      0 0 30px rgba(212, 24, 114, 0.6); /* Brillo neón */
   }
 
   #publisher1,
@@ -263,17 +272,10 @@ body {
 /* Slider de Mirá más*/
 
 /* Slider de Mirá más*/
-@media (max-width: 956px) {
-  .slider-medium-2col .container-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
 
 /* Slider de Mirá más*/
 .slider-medium-2col {
-  background-image: url("./stpunk3.jpeg"),
+  background-image: url("./img/cp2077.jpg"),
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: center;
@@ -324,7 +326,7 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .container-store {
     flex: 0 0 100%; /* Show 1 card per row */
   }
@@ -372,20 +374,18 @@ body {
 /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */
 
 .search-bar {
-  background-color: #1a1f2b;
-  border-radius: 50px;
-  padding: 5px;
-  margin-right: 30px;
+  position: relative;
+  width: 300px;
+  margin: auto;
 }
 
 .search-input {
+  width: 100%;
+  padding-right: 40px; /* Espacio para el icono */
+  border-radius: 50px;
+  border: 2px solid #2e4a5a;
   background-color: transparent;
   color: white;
-  border: none;
-  border-radius: 50px;
-  padding-left: 15px;
-  width: 300px;
-  max-width: 100%;
 }
 
 .search-input::placeholder {
@@ -394,24 +394,33 @@ body {
 
 .search-input:focus {
   outline: none;
+  border-color: #3c5c73;
+}
+
+/* Estilo personalizado para el botón de alternancia */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.custom-toggler {
+  border-color: white;
 }
 
 .search-btn {
-  background-color: white;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
   border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1a1f2b;
+  color: #8a2be2;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .search-btn:hover {
-  background-color: #f0f0f0;
+  color: #3c5c73;
 }
-
 .search-btn i {
   font-size: 1rem;
 }
@@ -615,7 +624,7 @@ footer .nav-link:hover {
 }
 
 /* Estilo para las cards */
-.card {
+.commercer-card {
   max-width: 250px; /* Tamaño máximo de la card */
   margin: 10px auto; /* Centrado y espaciado */
   height: auto;
@@ -653,7 +662,7 @@ footer .nav-link:hover {
 }
 
 /* Asegurarse de que las cards sean responsivas */
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .card {
     max-width: 100%; /* Ocupan toda la fila en pantallas pequeñas */
   }
@@ -849,6 +858,15 @@ footer .nav-link:hover {
   background-color: #345f7d;
 }
 
+.call-to-action a {
+  color: white;
+  background-color: #8a2be2;
+}
+.call-to-action a:hover {
+  color: white;
+  background-color: #8a2be2;
+}
+
 #index-banner1,
 #index-banner2,
 #index-banner3 {
@@ -888,10 +906,6 @@ footer .nav-link:hover {
 #index-banner3 a {
   position: relative;
   z-index: 2;
-}
-
-.five-slider {
-  min-height: 200px;
 }
 
 /* ABOUT */
@@ -1010,7 +1024,7 @@ footer .nav-link:hover {
 
 /* Button Styles */
 .btn.godown-btn {
-  background-color: #8a2be2; /* Adjust the color as needed */
+  background-color: #8a2be2;
   color: #fff;
   padding: 10px 20px;
   border: 1px solid #8a2be2;
@@ -1021,10 +1035,10 @@ footer .nav-link:hover {
 }
 
 .btn.godown-btn:hover {
-  background-color: transparent; /* Adjust the hover color as needed */
+  background-color: transparent; /* botón de about */
   border: 1px solid #8a2be2;
   color: #fff;
-  box-shadow: 0 0 20px 5px rgba(138, 43, 226, 0.7); /* Purple shadow */
+  box-shadow: 0 0 20px 5px rgba(138, 43, 226, 0.7); /* sombra violeta */
   transition: all 0.3s ease;
 }
 
@@ -1091,6 +1105,40 @@ footer .nav-link:hover {
 }
 
 .login-logo:hover::before {
+  opacity: 1;
+}
+
+.logonav {
+  max-width: 100%;
+  height: auto;
+}
+
+.logonav-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.logonav-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: -1;
+}
+
+.logonav-container:hover::before {
   opacity: 1;
 }
 
@@ -1233,12 +1281,12 @@ footer .nav-link:hover {
 input[type="submit"] {
   border: none;
   outline: none;
-  padding: 11px 25px;
+  padding: 11px 40px;
   background: #45f3ff;
   cursor: pointer;
   border-radius: 4px;
   font-weight: 600;
-  width: 100px;
+  width: 200px;
   margin-top: 10px;
 }
 input[type="submit"]:active {
@@ -1400,7 +1448,7 @@ input[type="submit"]:active {
   cursor: pointer;
   border-radius: 4px;
   font-weight: 600;
-  width: calc(100% - 40px); /* Asegura que el botón no sobresalga */
+  width: auto; /* Asegura que el botón no sobresalga */
   margin: 20px auto; /* Centra el botón horizontalmente */
   text-align: center;
   color: #23242a;
@@ -1416,10 +1464,10 @@ input[type="submit"]:active {
   position: relative; /* Ensure the pseudo-element is positioned relative to the container */
   width: 100%;
   min-height: 70vh; /* Ensure it covers the full viewport height */
-  background-image: url("../src/img/register.webp") !important; /* Update the path to your background image */
+  background-image: url("../src/img/register.jpg") !important; /* Update the path to your background image */
   background-size: contain; /* Ensure the background image covers the entire container */
   background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-repeat: repeat; /* Prevent the background image from repeating */
   display: flex;
   justify-content: center;
   align-items: center;

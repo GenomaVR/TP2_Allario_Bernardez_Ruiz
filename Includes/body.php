@@ -1,29 +1,17 @@
 <?php
 include './includes/404-section.php';
 
-$servername = "localhost";
-$username = "root";  // Cambiá esto si tu usuario de MySQL es diferente
-$password = "";      // Cambiá esto si tu contraseña de MySQL es diferente
-$dbname = "juegos"; // Nombre de la base de datos correcta
-
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-  die("Conexión fallida: " . $conn->connect_error);
-}
+include 'config.php'; // Incluir el archivo de configuración
 
 // Consulta de juegos desde la base de datos
 $sql = "SELECT id, titulo, descripcion, lanzamiento, genero, precio, publisher, imagen FROM titulos";
 $result = $conn->query($sql);
 
 if (!$result) {
-  mostrar_error(true);
-  die("Error en la consulta: " . $conn->error);
+    mostrar_error(true);
+    die("Error en la consulta: " . $conn->error);
 }
 ?>
-
 <body>
 
 <div id="carouselExampleIndicators" class="carousel slide d-flex justify-content-center position-relative main-carousel" data-bs-interval="3000">
@@ -34,18 +22,24 @@ if (!$result) {
   </div>
   <div class="carousel-inner container-fluid p-0">
     <div class="carousel-item active carousel-banner" id="index-banner1">
-        <div class="banner-content text-center text-white">
-            <h1>Bienvenido a Vapor Games</h1>
+        <div class="banner-content text-center text-white fw-bold">
+            <h1>VAPOR GAMES</h1>
             <p>Descubre los mejores juegos a precios increíbles</p>
             <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
     <div class="carousel-item carousel-banner" id="index-banner2">
-        <img src="+" alt="">
+        <div class="banner-content text-center text-white fw-bold">
+        <h2>Call of Duty Blak Ops6</h2>
+            <p>Descubre los mejores juegos a precios increíbles</p>
+            <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
+        </div>
     </div>
     <div class="carousel-item carousel-banner" id="index-banner3">
-        <div class="banner-content text-center text-white">
-
+        <div class="banner-content text-center text-white fw-bold">
+        <h1>WARHAMMER 40K: SPACE MARINE 2</h1>
+            <p>Descubre los mejores juegos a precios increíbles</p>
+            <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
   </div>
@@ -61,27 +55,27 @@ if (!$result) {
 
 
 <div class="mx-5">
-    <div class="container-fluid mt-5 px-5 text-white">
-        <h3>Pensados para vos</h3>
+    <div class="container-fluid mt-5 px-4 text-white fw-bold">
+        <h3 class="fw-bold m-0">Pensados para vos</h3>
     </div>
     <!-- SLIDER CON IMAGENES DESDE LA BASE DE DATOS - VIEWPORTS GRANDES -->
-    <div id="carouselExample2" class="container-fluid px-5 carousel slide d-flex position-relative d-none d-lg-flex align-items-center" data-bs-ride="carousel">
+    <div id="carouselExample2" class="container-fluid carousel slide d-flex position-relative d-none d-lg-flex align-items-center" data-bs-ride="carousel">
         <div class="d-flex justify-content-center">
-            <div class="carousel-inner overflow-hidden">
+            <div class="carousel-inner py-3">
                 <?php
                 if ($result->num_rows > 0) {
                     $active = true;
                     $counter = 0;
                     while($row = $result->fetch_assoc()) {
-                        if ($counter % 5 == 0) {
+                        if ($counter % 6 == 0) {
                             if ($counter > 0) {
                                 echo '</div></div>'; // CIERRA EL ULTIMO CAROUSEL ITEM
                             }
                             echo '<div class="carousel-item ' . ($active ? 'active' : '') . '">';
-                            echo '<div class="d-flex .five-slider justify-content-between gap-5 card-rows">';
+                            echo '<div class="d-flex gap-2">';
                             $active = false;
                         }
-                        echo '<div class="card cards-juegos border-4 bg-light main-cards col p-0" onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($row["imagen"]) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">';
+                        echo '<div class="card border-4 bg-light  main-cards" onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($row["imagen"]) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">';
                         echo '<div class="img-box p-0">';
                         echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
                         echo '</div>';
@@ -108,7 +102,7 @@ if (!$result) {
     <!-- SLIDER CON IMAGENES DESDE LA BASE DE DATOS - VIEWPORTS CHICO  -->
     <div id="carouselExample3" class="container carousel slide d-flex justify-content-center position-relative d-lg-none" data-bs-ride="carousel">
         <div class="d-flex justify-content-center">
-            <div class="carousel-inner overflow-visible">
+            <div class="carousel-inner carousel-inner-container align-items-center p-2">
                 <?php
                 // Resetea y hace fetch para volver a recorrer los resultados en pantallas más chicas
                 $result->data_seek(0);
@@ -116,8 +110,8 @@ if (!$result) {
                     $active = true;
                     while($row = $result->fetch_assoc()) {
                         echo '<div class="carousel-item ' . ($active ? 'active' : '') . '">';
-                        echo '<div class="d-flex justify-content-between gap-3 card-rows">';
-                        echo '<div class="card cards-juegos border-4 bg-light main-cards col-12 p-0" onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($row["imagen"]) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">';
+                        echo '<div class="d-flex">';
+                        echo '<div class="card border-4 main-cards" onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($row["imagen"]) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">';
                         echo '<div class="img-box p-0">';
                         echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
                         echo '</div>';
@@ -232,8 +226,8 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
 <div class="container-fluid slider-medium-2col my-5 py-5 ">
         <div class="row container-columns d-flex md-flex-wrap">
             <div class="call-to-action d-flex flex-column justify-content-center align-items-center text-center col-xl-3">
-                <h3 class="text-white">Selección de los editores</h3>
-                <a href="index.php" class="btn btn-dark w-50">Ver tienda completa</a>
+                <h3 class="text-white">Los más populares</h3>
+                <a href="index.php" class="btn godown-btn">Ver tienda completa</a>
             </div>
             <div class="slider-verticalcards container-fluid col-xl-9">
                 <div class="carousel2" id="customCarousel">
@@ -378,23 +372,25 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
     productoModal.show();
 }
 </script>
-<section class="container mt-5">
+
+
+<section class="container-fluid mt-5">
     <div class="row justify-content-center gap-3">
-        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4">
+        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4 d-flex flex-column">
             <div class="text-white text-center mb-3">
                 <h2>RECORRE NUESTRO STORE</h2>
             </div>
-            <div class="card-body about-info rounded d-flex flex-column">
+            <div class="card-body about-info rounded d-flex flex-column flex-grow-1">
                 <img src="./src/img/store.jpg" alt="" class="rounded mb-4 img-fluid">
                 <p class="flex-grow-1 mb-3">Encuentra los mejores juegos a los mejores precios tan buenos que podríamos quebrar mañana.</p>
                 <a href="./commerce.php" class="btn godown-btn mt-auto align-self-center">Ir a la tienda</a>
             </div>
         </div>
-        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4">
+        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4 d-flex flex-column">
             <div class="text-white text-center mb-3">
                 <h2>UNITE A NUESTRO DISCORD</h2>
             </div>
-            <div class="card-body about-info rounded d-flex flex-column">
+            <div class="card-body about-info rounded d-flex flex-column flex-grow-1">
                 <img src="./src/img/discord.jpg" alt="" class="rounded mb-4 img-fluid">
                 <p class="flex-grow-1 mb-3">Tenemos servidores personalizados para divertirte al máximo con tu Team.</p>
                 <a href="./404.php" class="btn godown-btn mt-auto align-self-center">Ir al Server</a>

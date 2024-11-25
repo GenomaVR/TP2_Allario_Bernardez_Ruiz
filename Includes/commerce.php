@@ -4,21 +4,20 @@ include './header.php';
 
 
 <?php
-$servername = "localhost";
-$username = "root";  // Cambia esto si tu usuario de MySQL es diferente
-$password = "";      // Cambia esto si tu contraseña de MySQL es diferente
-$dbname = "juegos"; // Nombre de la base de datos correcta
+include '404-section.php';
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+include 'config.php'; // Incluir el archivo de configuración
 
-// Verificar conexión
-if ($conn->connect_error) {
-  die("Conexión fallida: " . $conn->connect_error);
+// Consulta de juegos desde la base de datos
+$sql = "SELECT id, titulo, descripcion, lanzamiento, genero, precio, publisher, imagen FROM titulos";
+$result = $conn->query($sql);
+
+if (!$result) {
+    mostrar_error(true);
+    die("Error en la consulta: " . $conn->error);
 }
-
-
 ?>
+<body>
 
 
 <body>
@@ -56,7 +55,7 @@ if ($conn->connect_error) {
         }
 
         echo '<div class="col-md-3">
-        <div class="card h-100 neon-card">
+        <div class=" commercer-card h-100 neon-card">
             <img src="..' . $imagen . '" class="card-img-top p-3" alt="' . $row["titulo"] . '">
             <div class="card-body d-flex flex-column align-items-center text-center">
                 <h5 class="card-title text-white">' . $row["titulo"] . '</h5>
