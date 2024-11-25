@@ -40,6 +40,28 @@ body {
   color: white; /* Establece el color del texto en el contenedor del carrito como blanco */
 }
 
+.total-span {
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.cart-table {
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.input-num {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+}
 /* Carousel Styles */
 .carousel-banner {
   box-shadow: 0 4px 12px 1px #030618; /* Add shadow effect */
@@ -262,20 +284,9 @@ body {
   background-position: center;
 }
 
-.second-slider-card {
-  background-image: url("https://assets.website-files.com/62cd5c6f4947cd559a9cc4de/62d008324e9b917dffe8d17c_grey.jpg");
-  background-position: center;
-  background-size: contain;
-  border-color: #292a33 !important;
-}
-
-/* Slider de Mirá más*/
-
-/* Slider de Mirá más*/
-
 /* Slider de Mirá más*/
 .slider-medium-2col {
-  background-image: url("./img/cp2077.jpg"),
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/img/cp2077.jpg"),
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: center;
@@ -330,6 +341,10 @@ body {
   .container-store {
     flex: 0 0 100%; /* Show 1 card per row */
   }
+  .accesos-img img {
+    max-width: 500px;
+    align-self: center;
+  }
 }
 
 @media (max-width: 576px) {
@@ -349,7 +364,7 @@ body {
   font-weight: bold;
   position: relative;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .navbar .nav-link::after {
@@ -379,7 +394,8 @@ body {
   margin: auto;
 }
 
-.search-input {
+.search-input,
+.subscribe-input {
   width: 100%;
   padding-right: 40px; /* Espacio para el icono */
   border-radius: 50px;
@@ -392,7 +408,8 @@ body {
   color: #b0b3b8;
 }
 
-.search-input:focus {
+.search-input:focus,
+.subscribe-input:focus {
   outline: none;
   border-color: #3c5c73;
 }
@@ -400,6 +417,9 @@ body {
 /* Estilo personalizado para el botón de alternancia */
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
 }
 
 .custom-toggler {
@@ -423,6 +443,10 @@ body {
 }
 .search-btn i {
   font-size: 1rem;
+}
+
+.badge-num {
+  background-color: #527f9f;
 }
 
 /* CORTE */ /* CORTE */ /* CORTE */ /* CORTE */ /* CORTE */ /* CORTE */ /* CORTE */ /* CORTE */ /* CORTE */ /* CORTE */
@@ -449,9 +473,9 @@ body {
 
 .small-text {
   font-size: 16px;
-  color: rgb(162, 156, 192);
+  color: white;
   display: block;
-  font-weight: normal;
+  font-weight: bold;
   font-family: "Roboto", sans-serif;
 }
 
@@ -464,7 +488,7 @@ body {
 
 .subscribe-mail {
   flex: 0 0 70%;
-  background-color: #a445b2;
+  background-color: #2e4a5a;
   color: white;
   display: flex;
   align-items: center;
@@ -476,6 +500,8 @@ body {
   border-radius: 50px;
   width: 100%;
   display: flex;
+  position: relative;
+  margin: auto;
 }
 
 .subscribe-input {
@@ -631,12 +657,13 @@ footer .nav-link:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las cards */
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 /* Estilo para la imagen dentro de la card */
 .card-img-top {
   height: 120px; /* Altura fija para las imágenes */
-  object-fit: contain; /* Ajusta la imagen para que no se recorte ni se haga zoom */
+  object-fit: cover; /* Ajusta la imagen para que no se recorte ni se haga zoom */
   width: 100%; /* La imagen ocupa todo el ancho de la card */
   border-radius: 8px 8px 0 0; /* Redondea las esquinas superiores de la imagen */
 }
@@ -685,9 +712,17 @@ footer .nav-link:hover {
 
 /* Padding para la imagen */
 .card-img-top {
-  padding: 10px;
   border-radius: 8px; /* Opcional: bordes redondeados */
   background: #282a36; /* Fondo oscuro detrás de la imagen */
+}
+
+.card-button {
+  background-color: #8a2be2;
+  border: none;
+}
+
+.card-button:hover {
+  background-color: #6a1bbd;
 }
 
 /* Estilo para el botón */
@@ -786,12 +821,12 @@ footer .nav-link:hover {
 }
 
 .contact-page {
-  background-image: url("../logo/fondoContacto.jpg");
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/img/cyberpunk-contacto.jpeg");
   background-color: rgba(100, 100, 100, 0.9); /* Fondo oscuro con opacidad */
   background-blend-mode: soft-light;
-  background-size: cover;
+  background-size: contain;
   background-repeat: repeat-y; /* Hace que el fondo se repita verticalmente */
-  background-position: 0 0; /* Comienza desde la parte superior */
+  background-position: right; /* Comienza desde la parte superior */
   min-height: 100vh;
   position: relative;
   animation: moveBackground 20s linear infinite; /* Animación continua */
@@ -888,15 +923,15 @@ footer .nav-link:hover {
 }
 
 #index-banner1 {
-  background-image: url("../src/slider/helldivers2.jpg");
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/slider/helldivers2.jpg");
 }
 
 #index-banner2 {
-  background-image: url("../src/slider/COD6.webp");
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/slider/COD6.webp");
 }
 
 #index-banner3 {
-  background-image: url("../src/slider/SCP2.jpeg");
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/slider/SCP2.jpeg");
 }
 
 #index-banner1::before,
@@ -939,7 +974,7 @@ footer .nav-link:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../src/about-img/nomansky.jpg");
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/about-img/nomansky.jpg");
   background-size: cover;
   background-position: center;
   transition: transform 0.5s ease-in-out;
@@ -1057,7 +1092,7 @@ footer .nav-link:hover {
   width: 100%;
   min-height: 300px;
   max-height: 500px;
-  background-image: url("../src/img/tga2024-2.jpg");
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/img/tga2024-2.jpg");
   background-size: cover;
   background-position: top;
   background-color: #040404c9;
@@ -1302,6 +1337,10 @@ input[type="submit"] {
 }
 input[type="submit"]:active {
   opacity: 0.8;
+}
+
+.input-login {
+  align-self: center;
 }
 
 /*REGISTRO*/

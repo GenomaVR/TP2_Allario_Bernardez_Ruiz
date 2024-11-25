@@ -27,12 +27,12 @@ if( isset($_POST['email']) && isset($_POST['password']) ){
 <head>
 	<meta charset="UTF-8">
 	<title>Iniciar sesión</title>
-	<link rel="stylesheet" href=".././src/styles.css">
+	<link rel="stylesheet" href="../../TP2_Allario_Bernardez_Ruiz/src/styles.css">
 </head>
 
 <body class="login-body-conntainer">
 <div class="container-fluid login-logo">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="../../TP2_Allario_Bernardez_Ruiz/index.php">
       <img class="logonav" src="../../TP2_Allario_Bernardez_Ruiz/logo/logo.png" alt="">
     </a>
 </div>

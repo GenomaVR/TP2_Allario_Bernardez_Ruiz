@@ -9,15 +9,15 @@
 
 <body class="login-body-conntainer">
 <div class="login-logo">
-    <a class="navbar-brand" href="#">
-      <img class="logonav" src="../../TP2_Allario_Bernardez_Ruiz/logo/logo.png" alt="">
+    <a class="navbar-brand" href="../TP2_Allario_Bernardez_Ruiz/index.php">
+      <img class="logonav" src="../TP2_Allario_Bernardez_Ruiz/imagenes/logo/logo.png" alt="">
     </a>
 </div>
 
 
 <div class="custom-container">
     <div class="custom-content">
-        <img src="./src/img/notfound.png" width="200" alt="" class="img-notfound">
+        <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/img/notfound.png" width="200" alt="" class="img-notfound">
         <div class="custom-text">
             <h1>404 - Página no encontrada</h1>
             <p>Parece que has llegado a una parte no explorada del mapa.</p>

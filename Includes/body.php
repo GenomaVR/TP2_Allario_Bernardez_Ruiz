@@ -77,7 +77,7 @@ if (!$result) {
                         }
                         echo '<div class="card border-4 bg-light  main-cards" onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($row["imagen"]) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">';
                         echo '<div class="img-box p-0">';
-                        echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
+                        echo '<img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
                         echo '</div>';
                         echo '</div>';
                         $counter++;
@@ -113,7 +113,7 @@ if (!$result) {
                         echo '<div class="d-flex">';
                         echo '<div class="card border-4 main-cards" onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($row["imagen"]) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">';
                         echo '<div class="img-box p-0">';
-                        echo '<img src=".' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
+                        echo '<img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/' . $row["imagen"] . '" alt="' . $row["titulo"] . '">';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
@@ -235,7 +235,7 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
                         <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
-                                    <img src="./slider-img/cod6-slider.webp" alt="">
+                                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/cod6-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
@@ -243,42 +243,42 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
                         <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
-                                    <img src="./slider-img/helldivers2-slider.webp" alt="">
+                                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/helldivers2-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
                         <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
-                                    <img src="./slider-img/metro_awakening-slider.webp" alt="">
+                                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/metro_awakening-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
                         <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
-                                    <img src="./slider-img/silent-hill2-slider.webp" alt="">
+                                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/silent-hill2-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
                         <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
-                                    <img src="./slider-img/space-marine2-slider.webp" alt="">
+                                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/space-marine2-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
                         <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
-                                    <img src="./slider-img/farming-slider.webp" alt="">
+                                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/farming-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
                         <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                         <div class="carousel-item2">
                             <div class="card-content">
-                                <img src="./slider-img/tlou1.webp" alt="">
+                                <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/tlou1.webp" alt="">
                             </div>
                         </div>
                         </button>
@@ -374,14 +374,14 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
 </script>
 
 
-<section class="container-fluid mt-5">
+<section class="container mt-5">
     <div class="row justify-content-center gap-3">
         <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4 d-flex flex-column">
             <div class="text-white text-center mb-3">
                 <h2>RECORRE NUESTRO STORE</h2>
             </div>
-            <div class="card-body about-info rounded d-flex flex-column flex-grow-1">
-                <img src="./src/img/store.jpg" alt="" class="rounded mb-4 img-fluid">
+            <div class="card-body about-info rounded d-flex flex-column flex-grow-1 justify-content-center accesos-img">
+                <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/img/store.jpg" alt="" class="rounded mb-4 accesos-img">
                 <p class="flex-grow-1 mb-3">Encuentra los mejores juegos a los mejores precios tan buenos que podríamos quebrar mañana.</p>
                 <a href="./commerce.php" class="btn godown-btn mt-auto align-self-center">Ir a la tienda</a>
             </div>
@@ -390,8 +390,8 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
             <div class="text-white text-center mb-3">
                 <h2>UNITE A NUESTRO DISCORD</h2>
             </div>
-            <div class="card-body about-info rounded d-flex flex-column flex-grow-1">
-                <img src="./src/img/discord.jpg" alt="" class="rounded mb-4 img-fluid">
+            <div class="card-body about-info rounded d-flex flex-column flex-grow-1 justify-content-center accesos-img">
+                <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/img/discord.jpg" alt="" class="rounded mb-4 ">
                 <p class="flex-grow-1 mb-3">Tenemos servidores personalizados para divertirte al máximo con tu Team.</p>
                 <a href="./404.php" class="btn godown-btn mt-auto align-self-center">Ir al Server</a>
             </div>
@@ -448,7 +448,7 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
             </div>
             <div class="text-white fw-bold text-center">
                 <p>Vota a tus juegos favoritos en THE GAMES AWARDS 2024 y, por supuesto, a VAPOR en la cateogría mejor Store</p>
-                <a href="./commerce.php" class="btn godown-btn mt-4">Votar ahora</a>
+                <a href="./404.php" class="btn godown-btn mt-4">Votar ahora</a>
             </div>
         </div>
     </div>

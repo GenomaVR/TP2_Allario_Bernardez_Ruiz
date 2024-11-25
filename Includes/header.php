@@ -23,9 +23,8 @@ $total_items = count($carrito);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="src/styles.css">
   <script src="./script.js"></script>
-  <link rel="stylesheet" href="../src/styles.css">
+  <link rel="stylesheet" href="../TP2_Allario_Bernardez_Ruiz/src/styles.css">
 
 </head>
 
@@ -33,7 +32,7 @@ $total_items = count($carrito);
 
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid d-flex justify-content-between align-items-center">
-    <a class="navbar-brand logonav-container" href="#">
+    <a class="navbar-brand logonav-container" href="../../TP2_Allario_Bernardez_Ruiz/index.php">
       <img class="logonav" src="../../TP2_Allario_Bernardez_Ruiz/logo/logo.png" alt="">
     </a>
     <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -48,13 +47,13 @@ $total_items = count($carrito);
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../TP2_Allario_Bernardez_Ruiz/Includes/commerce.php">Tienda</a>
+          <a class="nav-link" href="../../TP2_Allario_Bernardez_Ruiz/commerce.php">Tienda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nosotros</a>
+          <a class="nav-link" href="./../TP2_Allario_Bernardez_Ruiz/about.php">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../TP2_Allario_Bernardez_Ruiz/Includes/contacto.php">Contacto</a>
+          <a class="nav-link" href="../../TP2_Allario_Bernardez_Ruiz/contacto.php">Contacto</a>
         </li>
       </ul>
       <form class="d-flex search-bar justify-content-center" role="search">
@@ -67,13 +66,13 @@ $total_items = count($carrito);
       <a href="carrito.php" class="navbar-cart m-2">
         <i class="bi bi-cart4 mx-1"></i>
         <span>Carrito</span>
-        <span class="badge bg-success mx-1">
+        <span class="badge mx-1 badge-num">
           <?php echo isset($_SESSION['carrito']) ? count($_SESSION['carrito']) : 0; ?>
         </span>
       </a>
-      <a href="../login/login.php" class="navbar-cart">
-        <span>Login</span>
-        <i class="bi bi-person  mx-1"></i>
+      <a href="../../TP2_Allario_Bernardez_Ruiz/login/login.php" class="navbar-cart">
+        <span></span>
+        <i class="bi bi-person"></i>
       </a>
     </div>
   </div>
