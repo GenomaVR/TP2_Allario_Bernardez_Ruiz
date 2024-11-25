@@ -62,7 +62,7 @@ if (!$result) {
                 <p class="card-text text-white">';
 
         if ($row["genero"] == "Free to Play") {
-          echo '<span class="text-success">Descargar gratis</span>';
+          echo '<span class="text-success">Gratis</span>';
         } elseif ($row["precio"] === null || $row["precio"] === '') {
           echo '<span class="text-danger">Fuera de stock</span>';
         } elseif ($row["precio"] == 0) {
@@ -78,8 +78,8 @@ if (!$result) {
         if ($row["genero"] == "Free to Play" || $row["precio"] == 0) {
           echo '<button class="btn btn-success d-flex align-items-center justify-content-center"
           onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($imagen) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">
-          <i class="bi bi-cart-plus me-2"></i> Descargar gratis
-          </button>';
+            <i class="bi bi-cart-plus me-2"></i> Gratis
+            </button>';
         } else {
           echo '<button class="btn btn-primary d-flex align-items-center justify-content-center"
           onclick="mostrarDetalleProducto(\'' . $row["id"] . '\', \'' . addslashes($row["titulo"]) . '\', \'' . addslashes($row["descripcion"]) . '\', \'' . addslashes($imagen) . '\', ' . ($row["precio"] ? $row["precio"] : 0) . ', \'' . addslashes($row["lanzamiento"]) . '\', \'' . addslashes($row["publisher"]) . '\', \'' . addslashes($row["genero"]) . '\')">
