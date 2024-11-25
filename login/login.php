@@ -33,7 +33,7 @@ if( isset($_POST['email']) && isset($_POST['password']) ){
 <body class="login-body-conntainer">
 <div class="container-fluid login-logo">
     <a class="navbar-brand" href="../../TP2_Allario_Bernardez_Ruiz/index.php">
-      <img class="logonav" src="../../TP2_Allario_Bernardez_Ruiz/logo/logo.png" alt="">
+      <img class="logonav" src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/logo.png" alt="">
     </a>
 </div>
 
