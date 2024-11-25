@@ -8,6 +8,10 @@
   </div>
 </main>
 
+<body>
+  
+
+
 <section class="container mt-5">
   <div class="row align-items-start mb-5 section-hover">
     <div class="col-md-6 order-md-2 animate-on-scroll">
@@ -83,14 +87,13 @@
 
 
 <article class="container-fluid p-0">
-
-<div class="animate-on-scroll">
-      <div class="about-info about-text px-4 py-4">
-        <h2>Unite a nosotros</h2>
-        <p>Explora las oportunidades que VAPOR tiene para ser parte de nuestra misión por llevar el Gaming a cada rincón del planeta.</p>
-        <a href="./commerce.php" class="btn godown-btn mt-4">Ver empleos
-
-
+  <div class="animate-on-scroll">
+    <div class="about-info about-text px-4 py-4">
+      <h2>Unite a nosotros</h2>
+      <p>Explora las oportunidades que VAPOR tiene para ser parte de nuestra misión por llevar el Gaming a cada rincón del planeta.</p>
+      <a href="./commerce.php" class="btn godown-btn mt-4">Ver empleos</a>
+    </div>
+  </div>
 </article>
 
 
@@ -120,4 +123,4 @@
   });
 </script>
 
-<?php include '../TP2_Allario_Bernardez_Ruiz/includes/footer.php'; ?>
+<?php include '../TP2_Allario_Bernardez_Ruiz/Includes/footer.php'; ?>

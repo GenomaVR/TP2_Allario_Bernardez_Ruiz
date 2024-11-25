@@ -20,8 +20,8 @@
         <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/img/notfound.png" width="200" alt="" class="img-notfound">
         <div class="custom-text">
             <h1>404 - Página no encontrada</h1>
-            <p>Parece que has llegado a una parte no explorada del mapa.</p>
-            <p>PERO no te preocupes, podés seguir explorando nuestra <a href="commerce.php" class="text-decoration-none fw-bold">Tienda!</a>.</p>
+            <p>Parece que has llegado a una parte no explorada del mapa o no tenes internet amigo</p>
+            <p>PERO no te preocupes, podés seguir explorando nuestra. <a href="commerce.php" class="text-decoration-none fw-bold">Tienda!</a>.</p>
         </div>
     </div>
 </div>
