@@ -1122,7 +1122,21 @@ footer .nav-link:hover {
   align-items: center;
   min-height: 100vh; /*cubre toda la ventana*/
   flex-direction: column;
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/img/store.jpg");
+  background-size: cover;
+  background-position: center;
 } /*cubre todo centradito, el color del fondo...*/
+
+.login-body-conntainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
 
 .login-logo {
   position: absolute;
@@ -1514,24 +1528,12 @@ input[type="submit"]:active {
   position: relative; /* Ensure the pseudo-element is positioned relative to the container */
   width: 100%;
   min-height: 70vh; /* Ensure it covers the full viewport height */
-  background-image: url("../src/img/register.jpg") !important; /* Update the path to your background image */
   background-size: contain; /* Ensure the background image covers the entire container */
   background-position: center; /* Center the background image */
   background-repeat: repeat; /* Prevent the background image from repeating */
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.register-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
-  z-index: 1; /* Ensure the overlay is above the background image */
 }
 
 .register-content {
