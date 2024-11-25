@@ -31,14 +31,14 @@ if (!$result) {
     <div class="carousel-item carousel-banner" id="index-banner2">
         <div class="banner-content text-center text-white fw-bold">
         <h2>Call of Duty Blak Ops6</h2>
-            <p>Descubre los mejores juegos a precios increíbles</p>
+            <p>Toca Shift para hacer slide</p>
             <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
     <div class="carousel-item carousel-banner" id="index-banner3">
         <div class="banner-content text-center text-white fw-bold">
         <h1>WARHAMMER 40K: SPACE MARINE 2</h1>
-            <p>Descubre los mejores juegos a precios increíbles</p>
+            <p>ta maso meno el juego pero safa</p>
             <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
@@ -407,27 +407,27 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
     </div>
     <div class="container-fluid px-5 d-flex justify-content-center">
         <div class="d-flex justify-content-between gap-3 card-rows w-100">
-        <a href="./includes/commerce.php" class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher1">
+        <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php" class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher1">
                 <div class="img-box">
-                    <img src="./logo/publisher/blizzard-logo.avif" alt="">
+                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/blizzard-logo.avif" alt="">
                 </div>
             </a>
-            <a href="./includes/commerce.php" class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher3">
+            <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php" class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher3">
                 <div class="img-box">
-                    <img src="./logo/publisher/konami-logo.png" alt="">
+                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/konami-logo.png" alt="">
                 </div>
             </a>
-            <a href="./includes/commerce.php"  class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher2">
+            <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php"  class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher2">
 
                 <div class="img-box">
-                    <img src="./logo/publisher/valve_logo.svg" alt="">
+                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/valve_logo.svg" alt="">
                 </div>
 
             </a>
-            <a href="./includes/commerce.php"class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher4" >
+            <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php"class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher4" >
 
                 <div class="img-box">
-                    <img src="./logo/publisher/ubi-logo.png" alt="">
+                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/ubi-logo.png" alt="">
                 </div>
 
             </a>

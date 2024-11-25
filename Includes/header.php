@@ -13,7 +13,7 @@ $total_items = count($carrito);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Cinfeilo </title>
+  <title>Tienda Vapor </title>
   <link rel="icon" href="./logoIcon.ico" type="image/x-icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -33,7 +33,7 @@ $total_items = count($carrito);
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid d-flex justify-content-between align-items-center">
     <a class="navbar-brand logonav-container" href="../../TP2_Allario_Bernardez_Ruiz/index.php">
-      <img class="logonav" src="../../TP2_Allario_Bernardez_Ruiz/logo/logo.png" alt="">
+      <img class="logonav" src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/logo.png" alt="logo">
     </a>
     <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
