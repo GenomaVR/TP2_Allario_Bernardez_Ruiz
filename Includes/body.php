@@ -7,9 +7,9 @@ include 'config.php'; // Incluir el archivo de configuración
 $sql = "SELECT id, titulo, descripcion, lanzamiento, genero, precio, publisher, imagen FROM titulos";
 $result = $conn->query($sql);
 
-if (!$result) {
+if (!$result || $conn->connect_error) {
     mostrar_error(true);
-    die("Error en la consulta: " . $conn->error);
+    die("Error en la consulta: " . $conn->connect_error);
 }
 ?>
 <body>
@@ -31,14 +31,14 @@ if (!$result) {
     <div class="carousel-item carousel-banner" id="index-banner2">
         <div class="banner-content text-center text-white fw-bold">
         <h2>Call of Duty Blak Ops6</h2>
-            <p>Toca Shift para hacer slide</p>
+            <p>Espionaje, acción y disparos</p>
             <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
     <div class="carousel-item carousel-banner" id="index-banner3">
         <div class="banner-content text-center text-white fw-bold">
         <h1>WARHAMMER 40K: SPACE MARINE 2</h1>
-            <p>ta maso meno el juego pero safa</p>
+            <p>Desatá todo el poder de el imperio</p>
             <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
@@ -166,7 +166,7 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
     }
 
     const modalContent = `
-        <img src=".${imagen}" class="img-fluid mb-3" alt="${titulo}">
+        <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/${imagen}" class="img-fluid mb-3" alt="${titulo}">
         <h4>${titulo}</h4>
         <p>${descripcion}</p>
         <p><strong>Precio:</strong> ${precio == 0 || precio === '' ? 'Gratis' : '$' + precio}</p>
@@ -318,7 +318,7 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
     }
 
     const modalContent = `
-        <img src=".${imagen}" class="img-fluid mb-3" alt="${titulo}">
+        <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/${imagen}" class="img-fluid mb-3" alt="${titulo}">
         <h4>${titulo}</h4>
         <p>${descripcion}</p>
         <p><strong>Precio:</strong> ${precio == 0 || precio === '' ? 'Gratis' : '$' + precio}</p>

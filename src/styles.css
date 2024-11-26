@@ -359,6 +359,16 @@ body {
   background-color: #292f3a; /* Color de fondo para la barra de navegación */
 }
 
+/* Estilo para la barra de navegación sticky */
+.sticky-top {
+  position: -webkit-sticky; /* Soporte para Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1030; /* Asegura que la barra de navegación esté por encima de otros elementos */
+  background-color: #343a40; /* Color de fondo para la barra de navegación */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Sombra para la barra de navegación */
+}
+
 .navbar .nav-link {
   color: white;
   font-weight: bold;
@@ -383,7 +393,7 @@ body {
 }
 
 .logonav {
-  width: 100px;
+  width: 80px;
 }
 
 /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */
@@ -1115,13 +1125,30 @@ footer .nav-link:hover {
   font-family: "Poppins", sans-serif;
 } /*reseteo de margenes y rellenos*/
 
-.login-body-conntainer,
-.register-body-conntainer {
+.login-body-container,
+.register-body-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh; /*cubre toda la ventana*/
   flex-direction: column;
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/img/store.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+} /*cubre todo centradito, el color del fondo...*/
+
+.login-body-container::before,
+.register-body-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #002f4b, #2e1553);
+  opacity: 0.6;
 } /*cubre todo centradito, el color del fondo...*/
 
 .login-logo {
@@ -1523,17 +1550,6 @@ input[type="submit"]:active {
   align-items: center;
 }
 
-.register-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
-  z-index: 1; /* Ensure the overlay is above the background image */
-}
-
 .register-content {
   position: relative; /* Ensure the content is above the overlay */
   z-index: 2; /* Ensure the content is above the overlay */
@@ -1549,6 +1565,15 @@ input[type="submit"]:active {
 }
 
 /* 404 not found */
+
+.notfound-container-total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
 .custom-container {
   display: flex;
   justify-content: center;
@@ -1557,11 +1582,21 @@ input[type="submit"]:active {
   margin: auto;
 }
 
-.custom-content {
+.custom-content,
+.custom-content-notfound {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.custom-content-notfound img {
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.custom-content {
+  color: white;
 }
 
 .custom-text {
@@ -1620,4 +1655,29 @@ input[type="submit"]:active {
 }
 .footer-notfound .link-column p {
   margin: 0 10px;
+}
+
+/* Estilo para la página de error 404 */
+.error-title {
+  font-size: 3rem; /* Tamaño de fuente grande para pantallas grandes */
+  line-height: 1.2; /* Espacio entre líneas */
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 1.5rem; /* Tamaño de fuente para el mensaje de error */
+  line-height: 1.5; /* Espacio entre líneas */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 576px) {
+  .error-title {
+    font-size: 2rem; /* Reducir el tamaño de fuente en pantallas pequeñas */
+    line-height: 1.3; /* Asegurar suficiente espacio entre líneas */
+  }
+
+  .error-message {
+    font-size: 1.2rem; /* Reducir el tamaño de fuente en pantallas pequeñas */
+    line-height: 1.4; /* Asegurar suficiente espacio entre líneas */
+  }
 }

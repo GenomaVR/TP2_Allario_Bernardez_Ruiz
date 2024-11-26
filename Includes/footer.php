@@ -27,16 +27,16 @@
       <p class="links-title">NUESTROS LINKS</p>
       <ul class="nav flex-column" style="list-style-type: none; padding: 0;">
         <li class="nav-item">
-          <a href="#" class="nav-link px-2">Home</a>
+          <a href="../TP2_Allario_Bernardez_Ruiz/index.php" class="nav-link px-2">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link px-2">Tienda</a>
+          <a href=../TP2_Allario_Bernardez_Ruiz/commerce.php#" class="nav-link px-2">Tienda</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link px-2">Nosotros</a>
+          <a href="../TP2_Allario_Bernardez_Ruiz/about.php" class="nav-link px-2">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link px-2">Contacto</a>
+          <a href="../TP2_Allario_Bernardez_Ruiz/contacto.php" class="nav-link px-2">Contacto</a>
         </li>
       </ul>
     </div>
@@ -71,13 +71,13 @@
       <p class="links-title">Redes Sociales</p>
       <ul class="nav flex-row" style="list-style-type: none; padding: 0;">
         <li class="nav-item">
-          <a href="#" class="text-white "><i class="bi bi-facebook social-icon"></i></a>
+          <a href="../TP2_Allario_Bernardez_Ruiz/404.php" class="text-white "><i class="bi bi-facebook social-icon"></i></a>
         </li>
         <li class="nav-item">
-          <a href="#" class="text-white "><i class="bi bi-twitter social-icon"></i></a>
+          <a href="../TP2_Allario_Bernardez_Ruiz/404.php" class="text-white "><i class="bi bi-twitter social-icon"></i></a>
         </li>
         <li class="nav-item">
-          <a href="#" class="text-white "><i class="bi bi-instagram social-icon"></i></a>
+          <a href="../TP2_Allario_Bernardez_Ruiz/404.php" class="text-white "><i class="bi bi-instagram social-icon"></i></a>
         </li>
       </ul>
     </div>

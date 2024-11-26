@@ -30,8 +30,8 @@ $total_items = count($carrito);
 
 <body>
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
+<nav class="navbar navbar-expand-lg sticky-top py-0">
+  <div class="container-fluid d-flex justify-content-between align-items-center ">
     <a class="navbar-brand logonav-container" href="../../TP2_Allario_Bernardez_Ruiz/index.php">
       <img class="logonav" src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/logo.png" alt="logo">
     </a>
@@ -56,7 +56,7 @@ $total_items = count($carrito);
           <a class="nav-link" href="../../TP2_Allario_Bernardez_Ruiz/contacto.php">Contacto</a>
         </li>
       </ul>
-      <form class="d-flex search-bar justify-content-center" role="search">
+      <form class="d-flex search-bar justify-content-center mx-sm-0 mx-lg-auto" role="search">
         <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search" />
         <button class="btn search-btn" type="submit">
           <i class="bi bi-search"></i>
@@ -71,8 +71,9 @@ $total_items = count($carrito);
         </span>
       </a>
       <a href="../../TP2_Allario_Bernardez_Ruiz/login/login.php" class="navbar-cart">
-        <span></span>
+        <span>
         <i class="bi bi-person"></i>
+        </span>
       </a>
     </div>
   </div>
