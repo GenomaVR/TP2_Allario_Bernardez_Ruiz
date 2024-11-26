@@ -10,6 +10,15 @@ body {
 
 /* carrito */
 
+.sticky-top {
+  position: -webkit-sticky; /* Soporte para Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1030; /* Asegura que la barra de navegación esté por encima de otros elementos */
+  background-color: #343a40; /* Color de fondo para la barra de navegación */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Sombra para la barra de navegación */
+}
+
 .navbar-cart {
   background-color: transparent; /* Fondo transparente */
   color: #8a2be2; /* Color de texto violeta */
@@ -365,6 +374,7 @@ body {
   position: relative;
   text-decoration: none;
   font-size: 1rem;
+  
 }
 
 .navbar .nav-link::after {
@@ -383,7 +393,7 @@ body {
 }
 
 .logonav {
-  width: 100px;
+  width: 80px;
 }
 
 /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */ /* BARRA BSUYQUEDA */
@@ -577,6 +587,7 @@ footer {
 .nav-item {
   margin-left: 10px;
   margin-right: 10px;
+  padding: 0;
 }
 
 footer .nav-link {
@@ -1154,11 +1165,6 @@ footer .nav-link:hover {
   opacity: 1;
 }
 
-.logonav {
-  max-width: 100%;
-  height: auto;
-}
-
 .logonav-container {
   position: relative;
   display: flex;
@@ -1186,11 +1192,6 @@ footer .nav-link:hover {
 
 .logonav-container:hover::before {
   opacity: 1;
-}
-
-.logonav {
-  max-width: 100%;
-  height: auto;
 }
 
 /* ANIMACIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN*/
