@@ -159,67 +159,7 @@ if (!$result || $conn->connect_error) {
     </div>
 </div>
 
-<script>
-function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzamiento, publisher, genero) {
-    if (!imagen || imagen === 'null' || imagen === 'undefined') {
-        imagen = 'ruta/a/imagen/predeterminada.jpg'; // Imagen predeterminada si no hay imagen
-    }
 
-    const modalContent = `
-        <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/${imagen}" class="img-fluid mb-3" alt="${titulo}">
-        <h4>${titulo}</h4>
-        <p>${descripcion}</p>
-        <p><strong>Precio:</strong> ${precio == 0 || precio === '' ? 'Gratis' : '$' + precio}</p>
-        <p><strong>Lanzamiento:</strong> ${lanzamiento}</p>
-        <p><strong>Publisher:</strong> ${publisher}</p>
-    `;
-
-    document.getElementById('modalContent').innerHTML = modalContent;
-
-    const actionButton = document.getElementById('modalActionButton');
-
-    // Acciones para productos gratis o de pago
-    if (precio == 0 || genero === 'Free to Play') {
-        actionButton.innerText = 'Descargar gratis';
-        actionButton.onclick = function() {
-            alert(`Iniciando descarga de ${titulo}...`);
-        };
-    } else {
-        actionButton.innerText = 'Agregar al carrito';
-        actionButton.onclick = function() {
-            fetch('agregar_carrito.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    id: id // Usar el ID correctamente para agregar al carrito
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const cartBadge = document.querySelector('.badge.bg-success');
-                    if (cartBadge) {
-                        cartBadge.textContent = data.totalItems;
-                    }
-                    alert('Producto agregado al carrito');
-                } else {
-                    alert('Error al agregar al carrito');
-                }
-            })
-            .catch(error => {
-                console.error('Error al agregar al carrito:', error);
-                alert('Error al agregar al carrito');
-            });
-        };
-    }
-
-    // Mostrar el modal
-    const productoModal = new bootstrap.Modal(document.getElementById('productoModal'));
-    productoModal.show();
-}
-</script>
 
 
 
@@ -295,7 +235,188 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
     </div>
 
 
-    <script>
+
+<section class="container mt-5">
+    <div class="row justify-content-center gap-3">
+        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4 d-flex flex-column">
+            <div class="text-white text-center mb-3">
+                <h2>RECORRE NUESTRO STORE</h2>
+            </div>
+            <div class="card-body about-info rounded d-flex flex-column flex-grow-1 justify-content-center accesos-img">
+                <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/img/store.jpg" alt="" class="rounded mb-4 accesos-img">
+                <p class="flex-grow-1 mb-3">Encuentra los mejores juegos a los mejores precios tan buenos que podríamos quebrar mañana.</p>
+                <a href="./commerce.php" class="btn godown-btn mt-auto align-self-center">Ir a la tienda</a>
+            </div>
+        </div>
+        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4 d-flex flex-column">
+            <div class="text-white text-center mb-3">
+                <h2>UNITE A NUESTRO DISCORD</h2>
+            </div>
+            <div class="card-body about-info rounded d-flex flex-column flex-grow-1 justify-content-center accesos-img">
+                <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/img/discord.jpg" alt="" class="rounded mb-4 ">
+                <p class="flex-grow-1 mb-3">Tenemos servidores personalizados para divertirte al máximo con tu Team.</p>
+                <a href="./404.php" class="btn godown-btn mt-auto align-self-center">Ir al Server</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="mx-5">
+    <div class="container-fluid mt-5 px-5 text-white ">
+        <h3>Principales Publishers</h3>
+    </div>
+    <div class="container-fluid px-5 d-flex justify-content-center">
+        <div class="d-flex justify-content-between gap-3 card-rows w-100">
+        <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php" class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher1">
+                <div class="img-box">
+                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/blizzard-logo.avif" alt="">
+                </div>
+            </a>
+            <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php" class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher3">
+                <div class="img-box">
+                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/konami-logo.png" alt="">
+                </div>
+            </a>
+            <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php"  class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher2">
+
+                <div class="img-box">
+                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/valve_logo.svg" alt="">
+                </div>
+
+            </a>
+            <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php"class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher4" >
+
+                <div class="img-box">
+                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/ubi-logo.png" alt="">
+                </div>
+
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container-fluid mt-5 tga2024">
+    <div class="row justify-content-start gap-3 tga2024 align-items-center">
+        <div class="container col-12 col-md-12 col-lg-6 p-4 align-items-center">
+            <div class="text-white text-center">
+                <h2>YA VOTASTE PARA EL GOTY?</h2>
+            </div>
+            <div class="text-white fw-bold text-center">
+                <p>Vota a tus juegos favoritos en THE GAMES AWARDS 2024 y, por supuesto, a VAPOR en la cateogría mejor Store</p>
+                <a href="./404.php" class="btn godown-btn mt-4">Votar ahora</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script> //SCRIPT DE MODAL
+function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzamiento, publisher, genero) {
+    if (!imagen || imagen === 'null' || imagen === 'undefined') {
+        imagen = 'ruta/a/imagen/predeterminada.jpg'; // Imagen predeterminada si no hay imagen
+    }
+
+    const modalContent = `
+        <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/${imagen}" class="img-fluid mb-3" alt="${titulo}">
+        <h4>${titulo}</h4>
+        <p>${descripcion}</p>
+        <p><strong>Precio:</strong> ${precio == 0 || precio === '' ? 'Gratis' : '$' + precio}</p>
+        <p><strong>Lanzamiento:</strong> ${lanzamiento}</p>
+        <p><strong>Publisher:</strong> ${publisher}</p>
+    `;
+
+    document.getElementById('modalContent').innerHTML = modalContent;
+
+    const actionButton = document.getElementById('modalActionButton');
+
+    // Acciones para productos gratis o de pago
+    if (precio == 0 || genero === 'Free to Play') {
+        actionButton.innerText = 'Descargar gratis';
+        actionButton.onclick = function() {
+            alert(`Iniciando descarga de ${titulo}...`);
+        };
+    } else {
+        actionButton.innerText = 'Agregar al carrito';
+        actionButton.onclick = function() {
+            fetch('agregar_carrito.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: id // Usar el ID correctamente para agregar al carrito
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const cartBadge = document.querySelector('.badge.bg-success');
+                    if (cartBadge) {
+                        cartBadge.textContent = data.totalItems;
+                    }
+                    alert('Producto agregado al carrito');
+                } else {
+                    alert('Error al agregar al carrito');
+                }
+            })
+            .catch(error => {
+                console.error('Error al agregar al carrito:', error);
+                alert('Error al agregar al carrito');
+            });
+        };
+    }
+
+    // Mostrar el modal
+    const productoModal = new bootstrap.Modal(document.getElementById('productoModal'));
+    productoModal.show();
+}
+</script>
+    <script> //SCRIPT para Carrousel con imágenes verticales
+        /*test*/
+
+        /*test*/
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('#customCarousel .carousel-inner2');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentIndex = 0;
+            const itemsPerSlide = 4;
+            const totalItems = document.querySelectorAll('#customCarousel .carousel-item2').length;
+
+            function updateCarousel() {
+                const offset = -currentIndex * (100 / itemsPerSlide);
+                carousel.style.transform = `translateX(${offset}%)`;
+            }
+
+            prevBtn.addEventListener('click', function() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = totalItems - itemsPerSlide;
+                }
+                updateCarousel();
+            });
+
+            nextBtn.addEventListener('click', function() {
+                if (currentIndex < totalItems - itemsPerSlide) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            });
+
+            updateCarousel();
+        }); //end
+    </script>
+
+
+    <script>//SCRIPT DE SELECCION DE DATOS PARA MODAL + MODAL
 function dataId(id) {
     console.log("ID:", id);
     fetch(`./Includes/get_product_details.php?id=${id}`)
@@ -373,129 +494,6 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
 }
 </script>
 
-
-<section class="container mt-5">
-    <div class="row justify-content-center gap-3">
-        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4 d-flex flex-column">
-            <div class="text-white text-center mb-3">
-                <h2>RECORRE NUESTRO STORE</h2>
-            </div>
-            <div class="card-body about-info rounded d-flex flex-column flex-grow-1 justify-content-center accesos-img">
-                <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/img/store.jpg" alt="" class="rounded mb-4 accesos-img">
-                <p class="flex-grow-1 mb-3">Encuentra los mejores juegos a los mejores precios tan buenos que podríamos quebrar mañana.</p>
-                <a href="./commerce.php" class="btn godown-btn mt-auto align-self-center">Ir a la tienda</a>
-            </div>
-        </div>
-        <div class="container-store rounded bg-dark col-12 col-md-6 col-lg-4 p-4 d-flex flex-column">
-            <div class="text-white text-center mb-3">
-                <h2>UNITE A NUESTRO DISCORD</h2>
-            </div>
-            <div class="card-body about-info rounded d-flex flex-column flex-grow-1 justify-content-center accesos-img">
-                <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/img/discord.jpg" alt="" class="rounded mb-4 ">
-                <p class="flex-grow-1 mb-3">Tenemos servidores personalizados para divertirte al máximo con tu Team.</p>
-                <a href="./404.php" class="btn godown-btn mt-auto align-self-center">Ir al Server</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<section class="mx-5">
-    <div class="container-fluid mt-5 px-5 text-white ">
-        <h3>Principales Publishers</h3>
-    </div>
-    <div class="container-fluid px-5 d-flex justify-content-center">
-        <div class="d-flex justify-content-between gap-3 card-rows w-100">
-        <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php" class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher1">
-                <div class="img-box">
-                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/blizzard-logo.avif" alt="">
-                </div>
-            </a>
-            <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php" class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher3">
-                <div class="img-box">
-                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/konami-logo.png" alt="">
-                </div>
-            </a>
-            <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php"  class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher2">
-
-                <div class="img-box">
-                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/valve_logo.svg" alt="">
-                </div>
-
-            </a>
-            <a href="../../TP2_Allario_Bernardez_Ruiz/commerce.php"class="card p-2 border-4 bg-light main-cards mx-sm-auto mx-md-0" id="publisher4" >
-
-                <div class="img-box">
-                    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/publisher/ubi-logo.png" alt="">
-                </div>
-
-            </a>
-
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<section class="container-fluid mt-5 tga2024">
-    <div class="row justify-content-start gap-3 tga2024 align-items-center">
-        <div class="container col-12 col-md-12 col-lg-6 p-4 align-items-center">
-            <div class="text-white text-center">
-                <h2>YA VOTASTE PARA EL GOTY?</h2>
-            </div>
-            <div class="text-white fw-bold text-center">
-                <p>Vota a tus juegos favoritos en THE GAMES AWARDS 2024 y, por supuesto, a VAPOR en la cateogría mejor Store</p>
-                <a href="./404.php" class="btn godown-btn mt-4">Votar ahora</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <script> //SCRIPT para Carrousel con imágenes verticales
-        /*test*/
-
-        /*test*/
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.querySelector('#customCarousel .carousel-inner2');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            let currentIndex = 0;
-            const itemsPerSlide = 4;
-            const totalItems = document.querySelectorAll('#customCarousel .carousel-item2').length;
-
-            function updateCarousel() {
-                const offset = -currentIndex * (100 / itemsPerSlide);
-                carousel.style.transform = `translateX(${offset}%)`;
-            }
-
-            prevBtn.addEventListener('click', function() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                } else {
-                    currentIndex = totalItems - itemsPerSlide;
-                }
-                updateCarousel();
-            });
-
-            nextBtn.addEventListener('click', function() {
-                if (currentIndex < totalItems - itemsPerSlide) {
-                    currentIndex++;
-                } else {
-                    currentIndex = 0;
-                }
-                updateCarousel();
-            });
-
-            updateCarousel();
-        }); //end
-    </script>
-
 <?php
 $conn->close();
 ?>
-</body>
