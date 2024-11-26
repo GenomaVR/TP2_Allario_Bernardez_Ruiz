@@ -176,7 +176,7 @@ if (!$result) {
   }
 
   const modalContent = `
-    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/${imagen}" class="img-fluid mb-3" alt="${titulo}">
+    <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes${imagen}" class="img-fluid mb-3" alt="${titulo}">
     <h4>${titulo}</h4>
     <p>${descripcion}</p>
     <p><strong>Precio:</strong> ${precio == 0 || precio === '' ? 'Gratis' : '$' + precio}</p>
