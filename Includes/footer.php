@@ -1,5 +1,5 @@
 <?php
-// Aquí puedes agregar lógica PHP 
+// Aquí puedes agregar lógica PHP
 ?>
 
 <footer class="footer">
@@ -12,10 +12,10 @@
       </p>
     </div>
     <div class="subscribe-mail">
-      <form class="d-flex subscribe-bar" role="search">
+      <form class="d-flex subscribe-bar justify-content-center" role="search">
         <input class="form-control subscribe-input me-2" type="email" placeholder="Ingresa tu email" aria-label="Email" />
         <button class="btn subscribe-btn" type="submit">
-          <i class="bi bi-search"></i>
+          <i class="bi bi-send"></i>
         </button>
       </form>
     </div>
@@ -46,22 +46,22 @@
       <ul class="nav flex-row" style="list-style-type: none; padding: 0;">
         <li class="nav-item">
           <a href="https://store.steampowered.com/" target="_blank">
-            <img class="logos" src="../../TP2_Allario_Bernardez_Ruiz/logo/steam.png" alt="STEAM">
+            <img class="logos" src="../TP2_Allario_Bernardez_Ruiz/imagenes/logo/steam.png" alt="STEAM">
           </a>
         </li>
         <li class="nav-item">
           <a href="https://store.epicgames.com/en-US/" target="_blank">
-            <img class="logos" src="../../TP2_Allario_Bernardez_Ruiz/logo/epic.png" alt="EpicGames">
+            <img class="logos" src="../TP2_Allario_Bernardez_Ruiz/imagenes/logo/epic.png" alt="EpicGames">
           </a>
         </li>
         <li class="nav-item">
           <a href="https://www.vorterix.com" target="_blank">
-            <img class="logos" src="../../TP2_Allario_Bernardez_Ruiz/logo/vorterix.png" alt="Vorterix">
+            <img class="logos" src="../TP2_Allario_Bernardez_Ruiz/imagenes/logo/vorterix.png" alt="Vorterix">
           </a>
         </li>
         <li class="nav-item">
           <a href="https://www.youtube.com/@Parenlamano" target="_blank">
-            <img class="logos" src="../../TP2_Allario_Bernardez_Ruiz/logo/PLM.png" alt="PLM">
+            <img class="logos" src="../TP2_Allario_Bernardez_Ruiz/imagenes/logo/PLM.png" alt="PLM">
           </a>
         </li>
       </ul>
@@ -86,11 +86,8 @@
 
 </footer>
 
-
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzOg6tv6Wz7mOz6D1F5Vx5KVW5y4e+86a0a4+QvZfWpi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
 
 </body>
 

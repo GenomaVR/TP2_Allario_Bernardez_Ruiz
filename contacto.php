@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $message = $_POST['message'] ?? '';
   $errors = [];
 
-  // Validaciones TEST
+  // Validaciones
   if (empty($name)) {
       $errors['name'] = "El nombre es obligatorio.";
   } elseif (!preg_match("/^[a-zA-ZÀ-ÿ\s]+$/", $name)) {
