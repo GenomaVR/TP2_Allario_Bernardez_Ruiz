@@ -1,0 +1,103 @@
+============================================== Programación Web II - Parcial II ==============================================
+
+# Proyecto
+## Tipo de web: E-commerce => Tienda de videojuegos
+## Nombre: 'VAPOR Argentina'
+
+
+# Integrantes
+- Carolina Allario
+- Lucas Bernardez
+- Lucas Ruiz
+
+
+# Contexto
+- E-commerce con conexión a base de datos local con temática videojuegos. 
+- Base de datos posee juegos y características como precio para calcular totales.
+- Posee un carrito, en el mismo se añaden los juegos deseados y se pueden eliminar o cambiar la cantidad. 
+- Posee formularios de login, registro y contacto (no conectados a db) 
+
+# Secciones de consigna
+[X] Página inicial con listado + catálogo
+[X] Página de error 
+[X] Información de la empresa
+[X] Formulario de contacto
+
+# Elementos de consigna
+[X] Lista => cards.
+[X] Página de error => 404-section.php
+[X] Paginado => commerce.php
+[X] Contacto => contacto.php
+[X] Diseño => Le pusimos mucho esfuerzo al diseño para generar una navegación práctica y con elementos visuales que logren 
+el objetivo de vender productos. 
+
+
+# Estructura del proyecto
+
+## Carpeta principal 'TP2_Allario_Bernardez_Ruiz'
+[X] Index => index.php llama al contenido de página principal de forma dinámica + llamada a base de datos para traer productos.
+[X] About => archivo separado de index => incluye header y footer dinámico.
+[X] Commerce => commerce.php contiene el Listado/Cards con la llamada a la base de datos.
+[X] 404 => 404.php es página de error 404 no encontrada.
+
+## Carpeta de views 'includes'
+[X] Header + Navbar => navbar.php archivo dinámico como view para incluir en index.
+[X] Contenido body => body.php archivo dinámico como view para incluir en index.
+[X] Footer => footer.php archivo dinámico como view para incluir en index.
+[X] 404 db => 404-section.php contiene página de error cuando hay un problema con la base de datos.
+[X] Función1 => agregar_carrito.php php para la funcionalidad de agregar productos al carrito.
+[X] Función2 => get_product_details.php php para la funcionalidad de obtener los datos de un elemento a partir del id. 
+[X] Conexión => dbcon contiene la conexión con la base de datos.
+[X] Config => config.php contiene el disparador de 404-section.php para el error de base de datos.
+
+## Carpeta de login 'login'
+[X] Formulario de contacto => contacto.php es el formulario con validación desde el back, arroja error si los datos no 
+son consistentes.
+[X] Login => login.php página de login con formulario y enlace a Registro.
+[X] Registro => registro.php página de registro con formulario.
+### Carpeta 'class'
+[X] Conexión => contiene una conexión pero no se encuentra activa. Se utilizará para el final.
+
+## Carpeta 'src'
+[X] Estilo => styles.css contiene el archivo css para estilo
+[] Javascript => script.js PENDIENTE ya que el javascript se encuentra en los archivos php (en el html), se ajustarán las funciones 
+para el final.  
+
+## Carpeta 'imagenes'
+[X] Distintas carpetas con imágenes para cada sección + logos. 
+
+## Carpeta 'db'
+[X] Base de datos => juegos.sql contiene el export de MySQL para importar y simular la base de datos. 
+[X] Tablas => titulos.sql contiene export de MySQL para importar únicamente la tabla `titulos`. 
+
+## Favicon 'logoIcon' => Favicon para navegador.
+
+
+
+# Pendientes para el final
+[] Conexión de login + base de datos.
+[] Roles.
+[] Consola de admin.
+[] Página de bienvenida para usuarios logueados.
+[] Formulario de UPDATE datos personales.
+[] Formulario para cambios de rol con acceso para rol admin.
+[] Formulario de CREATE registros para la base de datos.
+[] Vista de consulta de registros en la tabla READ.
+[] Formulario de UPDATE registros para la base de datos.
+[] Formulario de DELETE registros para la base de datos.
+[] Registros con imagen.
+[] Set de datos para exposición.
+
+# Otros puntos para el final
+[] Validación de formularios.
+[] Paginación de registros.
+[] Reutilización del contenido que se repite en el layout.
+[] Sitio web responsive.
+[] Un diseño bien trabajado.
+[] Utilización de recursos de Javascript que ayuden a enriquecer la
+usabilidad del proyecto.
+[] Mensaje de error al fallar la extracción de datos externos.
+[] Cada enlace o página deberá estar protegida de acuerdo al usuario,
+logueado y/o con permiso de administrador. Utilizar sesiones o
+cualquier otro recurso que proteja correctamente la información del
+usuario
