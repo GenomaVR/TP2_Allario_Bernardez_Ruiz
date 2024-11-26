@@ -1,15 +1,21 @@
 ============================================== **Programación Web II - Parcial II** ==============================================
+																  	
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 # Proyecto
 ## Tipo de web: E-commerce => Tienda de videojuegos
 ## Nombre: 'VAPOR Argentina'
 
+# Profesor
+- Victor Emanuel Villafañe
 
 # Integrantes
 - Carolina Allario
 - Lucas Bernardez
 - Lucas Ruiz
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 # Contexto
 - E-commerce con conexión a base de datos local con temática videojuegos. 
@@ -17,11 +23,15 @@
 - Posee un carrito, en el mismo se añaden los juegos deseados y se pueden eliminar o cambiar la cantidad. 
 - Posee formularios de login, registro y contacto (no conectados a db) 
 
+----------------------------------------------------------------------------------------------------------------------------------
+
 # Secciones de consigna
 [X] Página inicial con listado + catálogo
 [X] Página de error 
 [X] Información de la empresa
 [X] Formulario de contacto
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 # Elementos de consigna
 [X] Lista => cards.
@@ -31,6 +41,7 @@
 [X] Diseño => Le pusimos mucho esfuerzo al diseño para generar una navegación práctica y con elementos visuales que logren 
 el objetivo de vender productos. 
 
+----------------------------------------------------------------------------------------------------------------------------------
 
 # Estructura del proyecto
 
@@ -72,7 +83,7 @@ para el final.
 
 ## Favicon 'logoIcon' => Favicon para navegador.
 
-
+----------------------------------------------------------------------------------------------------------------------------------
 
 # Pendientes para el final
 [] Conexión de login + base de datos.
@@ -87,6 +98,8 @@ para el final.
 [] Formulario de DELETE registros para la base de datos.
 [] Registros con imagen.
 [] Set de datos para exposición.
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 # Otros puntos para el final
 [] Validación de formularios.
