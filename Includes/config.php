@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";  
 $password = "";      
-$dbname = "juegos"; // Nombre de la base de datos correcta OJITO LOCO
+$dbname = "juegos"; // Nombre de la base de datos correcta OJITO LOCOASD
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
