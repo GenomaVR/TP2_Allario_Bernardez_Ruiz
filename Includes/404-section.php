@@ -4,7 +4,7 @@ function mostrar_error($error, $mensaje = '') {
 ?>
 <div class="custom-container">
   <div class="custom-content">
-    <img src="../TP2_Allario_Bernardez_Ruiz/imagenes/img/server.gif" width="200" alt="" class="img-notfound">
+    <img src="../TP2_Allario_Bernardez_Ruiz/imagenes/img/server.gif" width="500" alt="" class="img-notfound rounded">
     <div class="custom-text">
       <h3>Elementos no encontrados</h3>
       <p>Esta sección está en un plano desconocido, intenta nuevamente más tarde.</p>
