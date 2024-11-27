@@ -180,42 +180,42 @@ if (!$result || $conn->connect_error) {
                             </div>
                         </button>
 
-                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="2" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
                                     <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/helldivers2-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="18" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
                                     <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/metro_awakening-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="14" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
                                     <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/silent-hill2-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="22" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
                                     <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/space-marine2-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="19" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
                                     <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/farming-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="25" onclick="dataId(this.getAttribute('data-id'))">
                         <div class="carousel-item2">
                             <div class="card-content">
                                 <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/tlou1.webp" alt="">
