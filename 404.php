@@ -8,20 +8,21 @@
 
 
 <body class="login-body-conntainer">
+
+
+<div class="notfound-container-total">
 <div class="login-logo">
-    <a class="navbar-brand" href="../TP2_Allario_Bernardez_Ruiz/index.php">
-      <img class="logonav" src="../TP2_Allario_Bernardez_Ruiz/imagenes/logo/logo.png" alt="">
+    <a class="navbar-brand" href="./index.php">
+      <img class="logonav" src="./imagenes/logo/logo.png" alt="">
     </a>
 </div>
-
-
 <div class="custom-container">
     <div class="custom-content">
-        <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/img/notfound.png" width="200" alt="" class="img-notfound">
-        <div class="custom-text">
-            <h1>404 - Página no encontrada</h1>
-            <p>Parece que has llegado a una parte no explorada del mapa o no tenes internet amigo</p>
-            <p>PERO no te preocupes, podés seguir explorando nuestra. <a href="commerce.php" class="text-decoration-none fw-bold">Tienda!</a>.</p>
+        <img src="./imagenes/img/notfound.png" width="200" alt="" class="img-notfound">
+        <div class="container text-center mt-5">
+            <h1 class="error-title">404 - Página no encontrada</h1>
+            <p class="error-message">Esta página seguro existe en un universo paralelo.</p>
+
         </div>
     </div>
 </div>
@@ -47,7 +48,7 @@
       </ul>
     </div>
 </footer>
-
+</div>
 
 
 </body>

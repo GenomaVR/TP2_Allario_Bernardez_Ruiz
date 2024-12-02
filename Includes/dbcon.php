@@ -5,6 +5,7 @@ $username = "root";
 $password = "";
 $dbname = "juegos"; // Nombre de la base de datos correcta
 
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar conexión
@@ -32,6 +33,33 @@ if (!$result) {
 // } else {
 //     echo "0 resultados";
 // }
+
+
+
+
+class Conexion {
+    private $servername = "localhost";
+    private $username = "root";
+    private $password = "";
+    private $dbname = "juegos";
+    private $conn;
+
+    public function __construct() {
+        $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+
+        // Verificar conexión
+        if ($this->conn->connect_error) {
+            die("Conexión fallida: " . $this->conn->connect_error);
+        }
+    }
+
+    public function getConexion() {
+        return $this->conn;
+    }
+}
+
+
+
 
 $conn->close();
 ?>

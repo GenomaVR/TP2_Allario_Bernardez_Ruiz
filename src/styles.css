@@ -10,18 +10,9 @@ body {
 
 /* carrito */
 
-.sticky-top {
-  position: -webkit-sticky; /* Soporte para Safari */
-  position: sticky;
-  top: 0;
-  z-index: 1030; /* Asegura que la barra de navegación esté por encima de otros elementos */
-  background-color: #343a40; /* Color de fondo para la barra de navegación */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Sombra para la barra de navegación */
-}
-
 .navbar-cart {
   background-color: transparent; /* Fondo transparente */
-  color: #8a2be2; /* Color de texto violeta */
+  color: #ffffff; /* Color de texto violeta */
   border: 2px solid #8a2be2; /* Borde violeta */
   padding: 8px 16px; /* Tamaño del botón */
   border-radius: 8px; /* Bordes redondeados */
@@ -368,13 +359,22 @@ body {
   background-color: #292f3a; /* Color de fondo para la barra de navegación */
 }
 
+/* Estilo para la barra de navegación sticky */
+.sticky-top {
+  position: -webkit-sticky; /* Soporte para Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1030; /* Asegura que la barra de navegación esté por encima de otros elementos */
+  background-color: #343a40; /* Color de fondo para la barra de navegación */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Sombra para la barra de navegación */
+}
+
 .navbar .nav-link {
   color: white;
   font-weight: bold;
   position: relative;
   text-decoration: none;
   font-size: 1rem;
-  
 }
 
 .navbar .nav-link::after {
@@ -587,7 +587,6 @@ footer {
 .nav-item {
   margin-left: 10px;
   margin-right: 10px;
-  padding: 0;
 }
 
 footer .nav-link {
@@ -1126,13 +1125,30 @@ footer .nav-link:hover {
   font-family: "Poppins", sans-serif;
 } /*reseteo de margenes y rellenos*/
 
-.login-body-conntainer,
-.register-body-conntainer {
+.login-body-container,
+.register-body-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh; /*cubre toda la ventana*/
   flex-direction: column;
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/img/store.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+} /*cubre todo centradito, el color del fondo...*/
+
+.login-body-container::before,
+.register-body-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #002f4b, #2e1553);
+  opacity: 0.6;
 } /*cubre todo centradito, el color del fondo...*/
 
 .login-logo {
@@ -1165,6 +1181,11 @@ footer .nav-link:hover {
   opacity: 1;
 }
 
+.logonav {
+  max-width: 100%;
+  height: auto;
+}
+
 .logonav-container {
   position: relative;
   display: flex;
@@ -1192,6 +1213,11 @@ footer .nav-link:hover {
 
 .logonav-container:hover::before {
   opacity: 1;
+}
+
+.logonav {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ANIMACIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN*/
@@ -1345,6 +1371,111 @@ input[type="submit"]:active {
 }
 
 /*REGISTRO*/
+
+/*MODAL LOGIN SUCCESFULL */
+
+/* ==== Modal de Bienvenida ==== */
+#welcomeModalContent.modal-content {
+  background-color: #1c1c1c; /* Fondo oscuro */
+  border-radius: 8px;       /* Bordes redondeados */
+  overflow: hidden;        /* Ocultar el desbordamiento */
+}
+
+#welcomeModalContent .modal-header {
+  border-bottom: none;     /* Sin borde en el header */
+}
+
+#welcomeModalContent .modal-title {
+  color: #ffffff;          /* Color de texto azul */
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+#welcomeModalContent .modal-body {
+  color: #8f8f8f;          /* Color del texto del cuerpo */
+  text-align: center;
+  padding: 20px;
+}
+
+#welcomeModalContent .modal-body span {
+  color: #ffffff;          /* Color del nombre del usuario */
+  font-weight: 600;
+}
+
+#welcomeModalContent .modal-footer {
+  border-top: none;        /* Sin borde en el footer */
+  justify-content: center; /* Centrar el botón */
+}
+
+#welcomeModalContent .btn-primary {
+  background-color: #8a2be2; /* Color del botón */
+  border: none;
+  border-radius: 4px;         /* Bordes redondeados */
+  font-weight: 600;
+  padding: 11px 40px;         /* Espaciado interno */
+}
+
+#welcomeModalContent .btn-primary:active {
+  opacity: 0.8;               /* Opacidad en el estado activo */
+}
+
+#welcomeModalContent .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(69, 243, 255, 0.5); /* Sombra de enfoque */
+}
+
+/* USUARIO NO RESIGRADO LOCO*/
+
+/* ==== Modal de Error ==== */
+#errorModalContent.modal-content {
+  background-color: #1c1c1c; /* Fondo oscuro */
+  border-radius: 8px;       /* Bordes redondeados */
+  overflow: hidden;        /* Ocultar el desbordamiento */
+}
+
+#errorModalContent .modal-header {
+  border-bottom: none;     /* Sin borde en el header */
+}
+
+#errorModalContent .modal-title {
+  color: #ff4545;          /* Color de texto rojo */
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+#errorModalContent .modal-body {
+  color: #8f8f8f;          /* Color del texto del cuerpo */
+  text-align: center;
+  padding: 20px;
+}
+
+#errorModalContent .modal-body span {
+  color: #ff4545;          /* Color del mensaje de error */
+  font-weight: 600;
+}
+
+#errorModalContent .modal-footer {
+  border-top: none;        /* Sin borde en el footer */
+  justify-content: center; /* Centrar el botón */
+}
+
+#errorModalContent .btn-primary {
+  background-color: #ff4545; /* Color del botón */
+  border: none;
+  border-radius: 4px;         /* Bordes redondeados */
+  font-weight: 600;
+  padding: 11px 40px;         /* Espaciado interno */
+}
+
+#errorModalContent .btn-primary:active {
+  opacity: 0.8;               /* Opacidad en el estado activo */
+}
+
+#errorModalContent .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 69, 69, 0.5); /* Sombra de enfoque */
+}
+
 
 /* Estilo para el cuerpo de la página */
 .contenedor-body {
@@ -1524,17 +1655,6 @@ input[type="submit"]:active {
   align-items: center;
 }
 
-.register-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
-  z-index: 1; /* Ensure the overlay is above the background image */
-}
-
 .register-content {
   position: relative; /* Ensure the content is above the overlay */
   z-index: 2; /* Ensure the content is above the overlay */
@@ -1550,6 +1670,15 @@ input[type="submit"]:active {
 }
 
 /* 404 not found */
+
+.notfound-container-total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
 .custom-container {
   display: flex;
   justify-content: center;
@@ -1558,11 +1687,21 @@ input[type="submit"]:active {
   margin: auto;
 }
 
-.custom-content {
+.custom-content,
+.custom-content-notfound {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.custom-content-notfound img {
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.custom-content {
+  color: white;
 }
 
 .custom-text {
@@ -1621,4 +1760,29 @@ input[type="submit"]:active {
 }
 .footer-notfound .link-column p {
   margin: 0 10px;
+}
+
+/* Estilo para la página de error 404 */
+.error-title {
+  font-size: 3rem; /* Tamaño de fuente grande para pantallas grandes */
+  line-height: 1.2; /* Espacio entre líneas */
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 1.5rem; /* Tamaño de fuente para el mensaje de error */
+  line-height: 1.5; /* Espacio entre líneas */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 576px) {
+  .error-title {
+    font-size: 2rem; /* Reducir el tamaño de fuente en pantallas pequeñas */
+    line-height: 1.3; /* Asegurar suficiente espacio entre líneas */
+  }
+
+  .error-message {
+    font-size: 1.2rem; /* Reducir el tamaño de fuente en pantallas pequeñas */
+    line-height: 1.4; /* Asegurar suficiente espacio entre líneas */
+  }
 }

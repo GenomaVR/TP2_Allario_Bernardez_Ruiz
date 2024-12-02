@@ -9,7 +9,7 @@
 </main>
 
 <body>
-  
+
 
 
 <section class="container mt-5">
@@ -17,7 +17,7 @@
     <div class="col-md-6 order-md-2 animate-on-scroll">
       <div class="about-info about-text py-4 px-4 rounded">
         <h2>Nuestra Historia</h2>
-        <p>Somos una tienda de videojuegos fundada en 2020 con la misión de ofrecer los mejores juegos a los precios más competitivos. Desde nuestros humildes comienzos, hemos crecido para convertirnos en uno de los principales minoristas de videojuegos en línea.</p>
+        <p>Somos una tienda de videojuegos fundada en 2020 con la misión de ofrecer los mejores juegos al mejor precio. Desde nuestros humildes comienzos, hemos crecido para convertirnos en uno de los principale distribuidores de videojuegos en Argentina.</p>
       </div>
     </div>
     <div class="col-md-6 fade-in">
@@ -50,7 +50,7 @@
     <div class="col-md-6 order-md-2 animate-on-scroll">
       <div class="about-info about-text py-4 px-4  rounded">
         <h2>Nuestra Misión</h2>
-        <p>Nuestra misión es proporcionar una experiencia de compra inigualable para los amantes de los videojuegos. Nos esforzamos por ofrecer una amplia selección de juegos, consolas y accesorios, junto con un servicio al cliente excepcional.</p>
+        <p>Nuestra misión es proporcionar una experiencia de compra inigualable para los amantes de los videojuegos. Nos esforzamos por ofrecer una amplia selección de juegos, siempre con un precio imposible de creer.</p>
         <a href="./commerce.php" class="btn godown-btn mt-4">Ir a la tienda</a>
       </div>
     </div>
@@ -67,15 +67,16 @@
 <section class="container mt-5">
   <div class="row align-items-start mb-5 section-hover">
     <div class="col-md-6 animate-on-scroll">
-    <div class="about-info about-text py-4 px-4  rounded">
-        <h2>Contáctanos</h2>
-        <p>¿Tienes alguna pregunta o necesitas ayuda? No dudes en ponerte en contacto con nosotros. Nuestro equipo de atención al cliente está aquí para ayudarte.</p>
-        <ul>
-          <li>Email: soporte@videogamesecommerce.com</li>
-          <li>Teléfono: +123 456 7890</li>
-          <li>Dirección: Calle Falsa 123, Ciudad, País</li>
-        </ul>
-      </div>
+    <div class="about-info about-text py-4 px-4 rounded">
+    <h2>Contáctanos</h2>
+    <p>¿Necesitás asistencia? No dudes en ponerte en contacto con nosotros. Nuestro equipo de atención al cliente está siempre dispuesto a ayudarte y asegurarse de que tengas la mejor experiencia de principio a fin.</p>
+    <ul>
+        <li><strong>Email:</strong> soporte@vaporargentina.com</li>
+        <li><strong>Teléfono:</strong> +123 456 7890</li>
+        <li><strong>Dirección:</strong> Calle Falsa 123, Buenos Aires, Argentina.</li>
+    </ul>
+
+</div>
     </div>
     <div class="col-md-6 animate-on-scroll rounded">
       <div class="about-info rounded">
@@ -91,7 +92,7 @@
     <div class="about-info about-text px-4 py-4">
       <h2>Unite a nosotros</h2>
       <p>Explora las oportunidades que VAPOR tiene para ser parte de nuestra misión por llevar el Gaming a cada rincón del planeta.</p>
-      <a href="./commerce.php" class="btn godown-btn mt-4">Ver empleos</a>
+      <a href="./404.php" class="btn godown-btn mt-4">Ver empleos</a>
     </div>
   </div>
 </article>

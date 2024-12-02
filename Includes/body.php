@@ -7,9 +7,9 @@ include 'config.php'; // Incluir el archivo de configuración
 $sql = "SELECT id, titulo, descripcion, lanzamiento, genero, precio, publisher, imagen FROM titulos";
 $result = $conn->query($sql);
 
-if (!$result) {
+if (!$result || $conn->connect_error) {
     mostrar_error(true);
-    die("Error en la consulta: " . $conn->error);
+    die("Error en la consulta: " . $conn->connect_error);
 }
 ?>
 <body>
@@ -31,14 +31,14 @@ if (!$result) {
     <div class="carousel-item carousel-banner" id="index-banner2">
         <div class="banner-content text-center text-white fw-bold">
         <h2>Call of Duty Blak Ops6</h2>
-            <p>Toca Shift para hacer slide</p>
+            <p>Espionaje, acción y disparos</p>
             <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
     <div class="carousel-item carousel-banner" id="index-banner3">
         <div class="banner-content text-center text-white fw-bold">
         <h1>WARHAMMER 40K: SPACE MARINE 2</h1>
-            <p>ta maso meno el juego pero safa</p>
+            <p>Desatá todo el poder de el imperio</p>
             <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
@@ -159,67 +159,7 @@ if (!$result) {
     </div>
 </div>
 
-<script>
-function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzamiento, publisher, genero) {
-    if (!imagen || imagen === 'null' || imagen === 'undefined') {
-        imagen = 'ruta/a/imagen/predeterminada.jpg'; // Imagen predeterminada si no hay imagen
-    }
 
-    const modalContent = `
-        <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/.${imagen}" class="img-fluid mb-3" alt="${titulo}">
-        <h4>${titulo}</h4>
-        <p>${descripcion}</p>
-        <p><strong>Precio:</strong> ${precio == 0 || precio === '' ? 'Gratis' : '$' + precio}</p>
-        <p><strong>Lanzamiento:</strong> ${lanzamiento}</p>
-        <p><strong>Publisher:</strong> ${publisher}</p>
-    `;
-
-    document.getElementById('modalContent').innerHTML = modalContent;
-
-    const actionButton = document.getElementById('modalActionButton');
-
-    // Acciones para productos gratis o de pago
-    if (precio == 0 || genero === 'Free to Play') {
-        actionButton.innerText = 'Descargar gratis';
-        actionButton.onclick = function() {
-            alert(`Iniciando descarga de ${titulo}...`);
-        };
-    } else {
-        actionButton.innerText = 'Agregar al carrito';
-        actionButton.onclick = function() {
-            fetch('agregar_carrito.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    id: id // Usar el ID correctamente para agregar al carrito
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const cartBadge = document.querySelector('.badge.bg-success');
-                    if (cartBadge) {
-                        cartBadge.textContent = data.totalItems;
-                    }
-                    alert('Producto agregado al carrito');
-                } else {
-                    alert('Error al agregar al carrito');
-                }
-            })
-            .catch(error => {
-                console.error('Error al agregar al carrito:', error);
-                alert('Error al agregar al carrito');
-            });
-        };
-    }
-
-    // Mostrar el modal
-    const productoModal = new bootstrap.Modal(document.getElementById('productoModal'));
-    productoModal.show();
-}
-</script>
 
 
 
@@ -240,42 +180,42 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
                             </div>
                         </button>
 
-                        <button class="button-card" data-id="2" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
                                     <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/helldivers2-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="button-card" data-id="17" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
                                     <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/metro_awakening-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="button-card" data-id="14" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
                                     <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/silent-hill2-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="button-card" data-id="22" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
                                     <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/space-marine2-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="button-card" data-id="19" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                             <div class="carousel-item2">
                                 <div class="card-content">
                                     <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/farming-slider.webp" alt="">
                                 </div>
                             </div>
                         </button>
-                        <button class="button-card" data-id="25" onclick="dataId(this.getAttribute('data-id'))">
+                        <button class="button-card" data-id="7" onclick="dataId(this.getAttribute('data-id'))">
                         <div class="carousel-item2">
                             <div class="card-content">
                                 <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/slider2/tlou1.webp" alt="">
@@ -294,84 +234,6 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
         </div>
     </div>
 
-
-    <script>
-function dataId(id) {
-    console.log("ID:", id);
-    fetch(`./Includes/get_product_details.php?id=${id}`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.error) {
-                console.error('Error fetching product details:', data.error);
-            } else {
-                mostrarDetalleProducto(data.id, data.titulo, data.descripcion, data.imagen, data.precio, data.lanzamiento, data.publisher, data.genero);
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching product details:', error);
-        });
-}
-
-function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzamiento, publisher, genero) {
-    if (!imagen || imagen === 'null' || imagen === 'undefined') {
-        imagen = 'ruta/a/imagen/predeterminada.jpg'; // Imagen predeterminada si no hay imagen
-    }
-
-    const modalContent = `
-        <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/.${imagen}" class="img-fluid mb-3" alt="${titulo}">
-        <h4>${titulo}</h4>
-        <p>${descripcion}</p>
-        <p><strong>Precio:</strong> ${precio == 0 || precio === '' ? 'Gratis' : '$' + precio}</p>
-        <p><strong>Lanzamiento:</strong> ${lanzamiento}</p>
-        <p><strong>Publisher:</strong> ${publisher}</p>
-    `;
-
-    document.getElementById('modalContent').innerHTML = modalContent;
-
-    const actionButton = document.getElementById('modalActionButton');
-
-    // Acciones para productos gratis o de pago
-    if (precio == 0 || genero === 'Free to Play') {
-        actionButton.innerText = 'Descargar gratis';
-        actionButton.onclick = function() {
-            alert(`Iniciando descarga de ${titulo}...`);
-        };
-    } else {
-        actionButton.innerText = 'Agregar al carrito';
-        actionButton.onclick = function() {
-            fetch('./Includes/agregar_carrito.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    id: id // Usar el ID correctamente para agregar al carrito
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    const cartBadge = document.querySelector('.badge.bg-success');
-                    if (cartBadge) {
-                        cartBadge.textContent = data.totalItems;
-                    }
-                    alert('Producto agregado al carrito');
-                } else {
-                    alert('Error al agregar al carrito');
-                }
-            })
-            .catch(error => {
-                console.error('Error al agregar al carrito:', error);
-                alert('Error al agregar al carrito');
-            });
-        };
-    }
-
-    // Mostrar el modal
-    const productoModal = new bootstrap.Modal(document.getElementById('productoModal'));
-    productoModal.show();
-}
-</script>
 
 
 <section class="container mt-5">
@@ -438,8 +300,6 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
 
 
 
-
-
 <section class="container-fluid mt-5 tga2024">
     <div class="row justify-content-start gap-3 tga2024 align-items-center">
         <div class="container col-12 col-md-12 col-lg-6 p-4 align-items-center">
@@ -454,7 +314,67 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
     </div>
 </section>
 
+<script> //SCRIPT DE MODAL
+function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzamiento, publisher, genero) {
+    if (!imagen || imagen === 'null' || imagen === 'undefined') {
+        imagen = 'ruta/a/imagen/predeterminada.jpg'; // Imagen predeterminada si no hay imagen
+    }
 
+    const modalContent = `
+        <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/${imagen}" class="img-fluid mb-3" alt="${titulo}">
+        <h4>${titulo}</h4>
+        <p>${descripcion}</p>
+        <p><strong>Precio:</strong> ${precio == 0 || precio === '' ? 'Gratis' : '$' + precio}</p>
+        <p><strong>Lanzamiento:</strong> ${lanzamiento}</p>
+        <p><strong>Publisher:</strong> ${publisher}</p>
+    `;
+
+    document.getElementById('modalContent').innerHTML = modalContent;
+
+    const actionButton = document.getElementById('modalActionButton');
+
+    // Acciones para productos gratis o de pago
+    if (precio == 0 || genero === 'Free to Play') {
+        actionButton.innerText = 'Descargar gratis';
+        actionButton.onclick = function() {
+            alert(`Iniciando descarga de ${titulo}...`);
+        };
+    } else {
+        actionButton.innerText = 'Agregar al carrito';
+        actionButton.onclick = function() {
+            fetch('agregar_carrito.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: id // Usar el ID correctamente para agregar al carrito
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const cartBadge = document.querySelector('.badge.bg-success');
+                    if (cartBadge) {
+                        cartBadge.textContent = data.totalItems;
+                    }
+                    alert('Producto agregado al carrito');
+                } else {
+                    alert('Error al agregar al carrito');
+                }
+            })
+            .catch(error => {
+                console.error('Error al agregar al carrito:', error);
+                alert('Error al agregar al carrito');
+            });
+        };
+    }
+
+    // Mostrar el modal
+    const productoModal = new bootstrap.Modal(document.getElementById('productoModal'));
+    productoModal.show();
+}
+</script>
     <script> //SCRIPT para Carrousel con imágenes verticales
         /*test*/
 
@@ -495,7 +415,85 @@ function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzami
         }); //end
     </script>
 
+
+    <script>//SCRIPT DE SELECCION DE DATOS PARA MODAL + MODAL
+function dataId(id) {
+    console.log("ID:", id);
+    fetch(`./Includes/get_product_details.php?id=${id}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                console.error('Error fetching product details:', data.error);
+            } else {
+                mostrarDetalleProducto(data.id, data.titulo, data.descripcion, data.imagen, data.precio, data.lanzamiento, data.publisher, data.genero);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching product details:', error);
+        });
+}
+
+function mostrarDetalleProducto(id, titulo, descripcion, imagen, precio, lanzamiento, publisher, genero) {
+    if (!imagen || imagen === 'null' || imagen === 'undefined') {
+        imagen = 'ruta/a/imagen/predeterminada.jpg'; // Imagen predeterminada si no hay imagen
+    }
+
+    const modalContent = `
+        <img src="../../TP2_Allario_Bernardez_Ruiz/imagenes/${imagen}" class="img-fluid mb-3" alt="${titulo}">
+        <h4>${titulo}</h4>
+        <p>${descripcion}</p>
+        <p><strong>Precio:</strong> ${precio == 0 || precio === '' ? 'Gratis' : '$' + precio}</p>
+        <p><strong>Lanzamiento:</strong> ${lanzamiento}</p>
+        <p><strong>Publisher:</strong> ${publisher}</p>
+    `;
+
+    document.getElementById('modalContent').innerHTML = modalContent;
+
+    const actionButton = document.getElementById('modalActionButton');
+
+    // Acciones para productos gratis o de pago
+    if (precio == 0 || genero === 'Free to Play') {
+        actionButton.innerText = 'Descargar gratis';
+        actionButton.onclick = function() {
+            alert(`Iniciando descarga de ${titulo}...`);
+        };
+    } else {
+        actionButton.innerText = 'Agregar al carrito';
+        actionButton.onclick = function() {
+            fetch('./Includes/agregar_carrito.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: id // Usar el ID correctamente para agregar al carrito
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const cartBadge = document.querySelector('.badge.bg-success');
+                    if (cartBadge) {
+                        cartBadge.textContent = data.totalItems;
+                    }
+                    alert('Producto agregado al carrito');
+                } else {
+                    alert('Error al agregar al carrito');
+                }
+            })
+            .catch(error => {
+                console.error('Error al agregar al carrito:', error);
+                alert('Error al agregar al carrito');
+            });
+        };
+    }
+
+    // Mostrar el modal
+    const productoModal = new bootstrap.Modal(document.getElementById('productoModal'));
+    productoModal.show();
+}
+</script>
+
 <?php
 $conn->close();
 ?>
-</body>
