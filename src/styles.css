@@ -1786,3 +1786,152 @@ input[type="submit"]:active {
     line-height: 1.4; /* Asegurar suficiente espacio entre líneas */
   }
 }
+
+
+/* PERFIL USUARIO */ /* PERFIL USUARIO */ /* PERFIL USUARIO */ /* PERFIL USUARIO */ /* PERFIL USUARIO */ /* PERFIL USUARIO */
+
+/* Definimos la animación para mover el fondo hacia abajo sin rebote */
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0; /* Empieza en la parte superior */
+  }
+  100% {
+    background-position: 0 100%; /* Desplaza la imagen completamente hacia abajo */
+  }
+}
+
+.perfil-container {
+  background-image: url("../../TP2_Allario_Bernardez_Ruiz/imagenes/img/cyberpunk-contacto.jpeg");
+  background-color: rgba(100, 100, 100, 0.9); /* Fondo oscuro con opacidad */
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-repeat: repeat-y; /* Hace que el fondo se repita verticalmente */
+  background-position: right; /* Comienza desde la parte superior */
+  min-height: 100vh;
+  position: relative;
+  animation: moveBackground 20s linear infinite; /* Animación continua */
+  background-attachment: fixed; /* Mantiene el fondo fijo durante el desplazamiento */
+}
+
+.perfil-contenedor-caja {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 80vh; /* Ocupa el 80% de la altura de la ventana */
+  margin-top: 50px; /* Separación con el encabezado */
+}
+
+.titulo-perfil {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.formulario-perfil {
+  background-color: #1f3b4d; /* Fondo oscuro */
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px; /* Ancho máximo del formulario */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  color: white; /* Color del texto blanco */
+  position: relative; /* Necesario para el borde de neón animado */
+  overflow: hidden; /* Asegura que la animación no se salga del borde */
+  animation: neonGlow 1.5s ease-in-out infinite alternate; /* Animación de neón */
+  margin-bottom: 20px; /* Espacio entre el formulario y el botón */
+}
+
+/* Efecto de luz de neón alrededor del borde */
+@keyframes neonGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1);
+  }
+}
+
+/* Estilo de los campos del formulario */
+.formulario-perfil .form-control {
+  border-radius: 10px;
+  background-color: #2e4a5a;
+  color: white;
+  border: 1px solid #3c5c73;
+}
+
+
+
+.campo-entrada-perfil .form-control::placeholder {
+  color: #a1c4d7;
+}
+
+.btn-enviar-perfil {
+  background-color: #3a6b8f;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-enviar-perfil:hover {
+  background-color: #345f7d;
+}
+
+/* Estilo del botón "Volver al Inicio" */
+.btn-volver-inicio {
+  background-color: #8a2be2;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  display: block; /* Hace que el enlace se comporte como un botón */
+  margin-top: 20px; /* Espacio entre los botones */
+}
+
+.btn-volver-inicio:hover {
+  background-color: #7a24c4;
+}
+
+
+/* GESTION USUARIOS */
+
+.btn-gestion-usuarios {
+  background-color: #28a745; /* Color verde */
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  display: block; /* Hace que el enlace se comporte como un botón */
+  margin-top: 10px; /* Espacio entre los botones */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.btn-gestion-usuarios:hover {
+  background-color: #218838; /* Verde más oscuro al pasar el ratón */
+}
+
+.contenido-gestion h2 {
+  color: white;
+}
+
+.btn-volver {
+  margin-top: 20px;
+}
+
+.btn-gestion-tienda {
+  background-color: #ff4d4d; /* Rojo claro */
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.btn-gestion-tienda:hover {
+  background-color: #cc0000; /* Rojo más oscuro al pasar el ratón */
+}

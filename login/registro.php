@@ -1,4 +1,5 @@
 <?php
+session_start(); // Iniciar sesión
 include_once "../Includes/dbcon.php";
 
 if (isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["pass"]) && isset($_POST["pass2"])) {
@@ -28,7 +29,16 @@ if (isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["pass"])
                 $rol = 'usuario';
                 $PDOStatement->bind_param("ssss", $username, $email, $hashedPassword, $rol);
                 $PDOStatement->execute();
-                header("Location: ../index.php?seccion=login");
+                
+                // Loguear automáticamente al nuevo usuario
+                $_SESSION['usuario'] = [
+                    'nombre' => $username,
+                    'correo' => $email,
+                    'rol' => $rol
+                ];
+
+                // Redirigir al index
+                header("Location: ../index.php");
                 exit(); // Asegura que el script se detiene después de la redirección
             }
         } else {

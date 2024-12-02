@@ -267,5 +267,5 @@ if (!$result) {
 
 <?php
 $conn->close();
-include '../TP2_Allario_Bernardez_Ruiz/includes/footer.php';
+include './Includes/footer.php';
 ?>

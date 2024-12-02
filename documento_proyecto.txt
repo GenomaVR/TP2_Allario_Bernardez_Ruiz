@@ -87,15 +87,15 @@ para el final.
 
 # Pendientes para el final
 [x] Conexión de login + base de datos.
-[] Roles.
-[] Consola de admin.
+[x] Roles.
+[x] Consola de admin.
 [x] Página de bienvenida para usuarios logueados.
-[] Formulario de UPDATE datos personales.
-[] Formulario para cambios de rol con acceso para rol admin.
-[] Formulario de CREATE registros para la base de datos.
+[x] Formulario de UPDATE datos personales.
+[x] Formulario para cambios de rol con acceso para rol admin.
+[x] Formulario de CREATE registros para la base de datos.
 [] Vista de consulta de registros en la tabla READ.
-[] Formulario de UPDATE registros para la base de datos.
-[] Formulario de DELETE registros para la base de datos.
+[x] Formulario de UPDATE registros para la base de datos.
+[x] Formulario de DELETE registros para la base de datos.
 [] Registros con imagen.
 [] Set de datos para exposición.
 

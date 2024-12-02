@@ -132,4 +132,4 @@ $total = 0;
 </div>
 
 <!-- Incluir el pie de página -->
-<?php include('../TP2_Allario_Bernardez_Ruiz/includes/footer.php'); ?>
+<?php include './Includes/footer.php'; ?>

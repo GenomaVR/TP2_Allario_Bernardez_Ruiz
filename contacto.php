@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-  <?php include '../TP2_Allario_Bernardez_Ruiz/Includes/footer.php'; ?>
+  <?php include './Includes/footer.php'; ?>
 
 </body>
 </html>

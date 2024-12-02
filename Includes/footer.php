@@ -46,22 +46,22 @@
       <ul class="nav flex-row" style="list-style-type: none; padding: 0;">
         <li class="nav-item">
           <a href="https://store.steampowered.com/" target="_blank">
-            <img class="logos" src="../TP2_Allario_Bernardez_Ruiz/imagenes/logo/steam.png" alt="STEAM">
+            <img class="logos" src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/steam.png" alt="STEAM">
           </a>
         </li>
         <li class="nav-item">
           <a href="https://store.epicgames.com/en-US/" target="_blank">
-            <img class="logos" src="../TP2_Allario_Bernardez_Ruiz/imagenes/logo/epic.png" alt="EpicGames">
+            <img class="logos" src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/epic.png" alt="EpicGames">
           </a>
         </li>
         <li class="nav-item">
           <a href="https://www.vorterix.com" target="_blank">
-            <img class="logos" src="../TP2_Allario_Bernardez_Ruiz/imagenes/logo/vorterix.png" alt="Vorterix">
+            <img class="logos" src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/vorterix.png" alt="Vorterix">
           </a>
         </li>
         <li class="nav-item">
           <a href="https://www.youtube.com/@Parenlamano" target="_blank">
-            <img class="logos" src="../TP2_Allario_Bernardez_Ruiz/imagenes/logo/PLM.png" alt="PLM">
+            <img class="logos" src="../../TP2_Allario_Bernardez_Ruiz/imagenes/logo/PLM.png" alt="PLM">
           </a>
         </li>
       </ul>

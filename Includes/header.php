@@ -13,14 +13,14 @@ $total_items = count($carrito);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tienda Vapor </title>
-  <link rel="icon" href="./logoIcon.ico" type="image/x-icon">
+  <link rel="icon" href="../logoIcon.ico" type="image/x-icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./script.js"></script>
   <link rel="stylesheet" href="../TP2_Allario_Bernardez_Ruiz/src/styles.css">
@@ -47,7 +47,7 @@ $total_items = count($carrito);
           <a class="nav-link" href="../../TP2_Allario_Bernardez_Ruiz/commerce.php">Tienda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./../TP2_Allario_Bernardez_Ruiz/about.php">Nosotros</a>
+          <a class="nav-link" href="../../TP2_Allario_Bernardez_Ruiz/about.php">Nosotros</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../../TP2_Allario_Bernardez_Ruiz/contacto.php">Contacto</a>
@@ -60,7 +60,7 @@ $total_items = count($carrito);
         </button>
       </form>
       <!-- Carrito -->
-      <a href="carrito.php" class="navbar-cart m-2">
+      <a href="../carrito.php" class="navbar-cart m-2">
         <i class="bi bi-cart4 mx-1"></i>
         <span>Carrito</span>
         <span class="badge mx-1 badge-num">
@@ -68,9 +68,9 @@ $total_items = count($carrito);
         </span>
       </a>
       <?php if (isset($_SESSION['usuario'])): ?>
-        <span class="navbar-cart m-2">
+        <a href="../../TP2_Allario_Bernardez_Ruiz/Includes/perfil.php" class="navbar-cart m-2">
           <i class="bi bi-person"></i> ¡Bienvenido, <?php echo $_SESSION['usuario']['nombre']; ?>!
-        </span>
+        </a>
         <a href="../../TP2_Allario_Bernardez_Ruiz/Includes/logout.php" class="navbar-cart">
           <span>
           <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
