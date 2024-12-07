@@ -24,21 +24,21 @@ if (!$result || $conn->connect_error) {
     <div class="carousel-item active carousel-banner" id="index-banner1">
         <div class="banner-content text-center text-white fw-bold">
             <h1>VAPOR GAMES</h1>
-            <p>Descubre los mejores juegos a precios increíbles</p>
+            <p>Descubrí los mejores juegos a precios increíbles.</p>
             <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
     <div class="carousel-item carousel-banner" id="index-banner2">
         <div class="banner-content text-center text-white fw-bold">
         <h2>Call of Duty Blak Ops6</h2>
-            <p>Espionaje, acción y disparos</p>
+            <p>Espionaje, acción, disparos y mecánicas rotas.</p>
             <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
     <div class="carousel-item carousel-banner" id="index-banner3">
         <div class="banner-content text-center text-white fw-bold">
         <h1>WARHAMMER 40K: SPACE MARINE 2</h1>
-            <p>Desatá todo el poder de el imperio</p>
+            <p>Desatá todo el poder de el imperio.</p>
             <a href="./commerce.php" class="btn btn-primary mt-3">Explorar Tienda</a>
         </div>
     </div>
