@@ -1,10 +1,10 @@
-<?php
+v<?php
 include_once '404-section.php';
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "juegos"; // Nombre de la base de datos correcta OJITO LOCOSAD
+$servername = servername;
+$username = username;
+$password = password;
+$dbname = dbname; // Nombre de la base de datos correcta OJITO LOCOSAD
 
 // Crear conexión
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
