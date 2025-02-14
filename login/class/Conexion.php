@@ -1,10 +1,10 @@
 <?php
 
     class Conexion{
-        public $DB_SERVER = "localhost";
-        public $DB_USER = "root"; //por defecto
-        public $DB_PASS = "";
-        public $DB_NAME = "usuario";
+        public $DB_SERVER = server;
+        public $DB_USER = user; 
+        public $DB_PASS = pass;
+        public $DB_NAME = name;
         public $DB_DSN = null;
         public ?PDO $db = null;
 
